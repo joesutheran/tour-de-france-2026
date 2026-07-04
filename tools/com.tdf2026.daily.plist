@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.growthmedium.tdf-daily</string>
+    <string>com.tdf2026.daily</string>
 
     <key>ProgramArguments</key>
     <array>

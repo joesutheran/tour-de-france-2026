@@ -1,6 +1,6 @@
 #!/bin/bash
 # Daily job: refresh tonight's stage data, then commit + push so Vercel redeploys.
-# Called by launchd (com.growthmedium.tdf-daily). Safe to run manually.
+# Called by launchd (com.tdf2026.daily). Safe to run manually.
 set -u
 export PATH="/usr/bin:/bin:/usr/local/bin:/opt/homebrew/bin:$HOME/.local/bin:$PATH"
 cd "$HOME/tour-de-france-2026" || exit 1

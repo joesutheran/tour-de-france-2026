@@ -2,9 +2,9 @@
 """
 Daily updater for the Tour de France 2026 home page.
 
-Works out, for the current New Zealand date, which stage's highlights Joe & Fiona
-should watch *tonight* (NZ evening) and which stage is racing *overnight* tonight,
-then writes `stage-today.js` next to index.html.
+Works out, for the current New Zealand date, which stage's highlights to watch
+*tonight* (NZ evening) and which stage is racing *overnight* tonight, then writes
+`stage-today.js` next to index.html.
 
 Timing model (confirmed): NZ is +10h ahead of France (CEST) during the Tour.
 A stage raced on European date D finishes in NZ's small hours of D+1, so its
@@ -13,10 +13,12 @@ highlights are watched on the NZ evening of D+1.
     tonight's highlights  = stage whose European date == (NZ today - 1 day)
     racing overnight      = stage whose European date ==  NZ today
 
-Pure and deterministic: no web calls, so there is zero chance of leaking a result
-into a spoiler-free page. Safe to run on a schedule (launchd) or from n8n.
+The stage selection is deterministic. When the race is on, an optional `claude -p`
+step then adds spoiler-safe context (a tactical preview, the standings entering
+tonight's stage, and the DNF list) — see the AI-enrichment section below. Pass
+`--no-ai` for the deterministic-only path.
 
-Python 3.9 compatible (Mac Mini). No `X | Y` unions.
+Python 3.9 compatible. No `X | Y` unions.
 """
 import argparse
 import json
