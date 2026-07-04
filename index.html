@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Tour 2026 — Joe &amp; Fiona</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Archivo:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f2ecdc;
+    --paper-2:#e9e1cc;
+    --ink:#17130c;
+    --ink-soft:#4a4234;
+    --line:#d6cbb0;
+    --jaune:#ffce00;
+    --jaune-deep:#e9a900;
+    --vert:#009a44;
+    --pois:#e4002b;      /* polka-dot red */
+    --blanc:#ffffff;
+    --blue:#1f6fb2;
+    --slate:#5b5142;
+    --shadow:0 2px 0 rgba(23,19,12,.9), 0 10px 30px -12px rgba(23,19,12,.45);
+    --display:'Bebas Neue','Oswald','Arial Narrow Bold',Impact,sans-serif;
+    --serif:'Fraunces',Georgia,'Times New Roman',serif;
+    --sans:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--serif);font-size:17px;line-height:1.5;
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(0,0,0,.028) 0 1px, transparent 1.4px),
+      radial-gradient(circle at 62% 72%, rgba(0,0,0,.022) 0 1px, transparent 1.4px);
+    background-size:7px 7px, 11px 11px;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+
+  /* jersey stripe motif */
+  .stripe{height:8px;display:flex}
+  .stripe i{flex:1}
+  .stripe .a{background:var(--jaune)} .stripe .b{background:var(--vert)}
+  .stripe .c{background:repeating-linear-gradient(45deg,var(--pois) 0 6px,#fff 6px 12px)}
+  .stripe .d{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+
+  /* ---- Masthead ---- */
+  header.masthead{border-bottom:3px solid var(--ink);background:linear-gradient(180deg,var(--paper) 0,var(--paper-2) 100%)}
+  header.masthead .wrap{padding-top:16px;padding-bottom:8px}
+  .kicker{font-family:var(--sans);letter-spacing:.34em;text-transform:uppercase;font-size:11px;font-weight:700;color:var(--ink-soft);margin-bottom:2px}
+  h1.logo{font-family:var(--display);font-weight:400;margin:0;line-height:.8;
+    font-size:clamp(58px,12.5vw,150px);letter-spacing:.5px}
+  h1.logo .yr{color:var(--jaune-deep);-webkit-text-stroke:2px var(--ink);text-stroke:2px var(--ink)}
+  .intro{padding-top:16px;padding-bottom:2px}
+  .facts{font-family:var(--sans);font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;color:var(--ink);margin:0 0 8px;line-height:1.4}
+  .facts b{color:var(--jaune-deep);-webkit-text-stroke:.4px var(--ink)}
+  .overview{font-family:var(--serif);font-style:italic;font-size:16px;line-height:1.5;color:var(--ink-soft);margin:0}
+
+  /* ---- Tonight hero ---- */
+  section.tonight{padding:30px 0 8px}
+  .tn-head{display:flex;align-items:baseline;gap:14px;margin-bottom:14px;flex-wrap:wrap}
+  .tn-head h2{font-family:var(--display);font-size:clamp(30px,5.5vw,54px);margin:0;letter-spacing:1px;line-height:.9}
+  .tn-live{font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    background:var(--ink);color:var(--jaune);padding:5px 10px;border-radius:2px}
+  .hero{
+    display:grid;grid-template-columns:1.55fr 1fr;gap:0;border:3px solid var(--ink);
+    box-shadow:var(--shadow);background:var(--jaune)}
+  .hero-main{padding:26px 30px;position:relative;min-height:230px}
+  .hero-main:before{content:"";position:absolute;inset:0;background:
+    radial-gradient(circle at 90% 8%, rgba(255,255,255,.35),transparent 40%);pointer-events:none}
+  .stg-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:700;
+    text-transform:uppercase;letter-spacing:.16em;font-size:12px;background:var(--ink);color:#fff;padding:6px 12px;border-radius:2px}
+  .hero-main h3{font-family:var(--display);font-weight:400;letter-spacing:.5px;line-height:.94;
+    font-size:clamp(30px,4.6vw,52px);margin:14px 0 6px}
+  .hero-route{font-family:var(--serif);font-style:italic;font-size:19px;color:#231b06;margin:0 0 12px}
+  .hero-watch{font-size:17px;color:#241c07;margin:0 0 14px;max-width:56ch}
+  .hero-riders{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+  .rider-chip{font-family:var(--sans);font-size:12.5px;font-weight:600;background:rgba(23,19,12,.09);
+    border:1.5px solid rgba(23,19,12,.5);border-radius:20px;padding:4px 11px}
+  .hero-side{background:var(--ink);color:var(--paper);padding:24px 24px;display:flex;flex-direction:column;gap:14px}
+  .hero-side .lbl{font-family:var(--sans);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:#b7ad93}
+  .stat{border-bottom:1px solid #322a1c;padding-bottom:12px}
+  .stat .big{font-family:var(--display);font-size:34px;line-height:.9;color:var(--jaune)}
+  .nz-note{font-style:italic;font-size:14.5px;color:#e7dcc0;line-height:1.45}
+  .summit-flag{font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#ff7a8f;font-weight:700;margin-top:4px}
+  .overnight{margin:14px 0 4px;font-family:var(--sans);font-size:13.5px;color:var(--ink-soft);
+    display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .overnight b{color:var(--ink);font-weight:700}
+  .moon{width:9px;height:9px;border-radius:50%;box-shadow:inset -3px -1px 0 0 var(--ink);display:inline-block}
+
+  /* ---- Standings ---- */
+  .standings-sec{margin-top:6px}
+  .spoiler-line{font-family:var(--sans);font-size:13px;color:var(--ink-soft);margin:-8px 0 16px;max-width:82ch;line-height:1.5}
+  .spoiler-line b{color:var(--ink)}
+  .standings{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}
+  .gc-board{border:2.5px solid var(--ink);background:var(--blanc);box-shadow:0 3px 0 rgba(23,19,12,.85);align-self:start}
+  .gc-board header{background:var(--jaune);border-bottom:2.5px solid var(--ink);font-family:var(--display);font-size:22px;letter-spacing:.5px;padding:8px 16px}
+  .gc-board.b-points header{background:var(--vert);color:#fff}
+  .gc-board.b-kom header{background:var(--blanc);color:var(--pois);
+    box-shadow:inset 0 -6px 0 -2px repeating-linear-gradient(45deg,var(--pois) 0 6px,#fff 6px 12px)}
+  .gc-board.b-youth header{background:var(--blanc);color:var(--ink)}
+  .gc-row{display:flex;align-items:center;gap:12px;padding:8px 16px;border-bottom:1px solid var(--line)}
+  .gc-row:last-child{border-bottom:none}
+  .gc-rank{font-family:var(--display);font-size:20px;width:26px;text-align:center;color:var(--slate)}
+  .gc-row.leader .gc-rank{color:var(--jaune-deep)}
+  .gc-row.leader{background:rgba(23,19,12,.05)}
+  .gc-rider{flex:1;font-weight:600;font-size:15.5px}
+  .gc-rider small{font-family:var(--sans);font-weight:600;color:var(--ink-soft);font-size:11px;margin-left:8px}
+  .gc-gap{font-family:var(--sans);font-size:13px;font-weight:700;color:var(--ink-soft);white-space:nowrap}
+  .jerseys{display:grid;grid-template-columns:1fr;gap:12px;align-content:start}
+  .jersey-card{display:flex;gap:12px;align-items:center;border:2px solid var(--ink);background:var(--blanc);
+    padding:10px 14px;width:100%;text-align:left;font-family:inherit;cursor:pointer;position:relative;
+    transition:transform .1s ease, box-shadow .1s ease}
+  .jersey-card:hover:not([disabled]){transform:translateX(3px);box-shadow:-4px 0 0 var(--jaune-deep)}
+  .jersey-card.active{box-shadow:-6px 0 0 var(--ink);transform:translateX(6px)}
+  .jersey-card.active .j-label{color:var(--ink)}
+  .jersey-card[disabled]{opacity:.45;cursor:default}
+  .jersey-card:after{content:"▸";position:absolute;right:12px;font-size:15px;color:var(--ink-soft);opacity:0;transition:opacity .1s}
+  .jersey-card:hover:not([disabled]):after,.jersey-card.active:after{opacity:1}
+  .jersey-card.active:after{content:"◂"}
+  .j-txt{flex:1}
+  .j-swatch{width:32px;height:42px;border:1.5px solid var(--ink);flex:0 0 auto;border-radius:3px}
+  .j-yellow .j-swatch{background:var(--jaune)} .j-green .j-swatch{background:var(--vert)}
+  .j-polka .j-swatch{background:repeating-linear-gradient(45deg,var(--pois) 0 5px,#fff 5px 10px)}
+  .j-white .j-swatch{background:#fff}
+  .j-label{font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+  .j-holder{font-family:var(--serif);font-weight:600;font-size:16px;line-height:1.1}
+  .j-team{font-family:var(--sans);font-size:11px;color:var(--ink-soft)}
+
+  /* ---- Abandoned / DNF riders on team cards ---- */
+  .roster li.out{opacity:.7}
+  .roster li.out .r-name{text-decoration:line-through;text-decoration-color:var(--pois);text-decoration-thickness:2px;opacity:.6}
+  .roster li.out .spec{opacity:.4}
+  .dnf-badge{font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:.06em;background:var(--pois);color:#fff;padding:2px 6px;border-radius:2px;white-space:nowrap}
+  .team.decimated .team-name{opacity:.85}
+  .tactical-chip{font-family:var(--sans);font-weight:700;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    background:var(--ink);color:var(--jaune);padding:4px 9px;border-radius:2px;margin-left:10px;vertical-align:middle}
+
+  /* ---- Section titles ---- */
+  .sec-title{display:flex;align-items:center;gap:16px;margin:52px 0 20px}
+  .sec-title h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,4.4vw,46px);margin:0;letter-spacing:1px;white-space:nowrap}
+  .sec-title .rule{flex:1;height:3px;background:var(--ink)}
+  .sec-title .n{font-family:var(--sans);font-weight:700;font-size:12px;color:var(--ink-soft);letter-spacing:.1em}
+
+  /* ---- Stage ribbon ---- */
+  .ribbon{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 18px;scroll-snap-type:x proximity}
+  .ribbon::-webkit-scrollbar{height:8px}
+  .ribbon::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
+  .stage-card{scroll-snap-align:start;flex:0 0 auto;width:150px;border:2px solid var(--ink);background:var(--blanc);
+    cursor:pointer;transition:transform .12s ease, box-shadow .12s ease;display:flex;flex-direction:column}
+  .stage-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px -10px rgba(0,0,0,.5)}
+  .stage-card.is-today{outline:3px solid var(--jaune-deep);outline-offset:2px}
+  .sc-top{padding:8px 10px;border-bottom:2px solid var(--ink);display:flex;justify-content:space-between;align-items:center}
+  .sc-num{font-family:var(--display);font-size:22px;line-height:1}
+  .sc-date{font-family:var(--sans);font-size:10.5px;color:var(--ink-soft);font-weight:600}
+  .sc-body{padding:9px 10px 10px}
+  .sc-route{font-family:var(--sans);font-size:12px;font-weight:600;line-height:1.25;min-height:30px}
+  .sc-stats{font-family:var(--sans);font-size:11px;font-weight:700;color:var(--ink-soft);display:flex;gap:10px;margin:8px 0}
+  .sc-tags{display:flex;flex-wrap:wrap;gap:4px}
+  .sc-type{font-family:var(--sans);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;
+    display:inline-block;padding:3px 7px;border-radius:2px;color:#fff}
+  .stage-card.is-rest{width:96px;opacity:.72}
+  .stage-card.is-rest .sc-route{min-height:0}
+  .t-flat{background:var(--vert)} .t-hilly{background:#c07b12} .t-mtn{background:var(--pois)}
+  .t-summit{background:#8d1c8d} .t-itt{background:var(--blue)} .t-ttt{background:#0f7f8c} .t-rest{background:#8a8272}
+
+  /* stage detail popover */
+  .stage-detail{border:3px solid var(--ink);background:var(--blanc);padding:20px 22px;margin:2px 0 8px;
+    box-shadow:var(--shadow);display:none}
+  .stage-detail.open{display:block;animation:pop .2s ease}
+  @keyframes pop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+  .stage-detail h4{font-family:var(--display);font-size:30px;margin:0 0 4px;letter-spacing:.5px}
+  .stage-detail .meta{font-family:var(--sans);font-size:12.5px;color:var(--ink-soft);margin-bottom:10px}
+
+  /* ---- Teams (horizontal slider) ---- */
+  .team-grid{display:flex;gap:20px;overflow-x:auto;padding:4px 2px 22px;align-items:flex-start;scroll-snap-type:x proximity}
+  .team-grid::-webkit-scrollbar{height:8px}
+  .team-grid::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
+  .team{flex:0 0 min(340px,86vw);scroll-snap-align:start;border:2.5px solid var(--ink);background:var(--blanc);
+    display:flex;flex-direction:column;box-shadow:0 3px 0 rgba(23,19,12,.85);overflow:hidden}
+  .team-kit{height:10px;display:flex}
+  .team-kit i{flex:1}
+  .team-hd{padding:16px 18px 12px;border-bottom:2px solid var(--ink);position:relative}
+  .team-name{font-family:var(--display);font-weight:400;font-size:27px;line-height:.92;letter-spacing:.5px;margin:0}
+  .team-sub{font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
+  .conf{position:absolute;top:14px;right:16px;font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.1em;
+    text-transform:uppercase;padding:3px 7px;border-radius:2px;border:1.5px solid var(--line);color:var(--ink-soft)}
+  .conf.high{color:var(--vert);border-color:var(--vert)} .conf.low{color:var(--pois);border-color:var(--pois)}
+  .team-roles{display:grid;grid-template-columns:1fr 1fr;border-bottom:2px solid var(--ink)}
+  .role{padding:11px 18px}
+  .role+.role{border-left:2px solid var(--ink)}
+  .role .lbl{font-family:var(--sans);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+  .role .val{font-family:var(--serif);font-weight:600;font-size:16.5px;line-height:1.15;margin-top:2px}
+  .role .why{font-size:12.5px;font-style:italic;color:var(--ink-soft);margin-top:3px;line-height:1.35}
+  .roster{list-style:none;margin:0;padding:6px 0}
+  .roster li{display:flex;align-items:center;gap:10px;padding:7px 18px}
+  .roster li:nth-child(odd){background:rgba(23,19,12,.028)}
+  .r-lead{position:relative}
+  .r-lead:before{content:"★";position:absolute;left:5px;color:var(--jaune-deep);font-size:12px}
+  .r-name{font-weight:600;font-size:15px;flex:1}
+  .r-name small{font-family:var(--sans);font-weight:600;color:var(--ink-soft);font-size:11px;margin-left:7px}
+  .r-note{font-size:12px;font-style:italic;color:var(--ink-soft)}
+  .spec{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.03em;padding:3px 9px;border-radius:20px;
+    white-space:nowrap;color:#fff}
+  .sp-gc{background:var(--jaune-deep);color:var(--ink)} .sp-climber{background:var(--pois)}
+  .sp-sprinter{background:var(--vert)} .sp-puncheur{background:#c07b12} .sp-rouleur{background:var(--slate)}
+  .sp-tt{background:var(--blue)} .sp-domestique{background:#8a8272} .sp-leadout{background:#0f7f8c}
+  .sp-allround{background:#8d1c8d} .sp-break{background:#b5461f} .sp-other{background:#6b6252}
+
+  footer{border-top:3px solid var(--ink);margin-top:60px;padding:30px 0 60px;font-family:var(--sans);font-size:12.5px;color:var(--ink-soft)}
+  footer b{color:var(--ink)}
+  .spoiler-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:700;font-size:12px;
+    background:var(--ink);color:var(--jaune);padding:7px 13px;border-radius:2px;letter-spacing:.05em}
+
+  @media(max-width:760px){
+    .hero{grid-template-columns:1fr}
+    .mast-grid{padding-top:18px}
+    .mast-meta,.route-line{text-align:left}
+  }
+  .fade{opacity:0;transform:translateY(14px);animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="stripe"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">Grand Départ · Barcelona → Paris</div>
+    <h1 class="logo">LE&nbsp;TOUR<span class="yr"> 26</span></h1>
+  </div>
+</header>
+<div class="wrap intro">
+  <p class="facts" id="factLine"></p>
+  <p class="overview" id="overviewLine"></p>
+</div>
+
+<main class="wrap">
+
+  <section class="tonight">
+    <div class="tn-head">
+      <h2>Tonight's Highlights</h2>
+      <span class="tn-live" id="tnLive">NZ EVENING</span>
+    </div>
+    <div id="heroSlot"></div>
+    <div class="overnight" id="overnightSlot"></div>
+  </section>
+
+  <section class="standings-sec" id="standingsSec" style="display:none">
+    <div class="sec-title"><h2>Standings</h2><div class="rule"></div><span class="n" id="standingsAsOf"></span></div>
+    <p class="spoiler-line">Frozen at the <b>start of tonight's stage</b> — where everyone stood rolling out this morning. Nothing here gives away the highlights you're about to watch.</p>
+    <div class="standings" id="standings"></div>
+  </section>
+
+  <div class="sec-title">
+    <h2>The Route</h2><div class="rule"></div><span class="n" id="stageCount"></span>
+  </div>
+  <div class="ribbon" id="ribbon"></div>
+  <div class="stage-detail" id="stageDetail"></div>
+
+  <div class="sec-title">
+    <h2>The Teams</h2><div class="rule"></div><span class="n" id="teamCount"></span>
+  </div>
+  <div class="team-grid" id="teams"></div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="spoiler-badge">🚫 Spoiler-free</span>
+    <p style="margin:14px 0 6px;max-width:76ch">A companion for watching the Tour on <b>highlights in New Zealand</b>. Everything is frozen at the start of the stage you're about to watch — the tactical read, the standings, who's still in the race — so nothing reveals a result before you've seen it.</p>
+    <p style="margin:6px 0;opacity:.8">🚴 Allez allez allez</p>
+  </div>
+</footer>
+
+<!-- Data: single source of truth -->
+<script src="data.js"></script>
+<!-- Optional daily override written by tools/update_stage.py (safe if missing) -->
+<script src="stage-today.js" onerror="window.STAGE_TODAY=window.STAGE_TODAY||null"></script>
+<script>
+(function(){
+  const TDF = window.TDF || {race:{},teams:[],stages:[]};
+  const stages = TDF.stages||[];
+  const teams = TDF.teams||[];
+
+  /* riders who have abandoned/DNF up to the last stage we've watched (spoiler-safe) */
+  const abandoned={};
+  ((window.STAGE_TODAY&&window.STAGE_TODAY.abandoned)||[]).forEach(function(a){
+    if(a&&a.name) abandoned[a.name.toLowerCase().trim()]=a;
+  });
+  function abandonInfo(name){return name?(abandoned[name.toLowerCase().trim()]||null):null;}
+
+  /* ---------- date helpers (NZ) ---------- */
+  function nzToday(){
+    return new Intl.DateTimeFormat('en-CA',{timeZone:'Pacific/Auckland',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  }
+  function addDays(iso,n){const p=iso.split('-').map(Number);const d=new Date(Date.UTC(p[0],p[1]-1,p[2]));d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);}
+  function byDate(iso){return stages.find(s=>s.date===iso)||null;}
+  function fmtDate(iso){if(!iso)return'';const p=iso.split('-').map(Number);const d=new Date(Date.UTC(p[0],p[1]-1,p[2]));
+    return new Intl.DateTimeFormat('en-GB',{weekday:'short',day:'numeric',month:'short',timeZone:'UTC'}).format(d);}
+
+  /* ---------- specialty styling ---------- */
+  function specClass(s){s=(s||'').toLowerCase();
+    if(s.includes('gc')||s.includes('general'))return'sp-gc';
+    if(s.includes('climb'))return'sp-climber';
+    if(s.includes('sprint')&&s.includes('lead'))return'sp-leadout';
+    if(s.includes('lead'))return'sp-leadout';
+    if(s.includes('sprint'))return'sp-sprinter';
+    if(s.includes('punch'))return'sp-puncheur';
+    if(s.includes('roul'))return'sp-rouleur';
+    if(s.includes('time')||s.includes('tt')||s.includes('trial'))return'sp-tt';
+    if(s.includes('domes'))return'sp-domestique';
+    if(s.includes('all'))return'sp-allround';
+    if(s.includes('break'))return'sp-break';
+    return'sp-other';}
+  function specShort(s){s=(s||'').trim();
+    const m={'general classification':'GC','time-trialist':'Time trial','lead-out man':'Lead-out','breakaway specialist':'Breakaway'};
+    return m[s.toLowerCase()]||s;}
+
+  /* ---------- stage type styling + profile icon ---------- */
+  function typeClass(t){t=(t||'').toLowerCase();
+    if(t.includes('summit'))return't-summit';
+    if(t.includes('mountain'))return't-mtn';
+    if(t.includes('hill'))return't-hilly';
+    if(t.includes('team time'))return't-ttt';
+    if(t.includes('time'))return't-itt';
+    if(t.includes('rest'))return't-rest';
+    return't-flat';}
+  function profileSVG(t){t=(t||'').toLowerCase();const c='currentColor';
+    if(t.includes('rest'))return'<svg width="40" height="26" viewBox="0 0 40 26"><text x="20" y="18" text-anchor="middle" font-size="15" fill="'+c+'">☕</text></svg>';
+    if(t.includes('time'))return'<svg width="46" height="26" viewBox="0 0 46 26" fill="none" stroke="'+c+'" stroke-width="2"><circle cx="12" cy="13" r="6"/><circle cx="34" cy="13" r="6"/><path d="M12 13 L20 7 L27 13"/></svg>';
+    if(t.includes('summit'))return'<svg width="52" height="26" viewBox="0 0 52 26" fill="none" stroke="'+c+'" stroke-width="2"><path d="M2 24 L20 22 L34 6 L50 4"/><circle cx="50" cy="4" r="2.4" fill="'+c+'"/></svg>';
+    if(t.includes('mountain'))return'<svg width="52" height="26" viewBox="0 0 52 26" fill="none" stroke="'+c+'" stroke-width="2"><path d="M2 24 L12 12 L20 20 L30 5 L40 18 L50 9"/></svg>';
+    if(t.includes('hill'))return'<svg width="52" height="26" viewBox="0 0 52 26" fill="none" stroke="'+c+'" stroke-width="2"><path d="M2 22 L14 14 L24 20 L36 11 L50 18"/></svg>';
+    return'<svg width="52" height="26" viewBox="0 0 52 26" fill="none" stroke="'+c+'" stroke-width="2"><path d="M2 20 L50 20"/><path d="M2 20 L14 18 L26 20 L50 19" opacity=".5"/></svg>';}
+
+  /* ---------- masthead ---------- */
+  const r=TDF.race||{};
+  document.getElementById('factLine').innerHTML=[
+    r.edition?('<b>'+r.edition+'</b>'):'',
+    r.dates,
+    r.total_distance_km?(Math.round(r.total_distance_km).toLocaleString()+' km'):'',
+    (r.num_stages||21)+' stages',
+    'Barcelona → Paris'
+  ].filter(Boolean).join(' &nbsp;·&nbsp; ');
+  document.getElementById('overviewLine').textContent=r.overview||'';
+
+  /* ---------- tonight hero ---------- */
+  function resolveTonight(){
+    const today=nzToday();
+    // prefer server override if it matches today
+    if(window.STAGE_TODAY && window.STAGE_TODAY.nz_date===today){
+      return {status:window.STAGE_TODAY.status,tonight:window.STAGE_TODAY.tonight,overnight:window.STAGE_TODAY.overnight,today:today};
+    }
+    function isRest(s){return s && String(s.type||'').toLowerCase().indexOf('rest')>-1;}
+    let tonight=byDate(addDays(today,-1));
+    let overnight=byDate(today);
+    const restTonight=isRest(tonight);
+    if(isRest(tonight)) tonight=null;
+    if(isRest(overnight)) overnight=null;
+    const dated=stages.filter(s=>s.date).map(s=>s.date).sort();
+    let status='racing';
+    if(dated.length){
+      if(addDays(today,-1)<dated[0] && !tonight) status='pre-race';
+      else if(addDays(today,-1)>dated[dated.length-1]) status='finished';
+      else if(restTonight) status='rest-day';
+      else if(!tonight && !overnight) status='rest-day';
+    }
+    return {status,tonight,overnight,today};
+  }
+
+  function heroHTML(st){
+    const s=st.tonight;
+    const side=function(inner){return '<div class="hero-side">'+inner+'</div>';};
+    if(!s){
+      let msg,sub;
+      if(st.status==='pre-race'){msg="Lumière, moteur…";sub="The 2026 Tour rolls out of Barcelona. First highlights land here tomorrow NZ evening. Pour a wine, it's nearly on.";}
+      else if(st.status==='finished'){msg="C'est fini";sub="The Tour is done for another year. Champagne on the Champs-Élysées. See you in 2027.";}
+      else {msg="Rest day";sub="No racing overnight — the peloton puts its feet up. Back to the mountains tomorrow.";}
+      return '<div class="hero"><div class="hero-main"><span class="stg-tag">'+(st.status==='pre-race'?'Grand Départ':st.status==='finished'?'Wrapped':'Repos')+'</span>'+
+        '<h3>'+msg+'</h3><p class="hero-watch">'+sub+'</p></div>'+
+        side('<div><div class="lbl">Status</div><div class="big" style="font-size:26px">'+(st.status==='pre-race'?'Coming up':st.status==='finished'?'Merci':'Repos')+'</div></div>')+'</div>';
+    }
+    const riders=(s.riders_to_watch||[]).map(function(n){return '<span class="rider-chip">'+n+'</span>';}).join('');
+    const dist=s.distance_km?('<div class="stat"><div class="lbl">Distance</div><div class="big">'+Math.round(s.distance_km)+'<span style="font-size:15px"> km</span></div></div>'):'';
+    const climb=s.climb_m?('<div class="stat"><div class="lbl">Climbing</div><div class="big">'+s.climb_m.toLocaleString()+'<span style="font-size:15px"> m</span></div></div>'):'';
+    const type=s.type?('<div class="stat"><div class="lbl">Parcours</div><div class="big" style="font-size:22px">'+s.type+'</div>'+
+      (s.summit_finish?'<div class="summit-flag">▲ Summit finish</div>':'')+'</div>'):'';
+    const nz=s.nz_note?('<div><div class="lbl">From NZ</div><div class="nz-note">'+s.nz_note+'</div></div>'):
+      '<div><div class="lbl">From NZ</div><div class="nz-note">Raced overnight while you slept — settle in for the highlights this evening.</div></div>';
+    return '<div class="hero"><div class="hero-main">'+
+      '<span class="stg-tag">Stage '+s.num+' · '+fmtDate(s.date)+'</span>'+(s.contextual?'<span class="tactical-chip">Tactical read</span>':'')+
+      '<h3>'+(s.headline||('Stage '+s.num))+'</h3>'+
+      (s.start?('<p class="hero-route">'+s.start+' → '+s.finish+'</p>'):'')+
+      '<p class="hero-watch">'+(s.watch_for||s.note||'')+'</p>'+
+      '<div class="hero-riders">'+riders+'</div></div>'+
+      side(dist+climb+type+nz)+'</div>';
+  }
+
+  const st=resolveTonight();
+  const heroWrap=document.getElementById('heroSlot');
+  heroWrap.innerHTML=heroHTML(st);
+  heroWrap.querySelector('.hero').classList.add('fade');
+
+  // overnight strip
+  const ov=document.getElementById('overnightSlot');
+  if(st.overnight){
+    const o=st.overnight;
+    const bits=[o.type,(o.summit_finish?'summit finish':null),(o.distance_km?Math.round(o.distance_km)+' km':null),
+      (o.climb_m?'▲ '+o.climb_m.toLocaleString()+' m climbing':null)].filter(Boolean).join(' · ');
+    ov.innerHTML='<span class="moon"></span> <b>Racing overnight tonight (NZ):</b> Stage '+o.num+' — '+
+      (o.start?(o.start+' → '+o.finish+' · '):'')+bits+
+      '. <span style="font-style:italic">You\'ll watch these highlights tomorrow evening.</span>';
+  } else if(st.status==='racing'){ ov.innerHTML='<span class="moon"></span> No stage racing overnight tonight — rest day in France.'; }
+  else { ov.style.display='none'; }
+
+  /* ---------- standings (spoiler-safe: frozen at start of tonight's stage) ---------- */
+  (function(){
+    const S=window.STAGE_TODAY&&window.STAGE_TODAY.standings;
+    const sec=document.getElementById('standingsSec');
+    // accept either an array (new: full table) or {leader,team} (old: leader only)
+    function asArray(x){
+      if(Array.isArray(x))return x;
+      if(x&&x.leader)return [{rank:1,rider:x.leader,team:x.team}];
+      return [];
+    }
+    if(!S||!asArray(S.gc).length){sec.style.display='none';return;}
+    sec.style.display='block';
+    document.getElementById('standingsAsOf').textContent=S.as_of_label||'';
+
+    const boards={
+      gc:   {key:'gc',   cls:'j-yellow',jersey:'Yellow · GC',        head:'General Classification', unit:'time', arr:asArray(S.gc)},
+      points:{key:'points',cls:'j-green', jersey:'Green · Points',     head:'Points — Green Jersey',  unit:'pts',  arr:asArray(S.points)},
+      kom:  {key:'kom',  cls:'j-polka', jersey:'Polka · Mountains',  head:'Mountains — Polka-dot',  unit:'pts',  arr:asArray(S.kom)},
+      youth:{key:'youth',cls:'j-white', jersey:'White · Young rider',head:'Young Rider — White',    unit:'time', arr:asArray(S.youth)}
+    };
+    const order=['gc','points','kom','youth'];
+    let current='gc';
+
+    function valFor(b,r,i){
+      if(b.unit==='pts')return (r.pts!=null?r.pts+' pts':'');
+      return (i===0?'race lead':(r.gap||''));
+    }
+    function renderBoard(){
+      const b=boards[current];
+      const rows=b.arr.slice(0,10).map(function(r,i){
+        return '<div class="gc-row'+(i===0?' leader':'')+'"><span class="gc-rank">'+(r.rank||i+1)+'</span>'+
+          '<span class="gc-rider">'+r.rider+(r.team?('<small>'+r.team+'</small>'):'')+'</span>'+
+          '<span class="gc-gap">'+valFor(b,r,i)+'</span></div>';
+      }).join('');
+      const board=document.getElementById('gcBoard');
+      board.className='gc-board b-'+current;
+      board.innerHTML='<header>'+b.head+'</header>'+
+        (rows||'<div class="gc-row"><span class="gc-rider" style="color:var(--ink-soft);font-style:italic">No standings in this competition yet.</span></div>');
+    }
+    function renderJerseys(){
+      document.getElementById('jerseys').innerHTML=order.map(function(k){
+        const b=boards[k];const leader=b.arr[0]||{};
+        const dis=b.arr.length?'':' disabled';
+        return '<button class="jersey-card '+b.cls+(k===current?' active':'')+dis+'" data-k="'+k+'"'+(b.arr.length?'':' disabled')+'>'+
+          '<div class="j-swatch"></div><div class="j-txt"><div class="j-label">'+b.jersey+'</div>'+
+          '<div class="j-holder">'+(leader.rider||'—')+'</div>'+(leader.team?('<div class="j-team">'+leader.team+'</div>'):'')+'</div></button>';
+      }).join('');
+      [].forEach.call(document.querySelectorAll('#jerseys .jersey-card'),function(btn){
+        btn.addEventListener('click',function(){
+          const k=btn.getAttribute('data-k');
+          if(!boards[k].arr.length)return;
+          current=k;renderBoard();renderJerseys();
+        });
+      });
+    }
+    document.getElementById('standings').innerHTML='<div class="gc-board" id="gcBoard"></div><div class="jerseys" id="jerseys"></div>';
+    renderBoard();renderJerseys();
+  })();
+
+  /* ---------- stage ribbon ---------- */
+  const today=st.today;
+  const tonightNum=st.tonight?st.tonight.num:null;
+  const ribbon=document.getElementById('ribbon');
+  document.getElementById('stageCount').textContent=stages.filter(function(s){return s.num!=null;}).length+' stages';
+  stages.forEach(function(s){
+    const el=document.createElement('div');
+    const isRestType=String(s.type||'').toLowerCase().indexOf('rest')>-1;
+    const stats=(!isRestType && (s.distance_km||s.climb_m))?('<div class="sc-stats">'+
+      (s.distance_km?('<span>'+Math.round(s.distance_km)+' km</span>'):'')+
+      (s.climb_m?('<span>▲ '+s.climb_m.toLocaleString()+' m</span>'):'')+'</div>'):'';
+    const tags=(s.type?('<span class="sc-type '+typeClass(s.type)+'">'+s.type+'</span>'):'')+
+      (s.summit_finish?('<span class="sc-type t-summit">Summit finish</span>'):'');
+    el.className='stage-card'+((tonightNum!=null && s.num===tonightNum)?' is-today':'')+(isRestType?' is-rest':'');
+    el.innerHTML='<div class="sc-top"><span class="sc-num">'+(isRestType?'·':s.num)+'</span><span class="sc-date">'+fmtDate(s.date)+'</span></div>'+
+      '<div class="sc-body"><div class="sc-route">'+(s.start?(s.start+' → '+s.finish):(s.note||'Rest day'))+'</div>'+
+      stats+'<div class="sc-tags">'+tags+'</div></div>';
+    el.addEventListener('click',function(){showStage(s);});
+    ribbon.appendChild(el);
+  });
+
+  const detail=document.getElementById('stageDetail');
+  function showStage(s){
+    const riders=(s.riders_to_watch||[]).map(function(n){return '<span class="rider-chip">'+n+'</span>';}).join('');
+    const meta=[fmtDate(s.date),(s.start?s.start+' → '+s.finish:null),(s.distance_km?Math.round(s.distance_km)+' km':null),
+      (s.climb_m?'▲ '+s.climb_m.toLocaleString()+' m':null),s.type,(s.summit_finish?'summit finish':null)].filter(Boolean).join(' &nbsp;·&nbsp; ');
+    detail.innerHTML='<h4>Stage '+s.num+' · '+(s.headline||'')+'</h4>'+
+      '<div class="meta">'+meta+'</div>'+
+      '<p style="margin:0 0 12px;max-width:72ch">'+(s.watch_for||s.note||'')+'</p>'+
+      (riders?('<div class="hero-riders" style="margin:0">'+riders+'</div>'):'');
+    detail.classList.add('open');
+    detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  // open tonight's stage by default
+  if(st.tonight) showStage(st.tonight);
+
+  /* ---------- teams ---------- */
+  const kitDefault=['#111','#ffce00'];
+  const grid=document.getElementById('teams');
+  document.getElementById('teamCount').textContent=teams.length+' teams';
+  teams.forEach(function(t,i){
+    const p=t.jersey_primary||kitDefault[0], a=t.jersey_secondary||kitDefault[1];
+    let outCount=0;
+    const riders=(t.riders||[]).map(function(rd){
+      const isLead=t.road_leader && rd.name && t.road_leader.indexOf(rd.name)>-1;
+      const ab=abandonInfo(rd.name);
+      if(ab) outCount++;
+      const tail=ab
+        ? '<span class="dnf-badge" title="'+((ab.reason||'Abandoned')+(ab.stage?(' — Stage '+ab.stage):''))+'">OUT'+(ab.stage?(' · S'+ab.stage):'')+'</span>'
+        : (rd.note?('<span class="r-note">'+rd.note+'</span>'):'');
+      return '<li data-spec="'+specClass(rd.specialty)+'" class="'+(isLead?'r-lead ':'')+(ab?'out':'')+'">'+
+        '<span class="r-name">'+(isLead?'&nbsp;&nbsp;':'')+rd.name+(rd.nationality?('<small>'+rd.nationality+'</small>'):'')+'</span>'+
+        tail+
+        '<span class="spec '+specClass(rd.specialty)+'">'+specShort(rd.specialty)+'</span></li>';
+    }).join('');
+    const el=document.createElement('div');
+    el.className='team fade';el.style.animationDelay=(Math.min(i,10)*0.04)+'s';
+    el.innerHTML=
+      '<div class="team-kit"><i style="background:'+p+'"></i><i style="background:'+a+'"></i><i style="background:'+p+'"></i></div>'+
+      '<div class="team-hd">'+
+        '<h3 class="team-name">'+t.team_name+'</h3>'+
+        '<div class="team-sub">'+[t.team_code,t.country,t.division].filter(Boolean).join(' · ')+'</div></div>'+
+      '<div class="team-roles">'+
+        '<div class="role"><div class="lbl">Team boss</div><div class="val">'+(t.boss||'—')+'</div></div>'+
+        '<div class="role"><div class="lbl">Road leader</div><div class="val">'+(t.road_leader||'—')+'</div>'+
+          (t.road_leader_reason?('<div class="why">'+t.road_leader_reason+'</div>'):'')+'</div>'+
+      '</div>'+
+      '<ul class="roster">'+riders+'</ul>';
+    grid.appendChild(el);
+  });
+
+})();
+</script>
+</body>
+</html>

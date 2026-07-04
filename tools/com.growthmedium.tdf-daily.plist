@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.growthmedium.tdf-daily</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/joesutheran/tour-de-france-2026/tools/update_stage.py</string>
+    </array>
+
+    <!-- Run once a day at 14:00 NZ (well before evening highlights viewing),
+         and once more shortly after login in case the Mac was asleep at 14:00. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>14</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/joesutheran/tour-de-france-2026/logs/tdf-daily.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/joesutheran/tour-de-france-2026/logs/tdf-daily.err</string>
+</dict>
+</plist>
