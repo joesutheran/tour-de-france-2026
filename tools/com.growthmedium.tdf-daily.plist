@@ -7,8 +7,8 @@
 
     <key>ProgramArguments</key>
     <array>
-        <string>/usr/bin/python3</string>
-        <string>/Users/joesutheran/tour-de-france-2026/tools/update_stage.py</string>
+        <string>/bin/bash</string>
+        <string>/Users/joesutheran/tour-de-france-2026/tools/publish.sh</string>
     </array>
 
     <!-- Run once a day at 14:00 NZ (well before evening highlights viewing),
