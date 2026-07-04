@@ -14,6 +14,7 @@ if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     git add stage-today.js data.js tdf_data.json 2>/dev/null
     if ! git diff --cached --quiet; then
       git commit -m "chore: daily TdF update — $(date '+%Y-%m-%d %H:%M %Z')" >/dev/null
+      git pull --rebase origin main >/dev/null 2>&1 || true
       if git push origin HEAD >/dev/null 2>&1; then
         echo "[publish] pushed — Vercel will redeploy"
       else
