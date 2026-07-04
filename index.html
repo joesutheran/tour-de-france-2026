@@ -287,6 +287,11 @@
   const stages = TDF.stages||[];
   const teams = TDF.teams||[];
 
+  /* HTML-escape every data-derived string before it touches innerHTML.
+     Safe for both text and attribute contexts (quotes escaped too). */
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+
   /* riders who have abandoned/DNF up to the last stage we've watched (spoiler-safe) */
   const abandoned={};
   ((window.STAGE_TODAY&&window.STAGE_TODAY.abandoned)||[]).forEach(function(a){
@@ -341,8 +346,8 @@
   /* ---------- masthead ---------- */
   const r=TDF.race||{};
   document.getElementById('factLine').innerHTML=[
-    r.edition?('<b>'+r.edition+'</b>'):'',
-    r.dates,
+    r.edition?('<b>'+esc(r.edition)+'</b>'):'',
+    esc(r.dates),
     r.total_distance_km?(Math.round(r.total_distance_km).toLocaleString()+' km'):'',
     (r.num_stages||21)+' stages',
     'Barcelona → Paris'
@@ -385,18 +390,18 @@
         '<h3>'+msg+'</h3><p class="hero-watch">'+sub+'</p></div>'+
         side('<div><div class="lbl">Status</div><div class="big" style="font-size:26px">'+(st.status==='pre-race'?'Coming up':st.status==='finished'?'Merci':'Repos')+'</div></div>')+'</div>';
     }
-    const riders=(s.riders_to_watch||[]).map(function(n){return '<span class="rider-chip">'+n+'</span>';}).join('');
+    const riders=(s.riders_to_watch||[]).map(function(n){return '<span class="rider-chip">'+esc(n)+'</span>';}).join('');
     const dist=s.distance_km?('<div class="stat"><div class="lbl">Distance</div><div class="big">'+Math.round(s.distance_km)+'<span style="font-size:15px"> km</span></div></div>'):'';
     const climb=s.climb_m?('<div class="stat"><div class="lbl">Climbing</div><div class="big">'+s.climb_m.toLocaleString()+'<span style="font-size:15px"> m</span></div></div>'):'';
-    const type=s.type?('<div class="stat"><div class="lbl">Parcours</div><div class="big" style="font-size:22px">'+s.type+'</div>'+
+    const type=s.type?('<div class="stat"><div class="lbl">Parcours</div><div class="big" style="font-size:22px">'+esc(s.type)+'</div>'+
       (s.summit_finish?'<div class="summit-flag">▲ Summit finish</div>':'')+'</div>'):'';
-    const nz=s.nz_note?('<div><div class="lbl">From NZ</div><div class="nz-note">'+s.nz_note+'</div></div>'):
+    const nz=s.nz_note?('<div><div class="lbl">From NZ</div><div class="nz-note">'+esc(s.nz_note)+'</div></div>'):
       '<div><div class="lbl">From NZ</div><div class="nz-note">Raced overnight while you slept — settle in for the highlights this evening.</div></div>';
     return '<div class="hero"><div class="hero-main">'+
       '<span class="stg-tag">Stage '+s.num+' · '+fmtDate(s.date)+'</span>'+(s.contextual?'<span class="tactical-chip">Tactical read</span>':'')+
-      '<h3>'+(s.headline||('Stage '+s.num))+'</h3>'+
-      (s.start?('<p class="hero-route">'+s.start+' → '+s.finish+'</p>'):'')+
-      '<p class="hero-watch">'+(s.watch_for||s.note||'')+'</p>'+
+      '<h3>'+esc(s.headline||('Stage '+s.num))+'</h3>'+
+      (s.start?('<p class="hero-route">'+esc(s.start)+' → '+esc(s.finish)+'</p>'):'')+
+      '<p class="hero-watch">'+esc(s.watch_for||s.note||'')+'</p>'+
       '<div class="hero-riders">'+riders+'</div></div>'+
       side(dist+climb+type+nz)+'</div>';
   }
@@ -410,10 +415,10 @@
   const ov=document.getElementById('overnightSlot');
   if(st.overnight){
     const o=st.overnight;
-    const bits=[o.type,(o.summit_finish?'summit finish':null),(o.distance_km?Math.round(o.distance_km)+' km':null),
+    const bits=[esc(o.type),(o.summit_finish?'summit finish':null),(o.distance_km?Math.round(o.distance_km)+' km':null),
       (o.climb_m?'▲ '+o.climb_m.toLocaleString()+' m climbing':null)].filter(Boolean).join(' · ');
     ov.innerHTML='<span class="moon"></span> <b>Racing overnight tonight (NZ):</b> Stage '+o.num+' — '+
-      (o.start?(o.start+' → '+o.finish+' · '):'')+bits+
+      (o.start?(esc(o.start)+' → '+esc(o.finish)+' · '):'')+bits+
       '. <span style="font-style:italic">You\'ll watch these highlights tomorrow evening.</span>';
   } else if(st.status==='racing'){ ov.innerHTML='<span class="moon"></span> No stage racing overnight tonight — rest day in France.'; }
   else { ov.style.display='none'; }
@@ -442,14 +447,14 @@
     let current='gc';
 
     function valFor(b,r,i){
-      if(b.unit==='pts')return (r.pts!=null?r.pts+' pts':'');
-      return (i===0?'race lead':(r.gap||''));
+      if(b.unit==='pts')return (r.pts!=null?esc(r.pts)+' pts':'');
+      return (i===0?'race lead':esc(r.gap||''));
     }
     function renderBoard(){
       const b=boards[current];
       const rows=b.arr.slice(0,10).map(function(r,i){
-        return '<div class="gc-row'+(i===0?' leader':'')+'"><span class="gc-rank">'+(r.rank||i+1)+'</span>'+
-          '<span class="gc-rider">'+r.rider+(r.team?('<small>'+r.team+'</small>'):'')+'</span>'+
+        return '<div class="gc-row'+(i===0?' leader':'')+'"><span class="gc-rank">'+esc(r.rank||i+1)+'</span>'+
+          '<span class="gc-rider">'+esc(r.rider)+(r.team?('<small>'+esc(r.team)+'</small>'):'')+'</span>'+
           '<span class="gc-gap">'+valFor(b,r,i)+'</span></div>';
       }).join('');
       const board=document.getElementById('gcBoard');
@@ -463,7 +468,7 @@
         const dis=b.arr.length?'':' disabled';
         return '<button class="jersey-card '+b.cls+(k===current?' active':'')+dis+'" data-k="'+k+'"'+(b.arr.length?'':' disabled')+'>'+
           '<div class="j-swatch"></div><div class="j-txt"><div class="j-label">'+b.jersey+'</div>'+
-          '<div class="j-holder">'+(leader.rider||'—')+'</div>'+(leader.team?('<div class="j-team">'+leader.team+'</div>'):'')+'</div></button>';
+          '<div class="j-holder">'+esc(leader.rider||'—')+'</div>'+(leader.team?('<div class="j-team">'+esc(leader.team)+'</div>'):'')+'</div></button>';
       }).join('');
       [].forEach.call(document.querySelectorAll('#jerseys .jersey-card'),function(btn){
         btn.addEventListener('click',function(){
@@ -488,11 +493,11 @@
     const stats=(!isRestType && (s.distance_km||s.climb_m))?('<div class="sc-stats">'+
       (s.distance_km?('<span>'+Math.round(s.distance_km)+' km</span>'):'')+
       (s.climb_m?('<span>▲ '+s.climb_m.toLocaleString()+' m</span>'):'')+'</div>'):'';
-    const tags=(s.type?('<span class="sc-type '+typeClass(s.type)+'">'+s.type+'</span>'):'')+
+    const tags=(s.type?('<span class="sc-type '+typeClass(s.type)+'">'+esc(s.type)+'</span>'):'')+
       (s.summit_finish?('<span class="sc-type t-summit">Summit finish</span>'):'');
     el.className='stage-card'+((tonightNum!=null && s.num===tonightNum)?' is-today':'')+(isRestType?' is-rest':'');
     el.innerHTML='<div class="sc-top"><span class="sc-num">'+(isRestType?'·':s.num)+'</span><span class="sc-date">'+fmtDate(s.date)+'</span></div>'+
-      '<div class="sc-body"><div class="sc-route">'+(s.start?(s.start+' → '+s.finish):(s.note||'Rest day'))+'</div>'+
+      '<div class="sc-body"><div class="sc-route">'+(s.start?(esc(s.start)+' → '+esc(s.finish)):esc(s.note||'Rest day'))+'</div>'+
       stats+'<div class="sc-tags">'+tags+'</div></div>';
     el.addEventListener('click',function(){showStage(s);});
     ribbon.appendChild(el);
@@ -500,12 +505,12 @@
 
   const detail=document.getElementById('stageDetail');
   function showStage(s){
-    const riders=(s.riders_to_watch||[]).map(function(n){return '<span class="rider-chip">'+n+'</span>';}).join('');
-    const meta=[fmtDate(s.date),(s.start?s.start+' → '+s.finish:null),(s.distance_km?Math.round(s.distance_km)+' km':null),
-      (s.climb_m?'▲ '+s.climb_m.toLocaleString()+' m':null),s.type,(s.summit_finish?'summit finish':null)].filter(Boolean).join(' &nbsp;·&nbsp; ');
-    detail.innerHTML='<h4>Stage '+s.num+' · '+(s.headline||'')+'</h4>'+
+    const riders=(s.riders_to_watch||[]).map(function(n){return '<span class="rider-chip">'+esc(n)+'</span>';}).join('');
+    const meta=[fmtDate(s.date),(s.start?esc(s.start)+' → '+esc(s.finish):null),(s.distance_km?Math.round(s.distance_km)+' km':null),
+      (s.climb_m?'▲ '+s.climb_m.toLocaleString()+' m':null),esc(s.type),(s.summit_finish?'summit finish':null)].filter(Boolean).join(' &nbsp;·&nbsp; ');
+    detail.innerHTML='<h4>Stage '+s.num+' · '+esc(s.headline||'')+'</h4>'+
       '<div class="meta">'+meta+'</div>'+
-      '<p style="margin:0 0 12px;max-width:72ch">'+(s.watch_for||s.note||'')+'</p>'+
+      '<p style="margin:0 0 12px;max-width:72ch">'+esc(s.watch_for||s.note||'')+'</p>'+
       (riders?('<div class="hero-riders" style="margin:0">'+riders+'</div>'):'');
     detail.classList.add('open');
     detail.scrollIntoView({behavior:'smooth',block:'nearest'});
@@ -525,24 +530,24 @@
       const ab=abandonInfo(rd.name);
       if(ab) outCount++;
       const tail=ab
-        ? '<span class="dnf-badge" title="'+((ab.reason||'Abandoned')+(ab.stage?(' — Stage '+ab.stage):''))+'">OUT'+(ab.stage?(' · S'+ab.stage):'')+'</span>'
-        : (rd.note?('<span class="r-note">'+rd.note+'</span>'):'');
+        ? '<span class="dnf-badge" title="'+esc((ab.reason||'Abandoned')+(ab.stage?(' — Stage '+ab.stage):''))+'">OUT'+(ab.stage?(' · S'+esc(ab.stage)):'')+'</span>'
+        : (rd.note?('<span class="r-note">'+esc(rd.note)+'</span>'):'');
       return '<li data-spec="'+specClass(rd.specialty)+'" class="'+(isLead?'r-lead ':'')+(ab?'out':'')+'">'+
-        '<span class="r-name">'+(isLead?'&nbsp;&nbsp;':'')+rd.name+(rd.nationality?('<small>'+rd.nationality+'</small>'):'')+'</span>'+
+        '<span class="r-name">'+(isLead?'&nbsp;&nbsp;':'')+esc(rd.name)+(rd.nationality?('<small>'+esc(rd.nationality)+'</small>'):'')+'</span>'+
         tail+
-        '<span class="spec '+specClass(rd.specialty)+'">'+specShort(rd.specialty)+'</span></li>';
+        '<span class="spec '+specClass(rd.specialty)+'">'+esc(specShort(rd.specialty))+'</span></li>';
     }).join('');
     const el=document.createElement('div');
     el.className='team fade';el.style.animationDelay=(Math.min(i,10)*0.04)+'s';
     el.innerHTML=
-      '<div class="team-kit"><i style="background:'+p+'"></i><i style="background:'+a+'"></i><i style="background:'+p+'"></i></div>'+
+      '<div class="team-kit"><i style="background:'+esc(p)+'"></i><i style="background:'+esc(a)+'"></i><i style="background:'+esc(p)+'"></i></div>'+
       '<div class="team-hd">'+
-        '<h3 class="team-name">'+t.team_name+'</h3>'+
-        '<div class="team-sub">'+[t.team_code,t.country,t.division].filter(Boolean).join(' · ')+'</div></div>'+
+        '<h3 class="team-name">'+esc(t.team_name)+'</h3>'+
+        '<div class="team-sub">'+[t.team_code,t.country,t.division].filter(Boolean).map(esc).join(' · ')+'</div></div>'+
       '<div class="team-roles">'+
-        '<div class="role"><div class="lbl">Team boss</div><div class="val">'+(t.boss||'—')+'</div></div>'+
-        '<div class="role"><div class="lbl">Road leader</div><div class="val">'+(t.road_leader||'—')+'</div>'+
-          (t.road_leader_reason?('<div class="why">'+t.road_leader_reason+'</div>'):'')+'</div>'+
+        '<div class="role"><div class="lbl">Team boss</div><div class="val">'+esc(t.boss||'—')+'</div></div>'+
+        '<div class="role"><div class="lbl">Road leader</div><div class="val">'+esc(t.road_leader||'—')+'</div>'+
+          (t.road_leader_reason?('<div class="why">'+esc(t.road_leader_reason)+'</div>'):'')+'</div>'+
       '</div>'+
       '<ul class="roster">'+riders+'</ul>';
     grid.appendChild(el);
