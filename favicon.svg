@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="6" fill="#17130c"/>
+  <!-- maillot jaune -->
+  <path d="M8 7 L13 6 L16 9 L19 6 L24 7 L29 11 L25 15.5 L23 13.5 L23 27 Q16 28.4 9 27 L9 13.5 L7 15.5 L3 11 Z"
+        fill="#ffce00" stroke="#17130c" stroke-width="1.1" stroke-linejoin="round"/>
+  <!-- number flash -->
+  <text x="16" y="23" text-anchor="middle" font-family="Arial Narrow, Helvetica, sans-serif"
+        font-weight="700" font-size="9" fill="#17130c">26</text>
+</svg>
