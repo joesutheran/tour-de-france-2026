@@ -5,6 +5,9 @@ set -u
 export PATH="/usr/bin:/bin:/usr/local/bin:/opt/homebrew/bin:$HOME/.local/bin:$PATH"
 cd "$HOME/tour-de-france-2026" || exit 1
 
+# Research API keys (Exa / Firecrawl) for the standings fetch — gitignored.
+[ -f tools/.research.env ] && set -a && . tools/.research.env && set +a
+
 # 1) regenerate stage-today.js (deterministic pick + spoiler-safe AI enrichment)
 /usr/bin/python3 tools/update_stage.py "$@"
 

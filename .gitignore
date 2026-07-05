@@ -3,4 +3,4 @@ logs/
 *.err
 .DS_Store
 .vercel
-tools/.webhook.env
+tools/.*.env

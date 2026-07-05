@@ -27,8 +27,10 @@ import re
 import shutil
 import subprocess
 import sys
+import urllib.error
+import urllib.request
 from datetime import datetime, timedelta
-from typing import Optional, Dict, Any, List
+from typing import Optional, Dict, Any, List, Tuple
 from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -158,6 +160,90 @@ def find_claude() -> Optional[str]:
     return None
 
 
+# ----------------------------------------------------------------------------
+# Research: fetch the source text via Exa (fast semantic search + inline content),
+# with a Firecrawl scrape fallback. The LLM then only EXTRACTS from this text — no
+# slow in-model web-search loop (which timed out even on a fast model).
+# Keys come from the environment (publish.sh sources tools/.research.env).
+# ----------------------------------------------------------------------------
+
+EXA_URL = "https://api.exa.ai/search"
+FIRECRAWL_SCRAPE_URL = "https://api.firecrawl.dev/v1/scrape"
+
+
+def _post_json(url: str, headers: Dict[str, str], body: Dict[str, Any], timeout: int) -> Optional[Dict[str, Any]]:
+    data = json.dumps(body).encode("utf-8")
+    hdrs = dict(headers); hdrs.setdefault("Content-Type", "application/json")
+    req = urllib.request.Request(url, data=data, headers=hdrs, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except (urllib.error.URLError, urllib.error.HTTPError, ValueError, OSError) as e:
+        print("[research] POST %s failed: %s" % (url, e), file=sys.stderr)
+        return None
+
+
+def exa_search(query: str, key: str, n: int = 4, max_chars: int = 8000,
+               timeout: int = 30) -> Tuple[List[str], List[str]]:
+    d = _post_json(EXA_URL, {"x-api-key": key},
+                   {"query": query, "numResults": n,
+                    "contents": {"text": {"maxCharacters": max_chars}}}, timeout)
+    if not d:
+        return [], []
+    texts, srcs = [], []
+    for r in d.get("results", []) or []:
+        t = (r.get("text") or "").strip()
+        if t:
+            texts.append("### %s (%s)\n%s" % (r.get("title", ""), r.get("url", ""), t))
+        if r.get("url"):
+            srcs.append(r["url"])
+    return texts, srcs
+
+
+def firecrawl_scrape(url: str, key: str, timeout: int = 45) -> str:
+    d = _post_json(FIRECRAWL_SCRAPE_URL, {"Authorization": "Bearer %s" % key},
+                   {"url": url, "formats": ["markdown"], "onlyMainContent": True,
+                    "waitFor": 2500}, timeout)
+    return ((d or {}).get("data") or {}).get("markdown", "") or ""
+
+
+def gather_research(watched_num: Optional[int], timeout: int = 30) -> Optional[Dict[str, Any]]:
+    """Collect spoiler-relevant source text for the standings/DNFs after `watched_num`.
+
+    Returns {"text","sources"}; {"text":"","sources":[]} for pre-race (nothing to
+    fetch); or None if no EXA_API_KEY is configured (research disabled).
+    """
+    exa = os.environ.get("EXA_API_KEY")
+    if not exa:
+        print("[research] EXA_API_KEY not set — skipping research", file=sys.stderr)
+        return None
+    if not watched_num:
+        return {"text": "", "sources": []}  # pre-race: preview only, no standings
+
+    q_class = ("Tour de France 2026 classifications after stage %d: general classification, "
+               "points/green, mountains/KOM, young rider/white — riders, teams, time gaps, points"
+               % watched_num)
+    q_dnf = ("Tour de France 2026 riders abandoned, withdrawn, did not start or eliminated "
+             "through stage %d" % watched_num)
+    t_class, s_class = exa_search(q_class, exa, n=4, max_chars=8000, timeout=timeout)
+    t_dnf, s_dnf = exa_search(q_dnf, exa, n=3, max_chars=3000, timeout=timeout)
+    texts = t_class + t_dnf
+    sources = list(dict.fromkeys(s_class + s_dnf))
+
+    # Firecrawl fallback: if Exa's inline text was thin, scrape the top source in full.
+    joined = "\n\n".join(texts)
+    fc = os.environ.get("FIRECRAWL_API_KEY")
+    if len(joined) < 3000 and fc and sources:
+        md = firecrawl_scrape(sources[0], fc, timeout=timeout + 15)
+        if md:
+            texts.append("### scraped %s\n%s" % (sources[0], md[:8000]))
+            joined = "\n\n".join(texts)
+
+    if not joined.strip():
+        return None
+    return {"text": joined[:40000], "sources": sources}
+
+
 def roster_block(data: Dict[str, Any]) -> str:
     lines = []  # type: List[str]
     for t in data.get("teams", []):
@@ -170,7 +256,9 @@ def roster_block(data: Dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def build_prompt(data: Dict[str, Any], payload: Dict[str, Any]) -> str:
+def build_extract_prompt(data: Dict[str, Any], payload: Dict[str, Any], context: str) -> str:
+    """Prompt to EXTRACT standings/DNFs from pre-fetched source text and write a
+    spoiler-free preview of the next stage. No in-model web search — fast."""
     W = payload.get("watched") or {}      # stage just watched — standings reflect its END
     P = payload.get("preview") or {}      # next stage to watch — the spoiler-free preview
     Wn = W.get("num")
@@ -181,42 +269,39 @@ def build_prompt(data: Dict[str, Any], payload: Dict[str, Any]) -> str:
         ", SUMMIT FINISH" if P.get("summit_finish") else "")
 
     if Wn:
-        watched_line = ("They have just watched STAGE %d tonight, and have seen every stage up to and "
-                        "including it." % Wn)
-        boundary = ("You may ONLY use information current as of the END of stage %d. NEVER look up, infer "
-                    "or reveal the result of stage %d (the preview stage) or anything after it. Do NOT "
-                    "search for 'stage %d result/winner' — if a result for stage %d or later appears, "
-                    "IGNORE it completely." % (Wn, Pn, Pn, Pn))
+        watched_line = ("They have just watched STAGE %d and have seen every stage up to and including it."
+                        % Wn)
+        boundary = ("Use ONLY facts current as of the END of stage %d. NEVER include, infer or hint at the "
+                    "result of stage %d (the preview stage) or anything later — even if the text below "
+                    "mentions it, IGNORE that." % (Wn, Pn))
         standings_ask = (
-            "Fetch these four classifications AS THEY STAND AFTER STAGE %d (the stage the couple just "
-            "watched), EACH as a top-10 table: (1) General Classification with time gaps; (2) Points / "
-            "Green jersey with points totals; (3) Mountains / Polka-dot (KOM) with points totals; "
-            "(4) Young rider / White jersey with time gaps." % Wn)
-        abandon_ask = ("Also compile the riders who have ABANDONED / been eliminated / did-not-start "
-                       "THROUGH stage %d (web search: 'Tour de France 2026 abandons / non-starters')." % Wn)
+            "From the SOURCE TEXT, extract these four classifications AS THEY STAND AFTER STAGE %d, EACH a "
+            "top-10 table: (1) General Classification with time gaps; (2) Points / Green with points totals; "
+            "(3) Mountains / Polka-dot (KOM) with points totals; (4) Young rider / White with time gaps. "
+            "If a classification is not present in the text, return an empty array for it rather than "
+            "guessing." % Wn)
+        abandon_ask = ("From the SOURCE TEXT, list riders who ABANDONED / were eliminated / did-not-start "
+                       "THROUGH stage %d only." % Wn)
     else:
         watched_line = "The race has not started yet — no stage has been watched."
-        boundary = ("The race has NOT started. NEVER look up, infer or reveal the result of stage %d "
-                    "(the preview stage) or anything after it." % Pn)
-        standings_ask = ("There are no standings yet — the race has not started. Return EMPTY arrays for "
-                         "all four classifications.")
+        boundary = ("The race has NOT started. NEVER include, infer or hint at the result of stage %d "
+                    "(the preview stage) or anything later." % Pn)
+        standings_ask = "There are no standings yet — return EMPTY arrays for all four classifications."
         abandon_ask = "There are no abandonments yet — return an empty array."
 
     return (
-        "You are the spoiler-safe race desk for a couple in New Zealand who watch Tour de France "
-        "highlights at about 7pm their time. %s You are preparing what they see AFTER tonight's viewing: "
-        "the up-to-date classifications, and a preview of the NEXT stage they'll watch.\n\n"
-        "ABSOLUTE SPOILER RULE — break this and you ruin their night:\n  * %s\n\n"
-        "NEXT STAGE TO PREVIEW — STAGE %s: %s -> %s. Profile: %s.\n"
-        "Race context: %s.\n\n"
-        "%s\n\n"
-        "%s Use rider names spelled EXACTLY as they appear in this startlist so they can be matched:\n%s\n\n"
-        "Now write a rich, SPOILER-FREE 'what to watch for' preview of STAGE %s (4-6 sentences). Make it "
-        "tactically specific and rider-aware, grounded in the classifications above and each rider's real "
-        "situation — e.g. a GC contender down on time who must attack; a renowned descender who will chance "
-        "a move on a technical descent; a sprinter's team needing to control a flat day; a summit finish "
-        "suiting the pure climbers. Name specific riders and WHY the profile plus their position makes them "
-        "act. Do NOT state or hint at any result.\n\n"
+        "You are the spoiler-safe race desk for a couple in New Zealand who follow the Tour de France on "
+        "highlights. %s You are preparing what they see AFTER watching: the up-to-date classifications, and "
+        "a preview of the NEXT stage they'll watch.\n\n"
+        "ABSOLUTE SPOILER RULE — break this and you ruin their day:\n  * %s\n\n"
+        "SOURCE TEXT (web content already retrieved for you — extract facts only from here):\n"
+        "<<<\n%s\n>>>\n\n"
+        "%s\n%s Match every rider to the EXACT spelling in this startlist:\n%s\n\n"
+        "Then write a rich, SPOILER-FREE 'what to watch for' preview of STAGE %s (%s -> %s; %s), 4-6 "
+        "sentences, grounded in the classifications above and each rider's real situation — e.g. a GC "
+        "contender down on time who must attack; a renowned descender chancing a technical descent; a "
+        "sprinter's team controlling a flat day; a summit finish suiting the pure climbers. Name specific "
+        "riders and WHY. Do NOT state or hint at any result. Race context: %s.\n\n"
         "Return ONLY a single JSON object, no prose, of exactly this shape:\n"
         "{\"preview_watch_for\":\"...\",\"preview_riders_to_watch\":[\"Name\",...],"
         "\"standings\":{"
@@ -226,8 +311,9 @@ def build_prompt(data: Dict[str, Any], payload: Dict[str, Any]) -> str:
         "\"youth\":[{\"rank\":1,\"rider\":\"...\",\"team\":\"...\",\"gap\":\"race lead\"}]},"
         "\"abandoned\":[{\"name\":\"Exact Name\",\"stage\":<int>,\"reason\":\"...\"}],"
         "\"confidence\":\"high|medium|low\",\"sources\":[\"url\"]}"
-        % (watched_line, boundary, Pn, P.get("start", "?"), P.get("finish", "?"), profile,
-           race.get("overview", ""), standings_ask, abandon_ask, roster_block(data), Pn))
+        % (watched_line, boundary, (context or "(no source text)"), standings_ask, abandon_ask,
+           roster_block(data), Pn, P.get("start", "?"), P.get("finish", "?"), profile,
+           race.get("overview", "")))
 
 
 def extract_json(text: str) -> Optional[Dict[str, Any]]:
@@ -261,19 +347,29 @@ def run_ai(data: Dict[str, Any], payload: Dict[str, Any], timeout: int,
     if not claude:
         print("[update_stage] claude binary not found — skipping AI enrichment", file=sys.stderr)
         return None
-    prompt = build_prompt(data, payload)
-    cmd = [claude, "-p", prompt, "--output-format", "json", "--allowedTools", "WebSearch"]
-    # The research is web-search + extraction, not deep reasoning — a fast model does
-    # it in a fraction of the time. The default Opus-class model was timing out.
+
+    # 1) Fetch source text fast via Exa/Firecrawl (outside the model).
+    w = payload.get("watched") or {}
+    research = gather_research(w.get("num"))
+    if research is None:
+        print("[update_stage] research unavailable — skipping AI enrichment", file=sys.stderr)
+        return None
+    print("[research] gathered %d chars from %d sources" % (
+        len(research.get("text", "")), len(research.get("sources", []))))
+
+    # 2) Extract structured standings + write the preview — pure extraction, no
+    #    in-model web search, so a fast model finishes in seconds.
+    prompt = build_extract_prompt(data, payload, research.get("text", ""))
+    cmd = [claude, "-p", prompt, "--output-format", "json"]
     if model:
         cmd += ["--model", model]
     try:
         res = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, cwd=ROOT)
     except subprocess.TimeoutExpired:
-        print("[update_stage] AI enrichment timed out after %ss — using base payload" % timeout, file=sys.stderr)
+        print("[update_stage] AI extraction timed out after %ss — using base payload" % timeout, file=sys.stderr)
         return None
     except Exception as e:  # noqa
-        print("[update_stage] AI enrichment error: %s" % e, file=sys.stderr)
+        print("[update_stage] AI extraction error: %s" % e, file=sys.stderr)
         return None
     out = res.stdout or ""
     wrapper = None
@@ -286,6 +382,9 @@ def run_ai(data: Dict[str, Any], payload: Dict[str, Any], timeout: int,
     if not ai:
         print("[update_stage] could not parse AI JSON — using base payload", file=sys.stderr)
         return None
+    # Prefer real source URLs from the research step over anything the model invents.
+    if research.get("sources"):
+        ai["sources"] = research["sources"]
     return ai
 
 
@@ -319,11 +418,10 @@ def merge_ai(payload: Dict[str, Any], ai: Dict[str, Any]) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-ai", action="store_true", help="skip claude enrichment (deterministic only)")
-    # Fetching four real classifications + DNFs via live web search takes several
-    # minutes; 300s times out once actual standings exist (not just pre-race empties).
-    ap.add_argument("--timeout", type=int, default=900, help="claude -p timeout seconds")
-    # Fast model for the research call — Opus-class defaults were timing out.
-    ap.add_argument("--model", default="sonnet", help="model for claude -p enrichment ('' = CLI default)")
+    # Exa/Firecrawl fetch the text; the model only extracts, so this is quick.
+    ap.add_argument("--timeout", type=int, default=300, help="claude -p extraction timeout seconds")
+    # Extraction needs no deep reasoning — a fast model keeps it to seconds.
+    ap.add_argument("--model", default="sonnet", help="model for claude -p extraction ('' = CLI default)")
     a = ap.parse_args()
 
     now_nz = datetime.now(NZ)

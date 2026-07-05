@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-06T10:03:05.396808+12:00",
+  "generated_at": "2026-07-06T10:22:47.068882+12:00",
   "nz_date": "2026-07-06",
   "as_of_date": "2026-07-06",
   "boundary_hour": 10,
@@ -20,18 +20,267 @@ window.STAGE_TODAY = {
     "type": "Mountain",
     "note": "Crosses the Pyrenees with 3,850m of climbing and an uphill ski-station finish at Les Angles - first real GC test.",
     "headline": "First summit showdown in the Pyrenees",
-    "watch_for": "The race crosses the Pyrenees with 3,850m of climbing and finishes uphill at the Les Angles ski station, the first genuine GC test of the whole Tour. This is where the overall contenders finally show their hand and the pretenders get exposed on the final drag to the line. Watch how deep each team can protect its leader and who dares the first real dig.",
+    "watch_for": "Stage 3 is the first real mountain verdict of the 2026 Tour — 195.9 km from Granollers into the Pyrenees with a summit finish at Les Angles and nearly 4,000 metres of climbing. Jonas Vingegaard defends yellow by just six seconds over Tadej Pogačar, making this the first day where bonus seconds and breakaway arithmetic give way to pure climbing; Pogačar, who arrived as co-favourite and has already trimmed the gap through bonus seconds, will be looking for the first opportunity to overturn the TTT deficit on a sustained mountain finale. Isaac del Toro arrives wearing the white jersey and brimming with confidence after winning Stage 2 atop Montjuic — the question is whether UAE let him ride for personal glory again or keep his climbing legs entirely in Pogačar's service on the final ascent. Remco Evenepoel (15 seconds down in third) and Juan Ayuso (19 seconds, fifth overall) must stay locked onto the lead group or risk the race hardening against them before the Tour even leaves Spain, while further back Paul Seixas (42 seconds), Romain Grégoire (44 seconds), and Tom Pidcock (1:00) will each be calculating whether this summit offers a rare chance to claw time back on the favourites. Alex Molenaar, the polka-dot jersey holder after animating the Stage 2 breakaway, will be eyeing every categorised climb en route as an opportunity to extend his KOM lead before the summit strip his move bare.",
     "riders_to_watch": [
-      "Tadej Pogacar",
       "Jonas Vingegaard",
+      "Tadej Pogačar",
+      "Isaac del Toro",
       "Remco Evenepoel",
       "Juan Ayuso",
-      "Paul Seixas",
-      "Egan Bernal"
+      "Tom Pidcock",
+      "Alex Molenaar",
+      "Paul Seixas"
     ],
     "nz_note": "The marquee stage of week one, worth watching the full final climb rather than just the highlights reel.",
     "climb_m": 3940,
-    "summit_finish": true
+    "summit_finish": true,
+    "contextual": true
   },
-  "abandoned": []
+  "abandoned": [
+    {
+      "name": "Filippo Ganna",
+      "stage": 1,
+      "reason": "withdrawal"
+    }
+  ],
+  "standings": {
+    "gc": [
+      {
+        "rank": 1,
+        "rider": "Jonas Vingegaard",
+        "team": "Team Visma | Lease a Bike",
+        "gap": "race lead"
+      },
+      {
+        "rank": 2,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "gap": "+0:06"
+      },
+      {
+        "rank": 3,
+        "rider": "Remco Evenepoel",
+        "team": "Red Bull – BORA – hansgrohe",
+        "gap": "+0:15"
+      },
+      {
+        "rank": 4,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "gap": "+0:16"
+      },
+      {
+        "rank": 5,
+        "rider": "Juan Ayuso",
+        "team": "Lidl - Trek",
+        "gap": "+0:19"
+      },
+      {
+        "rank": 6,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "gap": "+0:42"
+      },
+      {
+        "rank": 7,
+        "rider": "Romain Grégoire",
+        "team": "Groupama-FDJ United",
+        "gap": "+0:44"
+      },
+      {
+        "rank": 8,
+        "rider": "Lenny Martinez",
+        "team": "Bahrain – Victorious",
+        "gap": "+0:45"
+      },
+      {
+        "rank": 9,
+        "rider": "Florian Lipowitz",
+        "team": "Red Bull – BORA – hansgrohe",
+        "gap": "+0:53"
+      },
+      {
+        "rank": 10,
+        "rider": "Tom Pidcock",
+        "team": "Pinarello Q36.5 Pro Cycling Team",
+        "gap": "+1:00"
+      }
+    ],
+    "points": [
+      {
+        "rank": 1,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "pts": 30
+      },
+      {
+        "rank": 2,
+        "rider": "Alex Molenaar",
+        "team": "Caja Rural – Seguros RGA",
+        "pts": 25
+      },
+      {
+        "rank": 3,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "pts": 25
+      },
+      {
+        "rank": 4,
+        "rider": "Remco Evenepoel",
+        "team": "Red Bull – BORA – hansgrohe",
+        "pts": 22
+      },
+      {
+        "rank": 5,
+        "rider": "Felix Engelhardt",
+        "team": "Team Jayco AlUla",
+        "pts": 20
+      },
+      {
+        "rank": 6,
+        "rider": "Jonas Vingegaard",
+        "team": "Team Visma | Lease a Bike",
+        "pts": 19
+      },
+      {
+        "rank": 7,
+        "rider": "Mattias Skjelmose",
+        "team": "Lidl - Trek",
+        "pts": 17
+      },
+      {
+        "rank": 8,
+        "rider": "Frank van den Broek",
+        "team": "Team Picnic PostNL",
+        "pts": 16
+      },
+      {
+        "rank": 9,
+        "rider": "Biniam Girmay",
+        "team": "NSN Cycling Team",
+        "pts": 15
+      },
+      {
+        "rank": 10,
+        "rider": "Tobias Halland Johannessen",
+        "team": "Uno-X Mobility",
+        "pts": 14
+      }
+    ],
+    "kom": [
+      {
+        "rank": 1,
+        "rider": "Alex Molenaar",
+        "team": "Caja Rural – Seguros RGA",
+        "pts": 5
+      },
+      {
+        "rank": 2,
+        "rider": "Brandon McNulty",
+        "team": "UAE Team Emirates XRG",
+        "pts": 4
+      },
+      {
+        "rank": 3,
+        "rider": "Felix Engelhardt",
+        "team": "Team Jayco AlUla",
+        "pts": 3
+      },
+      {
+        "rank": 4,
+        "rider": "Tobias Halland Johannessen",
+        "team": "Uno-X Mobility",
+        "pts": 2
+      },
+      {
+        "rank": 5,
+        "rider": "Frank van den Broek",
+        "team": "Team Picnic PostNL",
+        "pts": 2
+      },
+      {
+        "rank": 6,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "pts": 1
+      },
+      {
+        "rank": 7,
+        "rider": "Matteo Jorgenson",
+        "team": "Team Visma | Lease a Bike",
+        "pts": 1
+      },
+      {
+        "rank": 8,
+        "rider": "Richard Carapaz",
+        "team": "EF Education–EasyPost",
+        "pts": 1
+      },
+      {
+        "rank": 9,
+        "rider": "Joshua Tarling",
+        "team": "Netcompany INEOS",
+        "pts": 1
+      }
+    ],
+    "youth": [
+      {
+        "rank": 1,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "gap": "race lead"
+      },
+      {
+        "rank": 2,
+        "rider": "Juan Ayuso",
+        "team": "Lidl - Trek",
+        "gap": "+0:00"
+      },
+      {
+        "rank": 3,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "gap": "+0:00"
+      },
+      {
+        "rank": 4,
+        "rider": "Romain Grégoire",
+        "team": "Groupama-FDJ United",
+        "gap": "+0:00"
+      },
+      {
+        "rank": 5,
+        "rider": "Lenny Martinez",
+        "team": "Bahrain – Victorious",
+        "gap": "+0:00"
+      },
+      {
+        "rank": 6,
+        "rider": "Alex Baudin",
+        "team": "EF Education–EasyPost",
+        "gap": "+0:00"
+      },
+      {
+        "rank": 7,
+        "rider": "Lennert Van Eetvelt",
+        "team": "Lotto-Intermarché",
+        "gap": "+1:23"
+      }
+    ],
+    "after_stage_num": 2,
+    "after_stage_date": "2026-07-05"
+  },
+  "ai": {
+    "confidence": "high",
+    "sources": [
+      "https://www.letour.fr/en/rankings",
+      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-2-jonas-vingegaard-keeps-yellow-but-uae-take-over-other-jerseys-as-tadej-pogacar-closes-in",
+      "https://www.letour.fr/en/rankings/stage-2?hasCookies=false&hasIframeResizer=true&isWebview=true&partner=sbsapN",
+      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-2",
+      "https://www.letour.fr/en/withdrawal",
+      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-2-biniam-girmay-maxim-van-gils-and-dorian-godon-all-caught-up-in-crashes",
+      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/"
+    ]
+  }
 };
