@@ -2,13 +2,12 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-04T14:11:25.790195+12:00",
-  "nz_date": "2026-07-04",
-  "tonight_watch_date": "2026-07-03",
-  "overnight_race_date": "2026-07-04",
-  "status": "pre-race",
-  "tonight": null,
-  "overnight": {
+  "generated_at": "2026-07-05T14:00:02.975058+12:00",
+  "nz_date": "2026-07-05",
+  "tonight_watch_date": "2026-07-04",
+  "overnight_race_date": "2026-07-05",
+  "status": "racing",
+  "tonight": {
     "num": 1,
     "date": "2026-07-04",
     "start": "Barcelona",
@@ -17,15 +16,54 @@ window.STAGE_TODAY = {
     "type": "Team time trial",
     "note": "Grand Depart TTT past the Sagrada Familia, hilly finale climbing to the Olympic Stadium; individual times taken (no hiding place).",
     "headline": "Grand Depart against the clock through Barcelona",
-    "watch_for": "A 19.6km team time trial that rolls past the Sagrada Familia before kicking up to the Olympic Stadium on Montjuic, so the day is decided as much by a squad's climbing legs as its aero engine. Crucially, individual times are taken, so no GC contender can shelter in the wheels and coast in. Watch the changeover discipline of the big teams and how many riders each leader still has around him when the road tilts up.",
+    "watch_for": "The first TTT since 2019 — and a format twist: every rider gets their own individual time, so GC contenders need their teammates to drag them home fast, not just finish together. Netcompany INEOS boast the most fearsome engine room with Filippo Ganna and Josh Tarling, two of the world's best against the clock, meaning Egan Bernal could pocket free GC seconds before the mountains even begin. Remco Evenepoel, the reigning Olympic time-trial champion, has Red Bull–BORA–hansgrohe's Cattaneo and Tratnik to set a ferocious tempo, and his individual TT pedigree makes him the man to beat rider-for-rider. Team Visma | Lease a Bike lost Wout van Aert to a pre-race injury, but Victor Campenaerts (the former Hour Record holder) and Edoardo Affini give Jonas Vingegaard a deep rouleur bench that could still dominate a flat 19.6 km parcours. Tadej Pogačar's UAE squad counter with Brandon McNulty, Nils Politt, and Florian Vermeersch — a potent motor if they ride a clean, cohesive effort through Barcelona's wide boulevards. Watch too for Lidl-Trek: Juan Ayuso and Mattias Skjelmose are both strong time triallists, and with Mads Pedersen's raw power in the lineup, they could spring a surprise that reshuffles the early GC picture.",
     "riders_to_watch": [
-      "Tadej Pogacar",
-      "Jonas Vingegaard",
       "Remco Evenepoel",
-      "Juan Ayuso"
+      "Jonas Vingegaard",
+      "Tadej Pogačar",
+      "Filippo Ganna",
+      "Josh Tarling",
+      "Egan Bernal",
+      "Victor Campenaerts",
+      "Brandon McNulty",
+      "Juan Ayuso",
+      "Mattias Skjelmose"
     ],
     "nz_note": "Short and sharp, so this is a rare one to watch end to end over dinner rather than skimming the highlights.",
     "climb_m": 220,
+    "summit_finish": false,
+    "contextual": true
+  },
+  "overnight": {
+    "num": 2,
+    "date": "2026-07-05",
+    "start": "Tarragona",
+    "finish": "Barcelona",
+    "distance_km": 168.5,
+    "type": "Hilly",
+    "note": "Coastal roads then a lumpy finishing circuit over Montjuic; puncheur/breakaway day with ~2,500m climbing.",
+    "headline": "Punchers pounce on the Montjuic circuit",
+    "watch_for": "Coastal roads unwind into a lumpy finishing circuit over Montjuic with around 2,500m of climbing, the sort of terrain that shreds a bunch and lets the fast-finishing puncheurs and a determined break fight it out. The repeated drags mean pure sprinters will be in trouble and the punchy classics types come alive. Keep an eye on who's marking whom on the final ascent.",
+    "riders_to_watch": [
+      "Mathieu van der Poel",
+      "Tom Pidcock",
+      "Julian Alaphilippe",
+      "Marc Hirschi",
+      "Ben Healy",
+      "Biniam Girmay"
+    ],
+    "nz_note": "The last half hour is where it detonates, so if you're tight on time queue up the closing circuit.",
+    "climb_m": 2049,
     "summit_finish": false
+  },
+  "abandoned": [],
+  "ai": {
+    "confidence": "high",
+    "sources": [
+      "https://franceletour.com/tour-de-france-2026-startlist/",
+      "https://cyclinguptodate.com/cycling/start-times-order-tour-de-france-2026-stage-1-ttt-who-will-take-first-yellow-jersey-of-the-race-as-pogacar-vingegaard-evenepoel-and-ineos-do-battle",
+      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-1-degenkolb-crashes-pre-stage-but-full-peloton-gets-through-opening-day",
+      "https://www.cyclingnews.com/tour-de-france/start-list/"
+    ]
   }
 };
