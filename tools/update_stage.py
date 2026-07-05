@@ -43,8 +43,8 @@ NZ = ZoneInfo("Pacific/Auckland")
 # Daily flip hour (NZ). Below this hour the page shows "Start of Stage X"; at/after
 # it, once you've watched, it flips to "End of Stage X" and rolls the page forward.
 # The browser reads this from the payload's `boundary_hour`, so this constant is the
-# single source of truth for the flip. The scheduler (n8n cron + the launchd fallback
-# plist) must fire at this same hour — see README "Triggering the daily update".
+# single source of truth for the flip. The n8n cron that fires `tdf_daily` must fire
+# at this same hour — see docs/deployment.md.
 BOUNDARY_HOUR = 10
 
 

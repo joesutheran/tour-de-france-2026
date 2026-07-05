@@ -105,12 +105,10 @@ finishes in NZ's small hours of `D+1`, so:
 | `tdf_data.json` | Single source of truth: race, teams, rosters, stages, watch notes. |
 | `data.js` | `window.TDF = <tdf_data.json>` — what the page loads. |
 | `stage-today.js` | Daily data written by the updater (watched stage, standings, DNFs, next-stage preview). |
-| `tools/update_stage.py` | Daily updater — resolves the 10:00 pointer + spoiler-safe AI enrichment. |
-| `tools/publish.sh` | Runs the updater, then commits + pushes to trigger a redeploy. |
-| `tools/webhook_listener.py` | Localhost webhook that runs `publish.sh` on `POST {"type":"tdf_daily"}`. |
-| `tools/run_listener.sh` | Launches the listener, sourcing the gitignored `tools/.webhook.env` secret. |
-| `tools/com.tdf2026.webhook.plist` | launchd job that keeps the listener alive. |
-| `tools/com.tdf2026.daily.plist` | launchd fallback trigger (10:00 NZ) if the webhook path is down. |
+| `tools/update_stage.py` | Daily updater — resolves the 10:00 pointer + fetches standings (Exa/Firecrawl → fast extraction). |
+| `tools/publish.sh` | Sources `tools/.research.env`, runs the updater, then commits + pushes to trigger a redeploy. |
+| `tools/.research.env` | Gitignored — Exa/Firecrawl API keys for the standings fetch. |
+| `docs/deployment.md` | Enable/disable runbook for the seasonal daily trigger. |
 | `vercel.json` | Static-hosting config (clean URLs, no-cache on `stage-today.js`). |
 
 ## Hosting (on Vercel)
@@ -121,49 +119,21 @@ push from the daily job auto-deploys.
 
 ## Triggering the daily update
 
-The refresh must fire **at 10:00 NZ** — that's the flip. The primary trigger is an
-**n8n cron → webhook listener** (so the schedule is visible in n8n, not buried in
-a local timer), with a launchd job as a fallback.
+The daily 10:00 NZ refresh is driven by the **canonical Growth Medium Ops webhook
+listener** (`growth-medium-ops/tools/webhook_listener.py`, `POST /trigger` with
+`{ "type": "tdf_daily" }`) — the same tunnelled dispatcher every other n8n cron
+uses. This repo stands up **no listener, tunnel, secret, or launchd job** of its
+own; it only supplies `publish.sh` (which the listener runs) and its Exa/Firecrawl
+keys in `tools/.research.env`.
 
-### 1. Webhook listener (primary)
+Because it's seasonal, the full **enable / disable runbook** lives in
+[`docs/deployment.md`](docs/deployment.md) — turn it on when the Tour opens
+(add the n8n node + confirm the `tdf_daily` listener branch), off when it ends.
 
-```sh
-cp ~/tour-de-france-2026/tools/.webhook.env.example ~/tour-de-france-2026/tools/.webhook.env
-# edit tools/.webhook.env and set TDF_WEBHOOK_SECRET (openssl rand -hex 24)
-cp ~/tour-de-france-2026/tools/com.tdf2026.webhook.plist ~/Library/LaunchAgents/
-launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.tdf2026.webhook.plist
-curl -s localhost:8787/health        # -> {"ok":true,"message":"ok"}
-```
-
-It binds to `127.0.0.1:8787` — expose it to n8n through whatever tunnel you
-already use to reach the Mac (Tailscale / Cloudflare Tunnel / ngrok). Then in n8n:
-a **Schedule** node at 10:00 `Pacific/Auckland` → **HTTP Request**:
-
-```
-POST  https://<your-tunnel-host>/          Header: X-TDF-Secret: <your secret>
-Body (JSON):  { "type": "tdf_daily" }
-```
-
-The Mac must be awake at 10:00; a missed run fires on next wake. n8n's execution
-log gives you the visibility the old opaque 14:00 timer lacked.
-
-### 2. launchd fallback (belt-and-braces)
-
-Fires `tools/publish.sh` at 10:00 NZ too, in case n8n/the tunnel is down.
-`publish.sh` is idempotent, so a double-fire is a harmless no-op.
-
-```sh
-cp ~/tour-de-france-2026/tools/com.tdf2026.daily.plist ~/Library/LaunchAgents/
-launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.tdf2026.daily.plist
-launchctl kickstart gui/$(id -u)/com.tdf2026.daily   # run once now
-```
-
-To stop either: `launchctl bootout gui/$(id -u)/com.tdf2026.<daily|webhook>`
-
-The AI step requires the `claude` CLI on `PATH` (or one of the fallback locations
-in `update_stage.py`); without it, the job still runs deterministically. If the
-repo lives somewhere other than `~/tour-de-france-2026`, edit the paths in the
-plists first.
+`10:00` is load-bearing: `BOUNDARY_HOUR` in `update_stage.py` (the flip hour, which
+the browser reads from the payload) and the n8n cron hour must match — change one,
+change both. The `claude` CLI must be on `PATH`; without it the job still runs
+deterministically (standings show a graceful "updating…").
 
 ## Refreshing the roster/route data (rosters change during the Tour)
 
