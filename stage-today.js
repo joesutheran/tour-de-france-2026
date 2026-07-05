@@ -2,68 +2,36 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-05T14:00:02.975058+12:00",
-  "nz_date": "2026-07-05",
-  "tonight_watch_date": "2026-07-04",
-  "overnight_race_date": "2026-07-05",
+  "generated_at": "2026-07-06T10:03:05.396808+12:00",
+  "nz_date": "2026-07-06",
+  "as_of_date": "2026-07-06",
+  "boundary_hour": 10,
   "status": "racing",
-  "tonight": {
-    "num": 1,
-    "date": "2026-07-04",
-    "start": "Barcelona",
-    "finish": "Barcelona",
-    "distance_km": 19.6,
-    "type": "Team time trial",
-    "note": "Grand Depart TTT past the Sagrada Familia, hilly finale climbing to the Olympic Stadium; individual times taken (no hiding place).",
-    "headline": "Grand Depart against the clock through Barcelona",
-    "watch_for": "The first TTT since 2019 — and a format twist: every rider gets their own individual time, so GC contenders need their teammates to drag them home fast, not just finish together. Netcompany INEOS boast the most fearsome engine room with Filippo Ganna and Josh Tarling, two of the world's best against the clock, meaning Egan Bernal could pocket free GC seconds before the mountains even begin. Remco Evenepoel, the reigning Olympic time-trial champion, has Red Bull–BORA–hansgrohe's Cattaneo and Tratnik to set a ferocious tempo, and his individual TT pedigree makes him the man to beat rider-for-rider. Team Visma | Lease a Bike lost Wout van Aert to a pre-race injury, but Victor Campenaerts (the former Hour Record holder) and Edoardo Affini give Jonas Vingegaard a deep rouleur bench that could still dominate a flat 19.6 km parcours. Tadej Pogačar's UAE squad counter with Brandon McNulty, Nils Politt, and Florian Vermeersch — a potent motor if they ride a clean, cohesive effort through Barcelona's wide boulevards. Watch too for Lidl-Trek: Juan Ayuso and Mattias Skjelmose are both strong time triallists, and with Mads Pedersen's raw power in the lineup, they could spring a surprise that reshuffles the early GC picture.",
-    "riders_to_watch": [
-      "Remco Evenepoel",
-      "Jonas Vingegaard",
-      "Tadej Pogačar",
-      "Filippo Ganna",
-      "Josh Tarling",
-      "Egan Bernal",
-      "Victor Campenaerts",
-      "Brandon McNulty",
-      "Juan Ayuso",
-      "Mattias Skjelmose"
-    ],
-    "nz_note": "Short and sharp, so this is a rare one to watch end to end over dinner rather than skimming the highlights.",
-    "climb_m": 220,
-    "summit_finish": false,
-    "contextual": true
-  },
-  "overnight": {
+  "watched": {
     "num": 2,
-    "date": "2026-07-05",
-    "start": "Tarragona",
-    "finish": "Barcelona",
-    "distance_km": 168.5,
-    "type": "Hilly",
-    "note": "Coastal roads then a lumpy finishing circuit over Montjuic; puncheur/breakaway day with ~2,500m climbing.",
-    "headline": "Punchers pounce on the Montjuic circuit",
-    "watch_for": "Coastal roads unwind into a lumpy finishing circuit over Montjuic with around 2,500m of climbing, the sort of terrain that shreds a bunch and lets the fast-finishing puncheurs and a determined break fight it out. The repeated drags mean pure sprinters will be in trouble and the punchy classics types come alive. Keep an eye on who's marking whom on the final ascent.",
-    "riders_to_watch": [
-      "Mathieu van der Poel",
-      "Tom Pidcock",
-      "Julian Alaphilippe",
-      "Marc Hirschi",
-      "Ben Healy",
-      "Biniam Girmay"
-    ],
-    "nz_note": "The last half hour is where it detonates, so if you're tight on time queue up the closing circuit.",
-    "climb_m": 2049,
-    "summit_finish": false
+    "date": "2026-07-05"
   },
-  "abandoned": [],
-  "ai": {
-    "confidence": "high",
-    "sources": [
-      "https://franceletour.com/tour-de-france-2026-startlist/",
-      "https://cyclinguptodate.com/cycling/start-times-order-tour-de-france-2026-stage-1-ttt-who-will-take-first-yellow-jersey-of-the-race-as-pogacar-vingegaard-evenepoel-and-ineos-do-battle",
-      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-1-degenkolb-crashes-pre-stage-but-full-peloton-gets-through-opening-day",
-      "https://www.cyclingnews.com/tour-de-france/start-list/"
-    ]
-  }
+  "preview": {
+    "num": 3,
+    "date": "2026-07-06",
+    "start": "Granollers",
+    "finish": "Les Angles",
+    "distance_km": 195.9,
+    "type": "Mountain",
+    "note": "Crosses the Pyrenees with 3,850m of climbing and an uphill ski-station finish at Les Angles - first real GC test.",
+    "headline": "First summit showdown in the Pyrenees",
+    "watch_for": "The race crosses the Pyrenees with 3,850m of climbing and finishes uphill at the Les Angles ski station, the first genuine GC test of the whole Tour. This is where the overall contenders finally show their hand and the pretenders get exposed on the final drag to the line. Watch how deep each team can protect its leader and who dares the first real dig.",
+    "riders_to_watch": [
+      "Tadej Pogacar",
+      "Jonas Vingegaard",
+      "Remco Evenepoel",
+      "Juan Ayuso",
+      "Paul Seixas",
+      "Egan Bernal"
+    ],
+    "nz_note": "The marquee stage of week one, worth watching the full final climb rather than just the highlights reel.",
+    "climb_m": 3940,
+    "summit_finish": true
+  },
+  "abandoned": []
 };

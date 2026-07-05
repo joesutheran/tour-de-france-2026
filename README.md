@@ -34,10 +34,11 @@ Two layers, so it can never break:
    spoiler-free notes and picks tonight's stage itself using the NZ clock. Open
    it any evening and the right stage is already front-and-centre.
 
-2. **Daily refresh job.** `tools/update_stage.py` (a) deterministically picks
-   tonight's stage from the NZ clock, then (b) if the race is on, runs
-   `claude -p` with web search to write a **contextual, rider-aware tactical
-   preview**, the **standings** going into tonight's stage, and the
+2. **Daily refresh job.** `tools/update_stage.py` (a) works out — from the NZ
+   clock and the **10:00 boundary** — which stage you've just watched and which
+   you'll watch next, then (b) if the race is on, runs `claude -p` with web
+   search to write a **contextual, rider-aware tactical preview** of the next
+   stage, the **standings at the end of the just-watched stage**, and the
    **abandoned/DNF list** — all into `stage-today.js`, which the page prefers
    when present. If the AI step fails or times out, the page falls back to the
    embedded static notes, so it never breaks. Pass `--no-ai` to skip the AI step.
@@ -45,23 +46,38 @@ Two layers, so it can never break:
 `tools/publish.sh` wraps that: it runs the updater, then commits and pushes the
 refreshed data so a connected host (e.g. Vercel) redeploys automatically.
 
+### The 10:00 flip (the core model)
+
+Everything is keyed to a single pointer that advances each morning at **10:00 NZ**.
+Let `X` be the stage you watch this cycle (you watch before the flip):
+
+| Window (NZ) | Hero previews | Standings label | Standings data |
+|---|---|---|---|
+| 00:00–09:59 | **Stage X** (up next) | **Start of Stage X** | end of Stage X−1 |
+| 10:00–23:59 | **Stage X+1** (coming up) | **End of Stage X** | end of Stage X |
+
+Because *End of Stage X ≡ Start of Stage X+1*, one file generated at 10:00 serves
+both the post-flip window and the next morning's pre-flip window — the browser
+just relabels at the boundary. The whole page rolls forward one stage at 10:00.
+(The flip hour is set once by `BOUNDARY_HOUR`; move it and the cron together.)
+
 ### The spoiler model (important)
 
-Tonight you watch stage `K`; you have already watched stages up to `K-1`. So the
-job may only ever use information current as of the *end of stage K-1*:
+The result of Stage X **only enters the published file at 10:00**, exactly when
+you watch it — so there is never an unwatched result in the page source. The job:
 
-- **Standings** shown = classification after stage `K-1` (what riders start
-  tonight's stage with) — never after stage `K`.
-- **DNF/abandoned** riders shown = those out through stage `K-1` only. A
-  deterministic guard also strips any DNF the model attributes to stage `K` or
-  later.
-- **Tactical preview** of stage `K` is written from that pre-stage picture and
-  each rider's real characteristics / GC position — never its result.
+- **Standings** = classification after the just-watched stage. Never a stage you
+  haven't seen (the browser refuses to show standings tagged to the wrong stage
+  boundary, falling back to a neutral "updating…" state).
+- **DNF/abandoned** = those out through the just-watched stage only. A
+  deterministic guard strips any DNF the model attributes to a later stage.
+- **Tactical preview** of the *next* stage is written from the pre-stage picture
+  and each rider's real characteristics / GC position — never its result (that
+  stage hasn't been raced yet in Europe when the job runs).
 
-Residual risk: the AI does a live web search around 14:00 NZ, by which time
-tonight's stage has finished in Europe. The prompt forbids looking it up and the
-guard above filters DNFs, but if you ever spot a leaked result, run
-`python3 tools/update_stage.py --no-ai` to fall back to the safe static notes.
+If you ever spot a leaked result, run `python3 tools/update_stage.py --no-ai` to
+fall back to the safe static notes. `BOUNDARY_HOUR` in `update_stage.py` and the
+`boundary_hour` in the payload (read by `index.html`) must stay in sync.
 
 ### Timezones
 
@@ -88,10 +104,13 @@ finishes in NZ's small hours of `D+1`, so:
 | `index.html` | The page. Open this. |
 | `tdf_data.json` | Single source of truth: race, teams, rosters, stages, watch notes. |
 | `data.js` | `window.TDF = <tdf_data.json>` — what the page loads. |
-| `stage-today.js` | Daily data written by the updater (tonight's stage, standings, DNFs). |
-| `tools/update_stage.py` | Daily updater — picks tonight's stage + spoiler-safe AI enrichment. |
+| `stage-today.js` | Daily data written by the updater (watched stage, standings, DNFs, next-stage preview). |
+| `tools/update_stage.py` | Daily updater — resolves the 10:00 pointer + spoiler-safe AI enrichment. |
 | `tools/publish.sh` | Runs the updater, then commits + pushes to trigger a redeploy. |
-| `tools/*.plist` | Example macOS launchd job (daily 14:00 NZ). |
+| `tools/webhook_listener.py` | Localhost webhook that runs `publish.sh` on `POST {"type":"tdf_daily"}`. |
+| `tools/run_listener.sh` | Launches the listener, sourcing the gitignored `tools/.webhook.env` secret. |
+| `tools/com.tdf2026.webhook.plist` | launchd job that keeps the listener alive. |
+| `tools/com.tdf2026.daily.plist` | launchd fallback trigger (10:00 NZ) if the webhook path is down. |
 | `vercel.json` | Static-hosting config (clean URLs, no-cache on `stage-today.js`). |
 
 ## Hosting (on Vercel)
@@ -100,11 +119,38 @@ The page is plain static HTML, so any static host works. On Vercel: **Add New �
 Project → Import this repo → Deploy** (no build step needed). After that, every
 push from the daily job auto-deploys.
 
-## Installing the daily job (macOS launchd)
+## Triggering the daily update
 
-The example plist assumes the repo lives at `~/tour-de-france-2026`; if yours is
-elsewhere, edit the paths inside it first. It runs `tools/publish.sh` daily at
-14:00 local time.
+The refresh must fire **at 10:00 NZ** — that's the flip. The primary trigger is an
+**n8n cron → webhook listener** (so the schedule is visible in n8n, not buried in
+a local timer), with a launchd job as a fallback.
+
+### 1. Webhook listener (primary)
+
+```sh
+cp ~/tour-de-france-2026/tools/.webhook.env.example ~/tour-de-france-2026/tools/.webhook.env
+# edit tools/.webhook.env and set TDF_WEBHOOK_SECRET (openssl rand -hex 24)
+cp ~/tour-de-france-2026/tools/com.tdf2026.webhook.plist ~/Library/LaunchAgents/
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.tdf2026.webhook.plist
+curl -s localhost:8787/health        # -> {"ok":true,"message":"ok"}
+```
+
+It binds to `127.0.0.1:8787` — expose it to n8n through whatever tunnel you
+already use to reach the Mac (Tailscale / Cloudflare Tunnel / ngrok). Then in n8n:
+a **Schedule** node at 10:00 `Pacific/Auckland` → **HTTP Request**:
+
+```
+POST  https://<your-tunnel-host>/          Header: X-TDF-Secret: <your secret>
+Body (JSON):  { "type": "tdf_daily" }
+```
+
+The Mac must be awake at 10:00; a missed run fires on next wake. n8n's execution
+log gives you the visibility the old opaque 14:00 timer lacked.
+
+### 2. launchd fallback (belt-and-braces)
+
+Fires `tools/publish.sh` at 10:00 NZ too, in case n8n/the tunnel is down.
+`publish.sh` is idempotent, so a double-fire is a harmless no-op.
 
 ```sh
 cp ~/tour-de-france-2026/tools/com.tdf2026.daily.plist ~/Library/LaunchAgents/
@@ -112,12 +158,12 @@ launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.tdf2026.daily.plist
 launchctl kickstart gui/$(id -u)/com.tdf2026.daily   # run once now
 ```
 
-To stop it: `launchctl bootout gui/$(id -u)/com.tdf2026.daily`
+To stop either: `launchctl bootout gui/$(id -u)/com.tdf2026.<daily|webhook>`
 
-Any scheduler works — a cron job, a CI cron, or an n8n workflow hitting a small
-endpoint can all run `tools/publish.sh` on the same daily cadence. The AI step
-requires the `claude` CLI on `PATH` (or one of the fallback locations in
-`update_stage.py`); without it, the job still runs deterministically.
+The AI step requires the `claude` CLI on `PATH` (or one of the fallback locations
+in `update_stage.py`); without it, the job still runs deterministically. If the
+repo lives somewhere other than `~/tour-de-france-2026`, edit the paths in the
+plists first.
 
 ## Refreshing the roster/route data (rosters change during the Tour)
 

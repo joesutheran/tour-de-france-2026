@@ -38,50 +38,87 @@ OUT_PATH = os.path.join(ROOT, "stage-today.js")
 
 NZ = ZoneInfo("Pacific/Auckland")
 
+# Daily flip hour (NZ). Below this hour the page shows "Start of Stage X"; at/after
+# it, once you've watched, it flips to "End of Stage X" and rolls the page forward.
+# The browser reads this from the payload's `boundary_hour`, so this constant is the
+# single source of truth for the flip. The scheduler (n8n cron + the launchd fallback
+# plist) must fire at this same hour — see README "Triggering the daily update".
+BOUNDARY_HOUR = 10
+
 
 def load_data() -> Dict[str, Any]:
     with open(DATA_PATH, "r", encoding="utf-8") as fh:
         return json.load(fh)
 
 
-def find_stage_by_date(stages, iso_date: str) -> Optional[Dict[str, Any]]:
-    for s in stages:
-        if s.get("date") == iso_date:
-            return s
-    return None
+def _dated(stages) -> List[Dict[str, Any]]:
+    return [s for s in stages if s.get("date") and s.get("num") is not None]
+
+
+def latest_on_or_before(stages, iso: str) -> Optional[Dict[str, Any]]:
+    best = None
+    for s in _dated(stages):
+        if s["date"] <= iso and (best is None or s["date"] > best["date"]):
+            best = s
+    return best
+
+
+def earliest_on_or_after(stages, iso: str) -> Optional[Dict[str, Any]]:
+    best = None
+    for s in _dated(stages):
+        if s["date"] >= iso and (best is None or s["date"] < best["date"]):
+            best = s
+    return best
 
 
 def build_payload(data: Dict[str, Any], now_nz: datetime) -> Dict[str, Any]:
+    """State as of the daily flip (BOUNDARY_HOUR, NZ).
+
+    Before the flip the page shows the stage you're about to watch this cycle
+    ("Start of Stage K"). At the flip — once you've watched — it reveals that
+    stage's result ("End of Stage K") and rolls the hero forward to the next
+    stage. So this payload is the AFTER-watching state:
+      * standings reflect the END of the just-watched stage;
+      * the hero previews the NEXT stage to watch (spoiler-free).
+    End-of-stage-K == start-of-stage-(K+1), so one file generated at the flip
+    also serves the next pre-flip window — the browser just relabels
+    'End of Stage K' -> 'Start of Stage K+1' and never has to reveal an unwatched
+    result, because the result only enters the file at the flip when you watch it.
+    """
     stages = data.get("stages", [])
     nz_today = now_nz.date()
-    tonight_date = (nz_today - timedelta(days=1)).isoformat()  # European stage date
-    overnight_date = nz_today.isoformat()
 
-    tonight = find_stage_by_date(stages, tonight_date)
-    overnight = find_stage_by_date(stages, overnight_date)
+    # Time-aware boundary (mirrors the browser). Before the flip the live state is
+    # still the previous cycle's (you haven't watched this cycle's stage yet), so
+    # anchor to yesterday; at/after the flip, roll forward to today. Whenever this
+    # runs it emits exactly the file correct for that moment — and that file also
+    # serves the following pre-flip window, since the browser resolves the same ref.
+    after_flip = now_nz.hour >= BOUNDARY_HOUR
+    ref_date = nz_today if after_flip else (nz_today - timedelta(days=1))
+    ref_iso = ref_date.isoformat()
+    prev_iso = (ref_date - timedelta(days=1)).isoformat()
 
-    # Race status messaging
-    dated = [s for s in stages if s.get("date")]
-    first_date = min((s["date"] for s in dated), default=None)
-    last_date = max((s["date"] for s in dated), default=None)
+    watched = latest_on_or_before(stages, prev_iso)     # standings reflect the END of this stage
+    preview = earliest_on_or_after(stages, ref_iso)     # next stage to watch (hero)
 
-    if first_date and tonight_date < first_date and tonight is None:
+    if watched is None and preview is not None:
         status = "pre-race"
-    elif last_date and tonight_date > last_date:
+    elif preview is None:
         status = "finished"
-    elif tonight is None and overnight is None:
-        status = "rest-day"
     else:
         status = "racing"
 
     return {
         "generated_at": now_nz.isoformat(),
         "nz_date": nz_today.isoformat(),
-        "tonight_watch_date": tonight_date,
-        "overnight_race_date": overnight_date,
+        "as_of_date": ref_iso,
+        "boundary_hour": BOUNDARY_HOUR,
         "status": status,
-        "tonight": tonight,     # the stage to watch highlights of tonight (NZ evening)
-        "overnight": overnight,  # the stage racing overnight tonight (NZ)
+        # just-watched stage — standings below are its END classifications
+        "watched": ({"num": watched.get("num"), "date": watched.get("date")} if watched else None),
+        # next stage to watch — full object; AI merges fresh spoiler-free preview text
+        "preview": preview,
+        "abandoned": [],
     }
 
 
@@ -134,54 +171,63 @@ def roster_block(data: Dict[str, Any]) -> str:
 
 
 def build_prompt(data: Dict[str, Any], payload: Dict[str, Any]) -> str:
-    t = payload["tonight"]
-    K = t.get("num")
-    prev = (K - 1) if isinstance(K, int) and K > 1 else 0
+    W = payload.get("watched") or {}      # stage just watched — standings reflect its END
+    P = payload.get("preview") or {}      # next stage to watch — the spoiler-free preview
+    Wn = W.get("num")
+    Pn = P.get("num")
     race = data.get("race", {})
     profile = "%s, %s km, ~%s m climbing%s" % (
-        t.get("type", "?"), t.get("distance_km", "?"), t.get("climb_m", "?"),
-        ", SUMMIT FINISH" if t.get("summit_finish") else "")
-    standings_ask = (
-        "There are no standings yet (stage 1 has not been completed) — return empty arrays."
-        if prev == 0 else
-        ("Fetch these four classifications AFTER STAGE %d ONLY (the numbers riders start tonight's "
-         "Stage %d with), EACH as a top-10 table: (1) General Classification with time gaps; "
-         "(2) Points / Green jersey with points totals; (3) Mountains / Polka-dot (KOM) with points "
-         "totals; (4) Young rider / White jersey with time gaps." % (prev, K)))
+        P.get("type", "?"), P.get("distance_km", "?"), P.get("climb_m", "?"),
+        ", SUMMIT FINISH" if P.get("summit_finish") else "")
+
+    if Wn:
+        watched_line = ("They have just watched STAGE %d tonight, and have seen every stage up to and "
+                        "including it." % Wn)
+        boundary = ("You may ONLY use information current as of the END of stage %d. NEVER look up, infer "
+                    "or reveal the result of stage %d (the preview stage) or anything after it. Do NOT "
+                    "search for 'stage %d result/winner' — if a result for stage %d or later appears, "
+                    "IGNORE it completely." % (Wn, Pn, Pn, Pn))
+        standings_ask = (
+            "Fetch these four classifications AS THEY STAND AFTER STAGE %d (the stage the couple just "
+            "watched), EACH as a top-10 table: (1) General Classification with time gaps; (2) Points / "
+            "Green jersey with points totals; (3) Mountains / Polka-dot (KOM) with points totals; "
+            "(4) Young rider / White jersey with time gaps." % Wn)
+        abandon_ask = ("Also compile the riders who have ABANDONED / been eliminated / did-not-start "
+                       "THROUGH stage %d (web search: 'Tour de France 2026 abandons / non-starters')." % Wn)
+    else:
+        watched_line = "The race has not started yet — no stage has been watched."
+        boundary = ("The race has NOT started. NEVER look up, infer or reveal the result of stage %d "
+                    "(the preview stage) or anything after it." % Pn)
+        standings_ask = ("There are no standings yet — the race has not started. Return EMPTY arrays for "
+                         "all four classifications.")
+        abandon_ask = "There are no abandonments yet — return an empty array."
+
     return (
         "You are the spoiler-safe race desk for a couple in New Zealand who watch Tour de France "
-        "highlights in their evening. Tonight they will watch the highlights of STAGE %d of the 2026 "
-        "Tour de France. They have ALREADY watched every stage up to and including stage %d.\n\n"
-        "ABSOLUTE SPOILER RULE — break this and you ruin their night:\n"
-        "  * You may ONLY use information current as of the START of stage %d (i.e. the end of stage %d).\n"
-        "  * NEVER look up, infer, or reveal the result of stage %d (tonight's highlights) or anything after it.\n"
-        "  * Do NOT search for 'stage %d result/winner'. If a search result shows tonight's or a later "
-        "stage's outcome, IGNORE it completely.\n"
-        "  * Standings must be AFTER STAGE %d. Abandonments must be THROUGH STAGE %d only.\n\n"
-        "TONIGHT'S STAGE %d: %s -> %s. Profile: %s.\n"
-        "Race context: %s. %s\n\n"
+        "highlights at about 7pm their time. %s You are preparing what they see AFTER tonight's viewing: "
+        "the up-to-date classifications, and a preview of the NEXT stage they'll watch.\n\n"
+        "ABSOLUTE SPOILER RULE — break this and you ruin their night:\n  * %s\n\n"
+        "NEXT STAGE TO PREVIEW — STAGE %s: %s -> %s. Profile: %s.\n"
+        "Race context: %s.\n\n"
         "%s\n\n"
-        "Also compile the list of riders who have ABANDONED / been eliminated / did-not-start THROUGH "
-        "stage %d (use web search: 'Tour de France 2026 abandons / non-starters'). Use rider names spelled "
-        "EXACTLY as they appear in this startlist so they can be matched:\n%s\n\n"
-        "Now write a rich, SPOILER-FREE 'what to watch for' preview of tonight's Stage %d (4-6 sentences). "
-        "Make it tactically specific and rider-aware, grounded in the standings above and each rider's real "
-        "characteristics and race situation — e.g. a GC contender who is down on time and must attack; a "
-        "renowned descender who will chance a move on a technical descent; a sprinter's team needing to "
-        "control a flat day; a summit finish suiting the pure climbers. Name specific riders and WHY the "
-        "stage profile plus their position makes them act. Do not state or hint at any result.\n\n"
+        "%s Use rider names spelled EXACTLY as they appear in this startlist so they can be matched:\n%s\n\n"
+        "Now write a rich, SPOILER-FREE 'what to watch for' preview of STAGE %s (4-6 sentences). Make it "
+        "tactically specific and rider-aware, grounded in the classifications above and each rider's real "
+        "situation — e.g. a GC contender down on time who must attack; a renowned descender who will chance "
+        "a move on a technical descent; a sprinter's team needing to control a flat day; a summit finish "
+        "suiting the pure climbers. Name specific riders and WHY the profile plus their position makes them "
+        "act. Do NOT state or hint at any result.\n\n"
         "Return ONLY a single JSON object, no prose, of exactly this shape:\n"
-        "{\"watch_for\":\"...\",\"riders_to_watch\":[\"Name\",...],"
-        "\"standings\":{\"as_of_label\":\"entering Stage %d (after Stage %d)\","
+        "{\"preview_watch_for\":\"...\",\"preview_riders_to_watch\":[\"Name\",...],"
+        "\"standings\":{"
         "\"gc\":[{\"rank\":1,\"rider\":\"...\",\"team\":\"...\",\"gap\":\"race lead\"}],"
         "\"points\":[{\"rank\":1,\"rider\":\"...\",\"team\":\"...\",\"pts\":123}],"
         "\"kom\":[{\"rank\":1,\"rider\":\"...\",\"team\":\"...\",\"pts\":45}],"
         "\"youth\":[{\"rank\":1,\"rider\":\"...\",\"team\":\"...\",\"gap\":\"race lead\"}]},"
         "\"abandoned\":[{\"name\":\"Exact Name\",\"stage\":<int>,\"reason\":\"...\"}],"
         "\"confidence\":\"high|medium|low\",\"sources\":[\"url\"]}"
-        % (K, prev, K, prev, K, K, prev, prev, K, t.get("start", "?"), t.get("finish", "?"),
-           profile, race.get("overview", ""), standings_ask, standings_ask, prev,
-           roster_block(data), K, K, prev))
+        % (watched_line, boundary, Pn, P.get("start", "?"), P.get("finish", "?"), profile,
+           race.get("overview", ""), standings_ask, abandon_ask, roster_block(data), Pn))
 
 
 def extract_json(text: str) -> Optional[Dict[str, Any]]:
@@ -209,13 +255,18 @@ def extract_json(text: str) -> Optional[Dict[str, Any]]:
     return best
 
 
-def run_ai(data: Dict[str, Any], payload: Dict[str, Any], timeout: int) -> Optional[Dict[str, Any]]:
+def run_ai(data: Dict[str, Any], payload: Dict[str, Any], timeout: int,
+           model: Optional[str] = None) -> Optional[Dict[str, Any]]:
     claude = find_claude()
     if not claude:
         print("[update_stage] claude binary not found — skipping AI enrichment", file=sys.stderr)
         return None
     prompt = build_prompt(data, payload)
     cmd = [claude, "-p", prompt, "--output-format", "json", "--allowedTools", "WebSearch"]
+    # The research is web-search + extraction, not deep reasoning — a fast model does
+    # it in a fraction of the time. The default Opus-class model was timing out.
+    if model:
+        cmd += ["--model", model]
     try:
         res = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, cwd=ROOT)
     except subprocess.TimeoutExpired:
@@ -239,23 +290,28 @@ def run_ai(data: Dict[str, Any], payload: Dict[str, Any], timeout: int) -> Optio
 
 
 def merge_ai(payload: Dict[str, Any], ai: Dict[str, Any]) -> None:
-    t = payload.get("tonight")
-    if t:
-        if ai.get("watch_for"):
-            t["watch_for"] = ai["watch_for"]
-            t["contextual"] = True
-        if ai.get("riders_to_watch"):
-            t["riders_to_watch"] = ai["riders_to_watch"]
+    p = payload.get("preview")
+    if p:
+        if ai.get("preview_watch_for"):
+            p["watch_for"] = ai["preview_watch_for"]
+            p["contextual"] = True
+        if ai.get("preview_riders_to_watch"):
+            p["riders_to_watch"] = ai["preview_riders_to_watch"]
+    w = payload.get("watched") or {}
     st = ai.get("standings")
     if isinstance(st, dict) and st.get("gc"):
+        # tag which stage boundary these standings are AFTER, so the browser can
+        # verify freshness and pick the right 'Start of' / 'End of' label.
+        st["after_stage_num"] = w.get("num")
+        st["after_stage_date"] = w.get("date")
         payload["standings"] = st
     ab = ai.get("abandoned")
     if isinstance(ab, list):
-        # SPOILER SAFETY NET: never surface a DNF from tonight's stage or later —
-        # that would betray something about the highlights not yet watched.
-        K = (t or {}).get("num")
-        if isinstance(K, int):
-            ab = [a for a in ab if not (isinstance(a.get("stage"), int) and a["stage"] >= K)]
+        # SPOILER SAFETY NET: never surface a DNF from a stage they haven't watched
+        # yet — only through the just-watched stage (Wn).
+        Wn = w.get("num")
+        if isinstance(Wn, int):
+            ab = [a for a in ab if not (isinstance(a.get("stage"), int) and a["stage"] > Wn)]
         payload["abandoned"] = ab
     payload["ai"] = {"confidence": ai.get("confidence"), "sources": ai.get("sources", [])}
 
@@ -263,15 +319,19 @@ def merge_ai(payload: Dict[str, Any], ai: Dict[str, Any]) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-ai", action="store_true", help="skip claude enrichment (deterministic only)")
-    ap.add_argument("--timeout", type=int, default=300, help="claude -p timeout seconds")
+    # Fetching four real classifications + DNFs via live web search takes several
+    # minutes; 300s times out once actual standings exist (not just pre-race empties).
+    ap.add_argument("--timeout", type=int, default=900, help="claude -p timeout seconds")
+    # Fast model for the research call — Opus-class defaults were timing out.
+    ap.add_argument("--model", default="sonnet", help="model for claude -p enrichment ('' = CLI default)")
     a = ap.parse_args()
 
     now_nz = datetime.now(NZ)
     data = load_data()
     payload = build_payload(data, now_nz)
 
-    if not a.no_ai and payload.get("status") == "racing" and payload.get("tonight"):
-        ai = run_ai(data, payload, a.timeout)
+    if not a.no_ai and payload.get("preview") and payload.get("status") != "finished":
+        ai = run_ai(data, payload, a.timeout, model=(a.model or None))
         if ai:
             merge_ai(payload, ai)
             print("[update_stage] AI enrichment merged (%d GC rows, %d abandoned)" % (
@@ -279,10 +339,11 @@ def main() -> int:
                 len(payload.get("abandoned", []))))
 
     write_js(payload)
-    t = payload.get("tonight")
-    label = ("Stage %s (%s)" % (t["num"], t.get("type", "")) if t else "nothing yet")
-    print("[update_stage] NZ %s -> tonight's highlights: %s [status=%s]" % (
-        payload["nz_date"], label, payload["status"]))
+    p = payload.get("preview")
+    label = ("Stage %s (%s)" % (p["num"], p.get("type", "")) if p else "nothing")
+    print("[update_stage] NZ %s (run at %s) -> next to watch: %s | standings after Stage %s [status=%s]" % (
+        payload["nz_date"], now_nz.strftime("%H:%M %Z"), label,
+        (payload.get("watched") or {}).get("num"), payload["status"]))
     return 0
 
 

@@ -97,6 +97,7 @@
   .spoiler-line{font-family:var(--sans);font-size:13px;color:var(--ink-soft);margin:-8px 0 16px;max-width:82ch;line-height:1.5}
   .spoiler-line b{color:var(--ink)}
   .standings{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}
+  .standings-empty{grid-column:1/-1;padding:18px 20px;border:1px dashed var(--line,#3a3a3a);border-radius:12px;color:var(--ink-soft);font-style:italic;line-height:1.5;max-width:70ch}
   .gc-board{border:2.5px solid var(--ink);background:var(--blanc);box-shadow:0 3px 0 rgba(23,19,12,.85);align-self:start}
   .gc-board header{background:var(--jaune);border-bottom:2.5px solid var(--ink);font-family:var(--display);font-size:22px;letter-spacing:.5px;padding:8px 16px}
   .gc-board.b-points header{background:var(--vert);color:#fff}
@@ -300,9 +301,6 @@
   function abandonInfo(name){return name?(abandoned[name.toLowerCase().trim()]||null):null;}
 
   /* ---------- date helpers (NZ) ---------- */
-  function nzToday(){
-    return new Intl.DateTimeFormat('en-CA',{timeZone:'Pacific/Auckland',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-  }
   function addDays(iso,n){const p=iso.split('-').map(Number);const d=new Date(Date.UTC(p[0],p[1]-1,p[2]));d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);}
   function byDate(iso){return stages.find(s=>s.date===iso)||null;}
   function fmtDate(iso){if(!iso)return'';const p=iso.split('-').map(Number);const d=new Date(Date.UTC(p[0],p[1]-1,p[2]));
@@ -354,51 +352,61 @@
   ].filter(Boolean).join(' &nbsp;·&nbsp; ');
   document.getElementById('overviewLine').textContent=r.overview||'';
 
-  /* ---------- tonight hero ---------- */
-  function resolveTonight(){
-    const today=nzToday();
-    // prefer server override if it matches today
-    if(window.STAGE_TODAY && window.STAGE_TODAY.nz_date===today){
-      return {status:window.STAGE_TODAY.status,tonight:window.STAGE_TODAY.tonight,overnight:window.STAGE_TODAY.overnight,today:today};
-    }
-    function isRest(s){return s && String(s.type||'').toLowerCase().indexOf('rest')>-1;}
-    let tonight=byDate(addDays(today,-1));
-    let overnight=byDate(today);
-    const restTonight=isRest(tonight);
-    if(isRest(tonight)) tonight=null;
-    if(isRest(overnight)) overnight=null;
-    const dated=stages.filter(s=>s.date).map(s=>s.date).sort();
+  /* ---------- time-aware state (NZ; the whole page rolls forward at the daily flip) ---------- */
+  function nzNow(){
+    const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Pacific/Auckland',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+    const g=function(t){return (parts.find(function(x){return x.type===t;})||{}).value;};
+    return {date:g('year')+'-'+g('month')+'-'+g('day'),hour:parseInt(g('hour'),10)};
+  }
+  function datedStages(){return stages.filter(function(s){return s.date&&s.num!=null;});}
+  function latestOnOrBefore(iso){var b=null;datedStages().forEach(function(s){if(s.date<=iso&&(!b||s.date>b.date))b=s;});return b;}
+  function earliestOnOrAfter(iso){var b=null;datedStages().forEach(function(s){if(s.date>=iso&&(!b||s.date<b.date))b=s;});return b;}
+
+  function resolveState(){
+    const now=nzNow();
+    const boundary=(window.STAGE_TODAY&&window.STAGE_TODAY.boundary_hour)||10;
+    const afterFlip=now.hour>=boundary;
+    // refDate = the NZ date this cycle is oriented to (also the flip file's ref).
+    // Before the flip we're still in the previous cycle's window; at/after it we roll on.
+    const refDate=afterFlip?now.date:addDays(now.date,-1);
+    let hero=earliestOnOrAfter(refDate);                 // next stage to watch (the hero)
+    const watched=latestOnOrBefore(addDays(refDate,-1)); // standings reflect the END of this stage
+    let racingTonight=byDate(now.date);                  // European stage racing during tonight's NZ night
+    if(racingTonight&&racingTonight.num==null)racingTonight=null;
+    // layer the spoiler-safe server preview onto the hero only when it's for the same stage
+    const srv=window.STAGE_TODAY;
+    if(srv&&srv.preview&&hero&&srv.preview.date===hero.date)hero=srv.preview;
     let status='racing';
-    if(dated.length){
-      if(addDays(today,-1)<dated[0] && !tonight) status='pre-race';
-      else if(addDays(today,-1)>dated[dated.length-1]) status='finished';
-      else if(restTonight) status='rest-day';
-      else if(!tonight && !overnight) status='rest-day';
-    }
-    return {status,tonight,overnight,today};
+    if(!hero&&watched)status='finished';
+    else if(!watched&&hero)status='pre-race';
+    return {now:now,afterFlip:afterFlip,boundary:boundary,hero:hero,watched:watched,racingTonight:racingTonight,status:status};
   }
 
   function heroHTML(st){
-    const s=st.tonight;
+    const s=st.hero;
     const side=function(inner){return '<div class="hero-side">'+inner+'</div>';};
     if(!s){
-      let msg,sub;
-      if(st.status==='pre-race'){msg="Lumière, moteur…";sub="The 2026 Tour rolls out of Barcelona. First highlights land here tomorrow NZ evening. Pour a wine, it's nearly on.";}
-      else if(st.status==='finished'){msg="C'est fini";sub="The Tour is done for another year. Champagne on the Champs-Élysées. See you in 2027.";}
-      else {msg="Rest day";sub="No racing overnight — the peloton puts its feet up. Back to the mountains tomorrow.";}
-      return '<div class="hero"><div class="hero-main"><span class="stg-tag">'+(st.status==='pre-race'?'Grand Départ':st.status==='finished'?'Wrapped':'Repos')+'</span>'+
+      let tag,msg,sub;
+      if(st.status==='pre-race'){tag='Grand Départ';msg="Lumière, moteur…";sub="The 2026 Tour rolls out of Barcelona. First highlights land here tomorrow (NZ). Pour a wine, it's nearly on.";}
+      else if(st.status==='finished'){tag='Wrapped';msg="C'est fini";sub="The Tour is done for another year. Champagne on the Champs-Élysées. See you in 2027.";}
+      else {tag='Repos';msg="Rest day";sub="No racing overnight — the peloton puts its feet up. Back to the mountains tomorrow.";}
+      return '<div class="hero"><div class="hero-main"><span class="stg-tag">'+tag+'</span>'+
         '<h3>'+msg+'</h3><p class="hero-watch">'+sub+'</p></div>'+
         side('<div><div class="lbl">Status</div><div class="big" style="font-size:26px">'+(st.status==='pre-race'?'Coming up':st.status==='finished'?'Merci':'Repos')+'</div></div>')+'</div>';
     }
+    // After the flip the hero is the NEXT stage — raced overnight, watched next cycle.
+    const coming=st.afterFlip;
     const riders=(s.riders_to_watch||[]).map(function(n){return '<span class="rider-chip">'+esc(n)+'</span>';}).join('');
     const dist=s.distance_km?('<div class="stat"><div class="lbl">Distance</div><div class="big">'+Math.round(s.distance_km)+'<span style="font-size:15px"> km</span></div></div>'):'';
     const climb=s.climb_m?('<div class="stat"><div class="lbl">Climbing</div><div class="big">'+s.climb_m.toLocaleString()+'<span style="font-size:15px"> m</span></div></div>'):'';
     const type=s.type?('<div class="stat"><div class="lbl">Parcours</div><div class="big" style="font-size:22px">'+esc(s.type)+'</div>'+
       (s.summit_finish?'<div class="summit-flag">▲ Summit finish</div>':'')+'</div>'):'';
-    const nz=s.nz_note?('<div><div class="lbl">From NZ</div><div class="nz-note">'+esc(s.nz_note)+'</div></div>'):
-      '<div><div class="lbl">From NZ</div><div class="nz-note">Raced overnight while you slept — settle in for the highlights this evening.</div></div>';
+    const nzDefault=coming
+      ?'Races overnight while you sleep — you\'ll watch these highlights next.'
+      :'Raced overnight while you slept — settle in for the highlights.';
+    const nz='<div><div class="lbl">From NZ</div><div class="nz-note">'+esc(s.nz_note||nzDefault)+'</div></div>';
     return '<div class="hero"><div class="hero-main">'+
-      '<span class="stg-tag">Stage '+s.num+' · '+fmtDate(s.date)+'</span>'+(s.contextual?'<span class="tactical-chip">Tactical read</span>':'')+
+      '<span class="stg-tag">'+(coming?'Coming up':'Up next')+' · Stage '+s.num+' · '+fmtDate(s.date)+'</span>'+(s.contextual?'<span class="tactical-chip">Tactical read</span>':'')+
       '<h3>'+esc(s.headline||('Stage '+s.num))+'</h3>'+
       (s.start?('<p class="hero-route">'+esc(s.start)+' → '+esc(s.finish)+'</p>'):'')+
       '<p class="hero-watch">'+esc(s.watch_for||s.note||'')+'</p>'+
@@ -406,36 +414,59 @@
       side(dist+climb+type+nz)+'</div>';
   }
 
-  const st=resolveTonight();
+  const st=resolveState();
   const heroWrap=document.getElementById('heroSlot');
   heroWrap.innerHTML=heroHTML(st);
   heroWrap.querySelector('.hero').classList.add('fade');
 
-  // overnight strip
+  // overnight / evening-recap strip
   const ov=document.getElementById('overnightSlot');
-  if(st.overnight){
-    const o=st.overnight;
+  const rt=st.racingTonight;
+  if(rt && (!st.hero || rt.num!==st.hero.num)){
+    const o=rt;
     const bits=[esc(o.type),(o.summit_finish?'summit finish':null),(o.distance_km?Math.round(o.distance_km)+' km':null),
       (o.climb_m?'▲ '+o.climb_m.toLocaleString()+' m climbing':null)].filter(Boolean).join(' · ');
     ov.innerHTML='<span class="moon"></span> <b>Racing overnight tonight (NZ):</b> Stage '+o.num+' — '+
       (o.start?(esc(o.start)+' → '+esc(o.finish)+' · '):'')+bits+
-      '. <span style="font-style:italic">You\'ll watch these highlights tomorrow evening.</span>';
+      '. <span style="font-style:italic">You\'ll watch these highlights next.</span>';
+  } else if(st.afterFlip && st.watched){
+    ov.innerHTML='<span class="moon"></span> <b>You\'ve watched Stage '+st.watched.num+'.</b> The classifications below now reflect its finish'+
+      (st.hero?('. <span style="font-style:italic">Coming up: Stage '+st.hero.num+', racing overnight.</span>'):'.');
   } else if(st.status==='racing'){ ov.innerHTML='<span class="moon"></span> No stage racing overnight tonight — rest day in France.'; }
   else { ov.style.display='none'; }
 
-  /* ---------- standings (spoiler-safe: frozen at start of tonight's stage) ---------- */
+  /* ---------- standings (spoiler-safe; label flips Start→End of stage at the daily boundary) ---------- */
   (function(){
     const S=window.STAGE_TODAY&&window.STAGE_TODAY.standings;
     const sec=document.getElementById('standingsSec');
+    const asOfEl=document.getElementById('standingsAsOf');
+    const cont=document.getElementById('standings');
+    const watched=st.watched, hero=st.hero;   // standings reflect the END of `watched` == start of `hero`
     // accept either an array (new: full table) or {leader,team} (old: leader only)
     function asArray(x){
       if(Array.isArray(x))return x;
       if(x&&x.leader)return [{rank:1,rider:x.leader,team:x.team}];
       return [];
     }
-    if(!S||!asArray(S.gc).length){sec.style.display='none';return;}
+    function stateMsg(label,msg){sec.style.display='block';asOfEl.textContent=label||'';cont.innerHTML='<div class="standings-empty">'+msg+'</div>';}
+
+    // Before the first stage is watched there are genuinely no classifications yet.
+    if(!watched){
+      stateMsg('before Stage 1',"The race hasn't started yet — the classifications appear here once Stage 1 is in the books.");
+      return;
+    }
+    // The label names the stage the standings belong to, from the current side of the flip.
+    const label=st.afterFlip?('End of Stage '+watched.num):('Start of Stage '+(hero?hero.num:watched.num+1));
+    // Only trust the server standings if they're tagged for exactly this stage boundary.
+    const fresh=S && S.after_stage_date===watched.date && asArray(S.gc).length;
+    if(!fresh){
+      stateMsg(label+' — updating…',
+        "The classifications are refreshing for today's update. If this sticks around, the daily job hasn't run — "+
+        "you'd be seeing the standings "+(st.afterFlip?('at the end of Stage '+watched.num):('going into Stage '+(hero?hero.num:'—')))+".");
+      return;
+    }
     sec.style.display='block';
-    document.getElementById('standingsAsOf').textContent=S.as_of_label||'';
+    asOfEl.textContent=label;
 
     const boards={
       gc:   {key:'gc',   cls:'j-yellow',jersey:'Yellow · GC',        head:'General Classification', unit:'time', arr:asArray(S.gc)},
@@ -483,8 +514,7 @@
   })();
 
   /* ---------- stage ribbon ---------- */
-  const today=st.today;
-  const tonightNum=st.tonight?st.tonight.num:null;
+  const tonightNum=st.hero?st.hero.num:null;   // the stage currently featured in the hero
   const ribbon=document.getElementById('ribbon');
   document.getElementById('stageCount').textContent=stages.filter(function(s){return s.num!=null;}).length+' stages';
   stages.forEach(function(s){
@@ -515,8 +545,8 @@
     detail.classList.add('open');
     detail.scrollIntoView({behavior:'smooth',block:'nearest'});
   }
-  // open tonight's stage by default
-  if(st.tonight) showStage(st.tonight);
+  // open the currently-featured stage by default
+  if(st.hero) showStage(st.hero);
 
   /* ---------- teams ---------- */
   const kitDefault=['#111','#ffce00'];
