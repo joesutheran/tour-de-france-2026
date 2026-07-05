@@ -148,6 +148,7 @@
   .sec-title .n{font-family:var(--sans);font-weight:700;font-size:12px;color:var(--ink-soft);letter-spacing:.1em}
 
   /* ---- Stage ribbon ---- */
+  .ribbon-hint{font-family:var(--sans);font-size:12.5px;font-style:italic;color:var(--ink-soft);letter-spacing:.02em;margin:-10px 2px 12px}
   .ribbon{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 18px;scroll-snap-type:x proximity}
   .ribbon::-webkit-scrollbar{height:8px}
   .ribbon::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
@@ -260,6 +261,7 @@
   <div class="sec-title">
     <h2>The Route</h2><div class="rule"></div><span class="n" id="stageCount"></span>
   </div>
+  <div class="ribbon-hint">Tap any stage for its details ↓</div>
   <div class="ribbon" id="ribbon"></div>
   <div class="stage-detail" id="stageDetail"></div>
 
@@ -529,10 +531,9 @@
     el.innerHTML='<div class="sc-top"><span class="sc-num">'+(isRestType?'·':s.num)+'</span><span class="sc-date">'+fmtDate(s.date)+'</span></div>'+
       '<div class="sc-body"><div class="sc-route">'+(s.start?(esc(s.start)+' → '+esc(s.finish)):esc(s.note||'Rest day'))+'</div>'+
       stats+'<div class="sc-tags">'+tags+'</div></div>';
-    // the featured stage carries fresh AI enrichment (st.hero); other cards use the
-    // baseline schedule entry. Match by date so clicking the featured card shows the
-    // same rich copy as the hero, not the shorter static blurb.
-    el.addEventListener('click',function(){showStage(st.hero&&st.hero.date===s.date?st.hero:s);});
+    // Always the concise baseline blurb — the featured stage's full read already
+    // lives in the hero card up top, no need to repeat it here.
+    el.addEventListener('click',function(){showStage(s);});
     ribbon.appendChild(el);
   });
 
@@ -548,8 +549,8 @@
     detail.classList.add('open');
     detail.scrollIntoView({behavior:'smooth',block:'nearest'});
   }
-  // open the currently-featured stage by default
-  if(st.hero) showStage(st.hero);
+  // The detail card stays closed until a stage is clicked (the hero already covers
+  // the featured stage), so we don't render the same copy twice on load.
 
   /* ---------- teams ---------- */
   const kitDefault=['#111','#ffce00'];
