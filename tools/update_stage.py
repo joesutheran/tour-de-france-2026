@@ -277,8 +277,17 @@ def build_extract_prompt(data: Dict[str, Any], payload: Dict[str, Any], context:
         standings_ask = (
             "From the SOURCE TEXT, extract these four classifications AS THEY STAND AFTER STAGE %d, EACH a "
             "top-10 table: (1) General Classification with time gaps; (2) Points / Green with points totals; "
-            "(3) Mountains / Polka-dot (KOM) with points totals; (4) Young rider / White with time gaps. "
-            "If a classification is not present in the text, return an empty array for it rather than "
+            "(3) Mountains / Polka-dot (KOM) with points totals; (4) Young rider / White with time gaps.\n"
+            "GAP RULES (get these right):\n"
+            "  - Every rider's `gap` is their deficit to THAT table's own leader (rank 1 = \"race lead\").\n"
+            "  - The Young rider (White) classification uses the SAME race times as the GC — it is just the "
+            "GC restricted to under-26 riders. So each young rider's gap = their GC time behind the "
+            "white-jersey holder (the best-placed young rider). If the source only lists GC times, COMPUTE "
+            "it: gap = rider's GC time − white-jersey holder's GC time. Example: if the white-jersey holder "
+            "sits +0:16 on GC and the next young rider is +0:19 on GC, that rider's youth gap is +0:03.\n"
+            "  - NEVER output +0:00 (or 0) as a placeholder for a rider who is not genuinely level on time. "
+            "If you cannot determine a real gap for a rider, omit that rider rather than fake a zero.\n"
+            "If a whole classification is absent from the text, return an empty array for it rather than "
             "guessing." % Wn)
         abandon_ask = ("From the SOURCE TEXT, list riders who ABANDONED / were eliminated / did-not-start "
                        "THROUGH stage %d only." % Wn)
