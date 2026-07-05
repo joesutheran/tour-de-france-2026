@@ -529,7 +529,10 @@
     el.innerHTML='<div class="sc-top"><span class="sc-num">'+(isRestType?'·':s.num)+'</span><span class="sc-date">'+fmtDate(s.date)+'</span></div>'+
       '<div class="sc-body"><div class="sc-route">'+(s.start?(esc(s.start)+' → '+esc(s.finish)):esc(s.note||'Rest day'))+'</div>'+
       stats+'<div class="sc-tags">'+tags+'</div></div>';
-    el.addEventListener('click',function(){showStage(s);});
+    // the featured stage carries fresh AI enrichment (st.hero); other cards use the
+    // baseline schedule entry. Match by date so clicking the featured card shows the
+    // same rich copy as the hero, not the shorter static blurb.
+    el.addEventListener('click',function(){showStage(st.hero&&st.hero.date===s.date?st.hero:s);});
     ribbon.appendChild(el);
   });
 
