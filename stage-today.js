@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-06T11:16:54.678556+12:00",
+  "generated_at": "2026-07-06T14:00:01.448273+12:00",
   "nz_date": "2026-07-06",
   "as_of_date": "2026-07-06",
   "boundary_hour": 10,
@@ -20,16 +20,14 @@ window.STAGE_TODAY = {
     "type": "Mountain",
     "note": "Crosses the Pyrenees with 3,850m of climbing and an uphill ski-station finish at Les Angles - first real GC test.",
     "headline": "First summit showdown in the Pyrenees",
-    "watch_for": "Stage 3 covers 195.9 km from Granollers to the summit at Les Angles — the first Pyrenean mountain verdict of 2026, with nearly 4,000m of climbing — and the razor-thin GC margins all but guarantee an aggressive day. Vingegaard holds yellow by just six seconds over Pogačar, meaning UAE Team Emirates will drive the pace relentlessly on the final ascent: expect del Toro, emboldened by his Barcelona win and only 16 seconds off yellow, and Ayuso, three seconds further back in white, to be the two UAE-aligned thorns in Vingegaard's side on the upper slopes. Evenepoel, 15 seconds adrift and a calculating racer who hates giving time to rivals, may push the pace early to test Vingegaard's climbing legs before the much bigger battles at Gavarnie-Gèdre and the Alps. Pidcock — explosive, unpredictable, and already 60 seconds down — is precisely the kind of rider who attacks a summit finish from distance rather than waiting for the favourite sprint, and Les Angles suits his punchy style perfectly. Further up the road, polka-dot leader Molenaar will almost certainly be prominent in the day's early breakaway, targeting the categorised climbs to extend his KOM lead, while Grégoire and Seixas — both in the top seven on GC despite being less-fancied names — will be fighting hard to limit any attrition and arrive at Les Angles with their positions intact.",
+    "watch_for": "Stage 3 delivers the race's first true summit finish — 195.9 km from Granollers to Les Angles with nearly 4,000 m of climbing through the Pyrenees — and every GC rider knows this is where the early Tour hierarchy gets set. Jonas Vingegaard holds a razor-thin six-second lead over Tadej Pogačar after two days, and the Giro-winning Slovenian will be hunting for every second on a climb that should strip the race down to the pure mountain men; watch for Visma to try to control tempo before Pogačar unleashes. Isaac del Toro arrives in the white jersey only 16 seconds off yellow after his Barcelona stage win and has already proven he can shoulder-to-shoulder with the very best — UAE Team Emirates must decide whether to protect him or burn him as a foil for Pogačar. Juan Ayuso and Lidl-Trek sit just 19 seconds down and cannot afford another passive day; with two GC cards in Ayuso and Skjelmose they have options to put Visma under pressure from multiple angles on the final climb. Paul Seixas — who hemorrhaged time on Stage 2's explosive Montjuic finale before fighting back — will be hoping the long, diesel-paced summit of Les Angles suits him far better, with 42 seconds already in the hole. Polka-dot leader Alex Molenaar may try to animate an early break to bank more KOM points up the categorised climbs, but once the GC engines ignite on the summit road, the jersey that truly matters here is yellow.",
     "riders_to_watch": [
-      "Tadej Pogačar",
       "Jonas Vingegaard",
+      "Tadej Pogačar",
       "Isaac del Toro",
-      "Remco Evenepoel",
-      "Tom Pidcock",
-      "Alex Molenaar",
       "Juan Ayuso",
-      "Romain Grégoire"
+      "Paul Seixas",
+      "Alex Molenaar"
     ],
     "nz_note": "The marquee stage of week one, worth watching the full final climb rather than just the highlights reel.",
     "climb_m": 3940,
@@ -72,7 +70,7 @@ window.STAGE_TODAY = {
       {
         "rank": 5,
         "rider": "Juan Ayuso",
-        "team": "Lidl-Trek",
+        "team": "Lidl - Trek",
         "gap": "+0:19"
       },
       {
@@ -146,7 +144,7 @@ window.STAGE_TODAY = {
       {
         "rank": 7,
         "rider": "Mattias Skjelmose",
-        "team": "Lidl-Trek",
+        "team": "Lidl - Trek",
         "pts": 17
       },
       {
@@ -214,7 +212,7 @@ window.STAGE_TODAY = {
       {
         "rank": 8,
         "rider": "Richard Carapaz",
-        "team": "EF Education–EasyPost",
+        "team": "EF Education – EasyPost",
         "pts": 1
       },
       {
@@ -234,7 +232,7 @@ window.STAGE_TODAY = {
       {
         "rank": 2,
         "rider": "Juan Ayuso",
-        "team": "Lidl-Trek",
+        "team": "Lidl - Trek",
         "gap": "+0:03"
       },
       {
@@ -258,7 +256,7 @@ window.STAGE_TODAY = {
       {
         "rank": 6,
         "rider": "Alex Baudin",
-        "team": "EF Education–EasyPost",
+        "team": "EF Education – EasyPost",
         "gap": "+0:51"
       },
       {
@@ -272,15 +270,15 @@ window.STAGE_TODAY = {
     "after_stage_date": "2026-07-05"
   },
   "ai": {
-    "confidence": "medium",
+    "confidence": "high",
     "sources": [
       "https://www.letour.fr/en/rankings",
       "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-2-jonas-vingegaard-keeps-yellow-but-uae-take-over-other-jerseys-as-tadej-pogacar-closes-in",
-      "https://www.letour.fr/en/rankings/stage-2?hasCookies=false&hasIframeResizer=true&isWebview=true&partner=sbsapN",
+      "https://www.letour.fr/en/rankings/stage-2?hasCookies=false&hideOnetrust=true&isRacecenter=true&isWebview=true",
       "https://www.procyclingstats.com/race/tour-de-france/2026/stage-2",
-      "https://www.letour.fr/en/withdrawal",
+      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-2-biniam-girmay-maxim-van-gils-and-dorian-godon-all-caught-up-in-crashes",
       "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/",
-      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-2-biniam-girmay-maxim-van-gils-and-dorian-godon-all-caught-up-in-crashes"
+      "https://www.letour.fr/en/withdrawal"
     ]
   }
 };
