@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-08T10:00:01.860193+12:00",
+  "generated_at": "2026-07-08T14:00:04.939897+12:00",
   "nz_date": "2026-07-08",
   "as_of_date": "2026-07-08",
   "boundary_hour": 10,
@@ -20,18 +20,264 @@ window.STAGE_TODAY = {
     "type": "Flat",
     "note": "Transitional day into Pau; a likely bunch sprint after the opening mountains.",
     "headline": "The fast men get their turn in Pau",
-    "watch_for": "A transitional day off the back of the mountains, running into Pau where the sprint trains will want to reassemble the bunch and set up a bunch gallop. The intrigue is whether the sprinters' teams have the legs to reel in a hopeful break after two hard days. Watch the lead-out choreography in the final kilometres.",
+    "watch_for": "Stage 5 is the first genuine sprint day of the race — 158.3 flat kilometres from Lannemezan to Pau give the pure speed men their long-awaited opportunity after four hilly, sprint-less opening stages. Mads Pedersen arrives in the green jersey with a commanding 103-point lead and the momentum of a Stage 4 win, and Lidl-Trek will be highly motivated to control the peloton all day: they also hold third on GC with Mathias Vacek, so expect their train to be the best-organised on the road, with teammate Quinn Simmons — fourth in the points standings himself — the obvious lead-out engine for a Danish-American finale. Jasper Philipsen (Alpecin – Premier Tech) and Biniam Girmay (NSN Cycling Team) are the most dangerous counter-punches; both are elite finishers who have been largely sidelined by the technical parcours so far and will arrive at the Pau line with fresh legs and a point to prove. The finish in Pau carries a history of twists — the approach is not a pure two-kilometre dragstrip — so teams with smart positioning and riders who can navigate corners at speed may have an edge over brute horsepower alone. Meanwhile, Torstein Traen dons the maillot jaune for the very first time and Uno-X simply needs to shepherd their Norwegian climber safely through the peloton, while Pogačar and Vingegaard — both sitting 7 minutes 53 seconds off the lead — have nothing to gain by racing aggressively today and every reason to conserve themselves before the Pyrenean summit day at Gavarnie-Gèdre on Stage 6.",
     "riders_to_watch": [
-      "Tim Merlier",
+      "Mads Pedersen",
+      "Quinn Simmons",
       "Jasper Philipsen",
       "Biniam Girmay",
-      "Arnaud De Lie",
-      "Fernando Gaviria",
-      "Milan Fretin"
+      "Tim Merlier",
+      "Torstein Traen"
     ],
     "nz_note": "A classic skip-to-the-last-3km stage if you're short on evening time.",
     "climb_m": 1395,
-    "summit_finish": false
+    "summit_finish": false,
+    "contextual": true
   },
-  "abandoned": []
+  "abandoned": [
+    {
+      "name": "Clément Berthet",
+      "stage": 2,
+      "reason": "DNS (did not start Stage 2)"
+    },
+    {
+      "name": "Kelland O'Brien",
+      "stage": 4,
+      "reason": "finished outside time limit on Stage 4"
+    }
+  ],
+  "standings": {
+    "gc": [
+      {
+        "rank": 1,
+        "rider": "Torstein Traen",
+        "team": "Uno-X Mobility",
+        "gap": "race lead"
+      },
+      {
+        "rank": 2,
+        "rider": "Sean Quinn",
+        "team": "EF Education–EasyPost",
+        "gap": "+0:28"
+      },
+      {
+        "rank": 3,
+        "rider": "Mathias Vacek",
+        "team": "Lidl - Trek",
+        "gap": "+3:50"
+      },
+      {
+        "rank": 4,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "gap": "+7:53"
+      },
+      {
+        "rank": 5,
+        "rider": "Jonas Vingegaard",
+        "team": "Team Visma | Lease a Bike",
+        "gap": "+7:53"
+      },
+      {
+        "rank": 6,
+        "rider": "Ramses Debruyne",
+        "team": "Alpecin – Premier Tech",
+        "gap": "+8:06"
+      },
+      {
+        "rank": 7,
+        "rider": "Remco Evenepoel",
+        "team": "Red Bull – BORA – hansgrohe",
+        "gap": "+8:16"
+      },
+      {
+        "rank": 8,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "gap": "+8:17"
+      },
+      {
+        "rank": 9,
+        "rider": "Juan Ayuso",
+        "team": "Lidl - Trek",
+        "gap": "+8:20"
+      },
+      {
+        "rank": 10,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "gap": "+8:41"
+      }
+    ],
+    "points": [
+      {
+        "rank": 1,
+        "rider": "Mads Pedersen",
+        "team": "Lidl - Trek",
+        "pts": 103
+      },
+      {
+        "rank": 2,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "pts": 55
+      },
+      {
+        "rank": 3,
+        "rider": "Jonas Vingegaard",
+        "team": "Team Visma | Lease a Bike",
+        "pts": 44
+      },
+      {
+        "rank": 4,
+        "rider": "Quinn Simmons",
+        "team": "Lidl - Trek",
+        "pts": 42
+      },
+      {
+        "rank": 5,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "pts": 39
+      },
+      {
+        "rank": 6,
+        "rider": "Biniam Girmay",
+        "team": "NSN Cycling Team",
+        "pts": 39
+      },
+      {
+        "rank": 7,
+        "rider": "Remco Evenepoel",
+        "team": "Red Bull – BORA – hansgrohe",
+        "pts": 33
+      },
+      {
+        "rank": 8,
+        "rider": "Tobias Halland Johannessen",
+        "team": "Uno-X Mobility",
+        "pts": 32
+      },
+      {
+        "rank": 9,
+        "rider": "Jasper Philipsen",
+        "team": "Alpecin – Premier Tech",
+        "pts": 30
+      },
+      {
+        "rank": 10,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 28
+      }
+    ],
+    "kom": [
+      {
+        "rank": 1,
+        "rider": "Alex Baudin",
+        "team": "EF Education–EasyPost",
+        "pts": 12
+      },
+      {
+        "rank": 2,
+        "rider": "Alex Molenaar",
+        "team": "Caja Rural – Seguros RGA",
+        "pts": 10
+      },
+      {
+        "rank": 3,
+        "rider": "Nicolas Prodhomme",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 9
+      },
+      {
+        "rank": 4,
+        "rider": "Raúl García Pierna",
+        "team": "Movistar Team",
+        "pts": 7
+      },
+      {
+        "rank": 5,
+        "rider": "Jan Tratnik",
+        "team": "Red Bull – BORA – hansgrohe",
+        "pts": 5
+      },
+      {
+        "rank": 6,
+        "rider": "Marco Frigo",
+        "team": "NSN Cycling Team",
+        "pts": 5
+      },
+      {
+        "rank": 7,
+        "rider": "Brandon McNulty",
+        "team": "UAE Team Emirates XRG",
+        "pts": 4
+      },
+      {
+        "rank": 8,
+        "rider": "Vlad Van Mechelen",
+        "team": "Bahrain – Victorious",
+        "pts": 4
+      },
+      {
+        "rank": 9,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "pts": 3
+      },
+      {
+        "rank": 10,
+        "rider": "Mathias Vacek",
+        "team": "Lidl - Trek",
+        "pts": 3
+      }
+    ],
+    "youth": [
+      {
+        "rank": 1,
+        "rider": "Mathias Vacek",
+        "team": "Lidl - Trek",
+        "gap": "race lead"
+      },
+      {
+        "rank": 2,
+        "rider": "Ramses Debruyne",
+        "team": "Alpecin – Premier Tech",
+        "gap": "+4:16"
+      },
+      {
+        "rank": 3,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "gap": "+4:27"
+      },
+      {
+        "rank": 4,
+        "rider": "Juan Ayuso",
+        "team": "Lidl - Trek",
+        "gap": "+4:30"
+      },
+      {
+        "rank": 5,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "gap": "+4:51"
+      }
+    ],
+    "after_stage_num": 4,
+    "after_stage_date": "2026-07-07"
+  },
+  "ai": {
+    "confidence": "high",
+    "sources": [
+      "https://www.letour.fr/en/rankings",
+      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-4-torstein-traeen-takes-historic-yellow-jersey-for-uno-x-as-pogacar-drops-down-pedersen-jumps-into-green-jersey",
+      "https://www.letour.fr/en/rankings/stage-4?hasCookies=false&hasIframeResizer=true&isWebview=true&partner=sbsapN",
+      "https://www.idlprocycling.com/cycling/2026-tour-de-france-standings-new-yellow-white-and-green-jersey-wearers",
+      "https://www.letour.fr/en/withdrawal",
+      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-4-tour-finds-its-first-rider-out-of-the-time-limit",
+      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/"
+    ]
+  }
 };
