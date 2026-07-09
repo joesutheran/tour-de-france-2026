@@ -2,325 +2,36 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-09T20:05:14.932091+12:00",
-  "nz_date": "2026-07-09",
-  "as_of_date": "2026-07-09",
+  "generated_at": "2026-07-10T10:00:00.963341+12:00",
+  "nz_date": "2026-07-10",
+  "as_of_date": "2026-07-10",
   "boundary_hour": 10,
   "status": "racing",
   "watched": {
-    "num": 5,
-    "date": "2026-07-08"
+    "num": 6,
+    "date": "2026-07-09"
   },
   "preview": {
-    "num": 6,
-    "date": "2026-07-09",
-    "start": "Pau",
-    "finish": "Gavarnie-Gedre",
-    "distance_km": 186.2,
-    "type": "Mountain",
-    "note": "Classic Pyrenean queen-of-the-week stage finishing high at Gavarnie-Gedre.",
-    "headline": "Queen of the Pyrenees soars to Gavarnie-Gedre",
-    "watch_for": "Stage 6 is the first true mountain test of the 2026 Tour — 186 km from Pau to the summit finish at Gavarnie-Gèdre, with 4,149 m of climbing. The yellow jersey sits on the shoulders of Torstein Træen, who holds just 28 seconds over Sean Quinn; neither is a pure climber and both face a genuine threat of losing significant time on this brutal summit finish, which could completely reshuffle the overall standings. With Tadej Pogačar and Jonas Vingegaard both sitting 7:53 back and level on time after Vingegaard's team successfully dragged him through the stage 5 finale chaos, this is the first real opportunity for the Tour's marquee GC duel to ignite — one or both will almost certainly be looking to probe the other on the final climb. Remco Evenepoel (8:16 back), Isaac del Toro (8:17) and Juan Ayuso (8:20) are separated by just four seconds on the GC, meaning their own three-way skirmish could be just as tense as the Pogačar–Vingegaard battle above them. Alex Baudin will be active over the early mountain passes to defend his polka-dot jersey lead, though with KOM runner-up Molenaar now out of the race after the stage 5 crash, a new rival could emerge from the day's breakaway. Mathias Vacek carries the white jersey into the mountains with a comfortable buffer over the other young riders, but a summit finish of this severity is the first serious test of whether the Lidl-Trek rouleur can stay with the pure climbers.",
+    "num": 7,
+    "date": "2026-07-10",
+    "start": "Hagetmau",
+    "finish": "Bordeaux",
+    "distance_km": 175.1,
+    "type": "Flat",
+    "note": "Flat run to Bordeaux - a prime sprinters' stage.",
+    "headline": "Bordeaux beckons the sprinters",
+    "watch_for": "A flat run to Bordeaux is about as pure a sprinters' stage as the Tour offers, so expect the fast men's teams to control the day and deliver a full-gas bunch finish. The tension is all in the final kilometre positioning and whether a breakaway can somehow survive on a wide, fast finale. Watch the lead-out trains lock horns.",
     "riders_to_watch": [
-      "Torstein Træen",
-      "Sean Quinn",
-      "Tadej Pogačar",
-      "Jonas Vingegaard",
-      "Remco Evenepoel",
-      "Isaac del Toro",
-      "Juan Ayuso",
-      "Alex Baudin",
-      "Mathias Vacek"
+      "Tim Merlier",
+      "Jasper Philipsen",
+      "Arnaud De Lie",
+      "Pavel Bittner",
+      "Fernando Gaviria",
+      "Biniam Girmay"
     ],
-    "nz_note": "A big one, so settle in for the final climb; this is appointment viewing.",
-    "climb_m": 4149,
-    "summit_finish": true,
-    "contextual": true
+    "nz_note": "One for the last-5km highlights if the day's been long.",
+    "climb_m": 701,
+    "summit_finish": false
   },
-  "abandoned": [
-    {
-      "name": "Clément Berthet",
-      "stage": 2,
-      "reason": "DNS — injuries due to crash"
-    },
-    {
-      "name": "Arnaud De Lie",
-      "stage": 3,
-      "reason": "withdrawal — sickness"
-    },
-    {
-      "name": "Kelland O'Brien",
-      "stage": 4,
-      "reason": "outside time limit"
-    },
-    {
-      "name": "Alex Molenaar",
-      "stage": 5,
-      "reason": "fractured metacarpal sustained in crash"
-    }
-  ],
-  "standings": {
-    "gc": [
-      {
-        "rank": 1,
-        "rider": "Torstein Træen",
-        "team": "Uno-X Mobility",
-        "gap": "race lead"
-      },
-      {
-        "rank": 2,
-        "rider": "Sean Quinn",
-        "team": "EF Education–EasyPost",
-        "gap": "+0:28"
-      },
-      {
-        "rank": 3,
-        "rider": "Mathias Vacek",
-        "team": "Lidl-Trek",
-        "gap": "+3:50"
-      },
-      {
-        "rank": 4,
-        "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates XRG",
-        "gap": "+7:53"
-      },
-      {
-        "rank": 5,
-        "rider": "Jonas Vingegaard",
-        "team": "Team Visma | Lease a Bike",
-        "gap": "+7:53"
-      },
-      {
-        "rank": 6,
-        "rider": "Ramses Debruyne",
-        "team": "Alpecin–Premier Tech",
-        "gap": "+8:06"
-      },
-      {
-        "rank": 7,
-        "rider": "Remco Evenepoel",
-        "team": "Red Bull–BORA–hansgrohe",
-        "gap": "+8:16"
-      },
-      {
-        "rank": 8,
-        "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates XRG",
-        "gap": "+8:17"
-      },
-      {
-        "rank": 9,
-        "rider": "Juan Ayuso",
-        "team": "Lidl-Trek",
-        "gap": "+8:20"
-      },
-      {
-        "rank": 10,
-        "rider": "Paul Seixas",
-        "team": "Decathlon CMA CGM Team",
-        "gap": "+8:41"
-      }
-    ],
-    "points": [
-      {
-        "rank": 1,
-        "rider": "Mads Pedersen",
-        "team": "Lidl-Trek",
-        "pts": 143
-      },
-      {
-        "rank": 2,
-        "rider": "Biniam Girmay",
-        "team": "NSN Cycling Team",
-        "pts": 79
-      },
-      {
-        "rank": 3,
-        "rider": "Max Kanter",
-        "team": "XDS Astana Team",
-        "pts": 77
-      },
-      {
-        "rank": 4,
-        "rider": "Jasper Philipsen",
-        "team": "Alpecin–Premier Tech",
-        "pts": 72
-      },
-      {
-        "rank": 5,
-        "rider": "Olav Kooij",
-        "team": "Decathlon CMA CGM Team",
-        "pts": 70
-      },
-      {
-        "rank": 6,
-        "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates XRG",
-        "pts": 55
-      },
-      {
-        "rank": 7,
-        "rider": "Tim Merlier",
-        "team": "Soudal Quick-Step",
-        "pts": 55
-      },
-      {
-        "rank": 8,
-        "rider": "Quinn Simmons",
-        "team": "Lidl-Trek",
-        "pts": 45
-      },
-      {
-        "rank": 9,
-        "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates XRG",
-        "pts": 44
-      },
-      {
-        "rank": 10,
-        "rider": "Jonas Vingegaard",
-        "team": "Team Visma | Lease a Bike",
-        "pts": 39
-      }
-    ],
-    "kom": [
-      {
-        "rank": 1,
-        "rider": "Alex Baudin",
-        "team": "EF Education–EasyPost",
-        "pts": 13
-      },
-      {
-        "rank": 2,
-        "rider": "Alex Molenaar",
-        "team": "Caja Rural–Seguros RGA",
-        "pts": 10
-      },
-      {
-        "rank": 3,
-        "rider": "Nicolas Prodhomme",
-        "team": "Decathlon CMA CGM Team",
-        "pts": 9
-      },
-      {
-        "rank": 4,
-        "rider": "Raúl García Pierna",
-        "team": "Movistar Team",
-        "pts": 7
-      },
-      {
-        "rank": 5,
-        "rider": "Jan Tratnik",
-        "team": "Red Bull–BORA–hansgrohe",
-        "pts": 5
-      },
-      {
-        "rank": 6,
-        "rider": "Marco Frigo",
-        "team": "NSN Cycling Team",
-        "pts": 5
-      },
-      {
-        "rank": 7,
-        "rider": "Brandon McNulty",
-        "team": "UAE Team Emirates XRG",
-        "pts": 4
-      },
-      {
-        "rank": 8,
-        "rider": "Vlad Van Mechelen",
-        "team": "Bahrain–Victorious",
-        "pts": 4
-      },
-      {
-        "rank": 9,
-        "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates XRG",
-        "pts": 3
-      },
-      {
-        "rank": 10,
-        "rider": "Mathias Vacek",
-        "team": "Lidl-Trek",
-        "pts": 3
-      }
-    ],
-    "youth": [
-      {
-        "rank": 1,
-        "rider": "Mathias Vacek",
-        "team": "Lidl-Trek",
-        "gap": "race lead"
-      },
-      {
-        "rank": 2,
-        "rider": "Ramses Debruyne",
-        "team": "Alpecin–Premier Tech",
-        "gap": "+4:16"
-      },
-      {
-        "rank": 3,
-        "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates XRG",
-        "gap": "+4:27"
-      },
-      {
-        "rank": 4,
-        "rider": "Juan Ayuso",
-        "team": "Lidl-Trek",
-        "gap": "+4:30"
-      },
-      {
-        "rank": 5,
-        "rider": "Paul Seixas",
-        "team": "Decathlon CMA CGM Team",
-        "gap": "+4:51"
-      },
-      {
-        "rank": 6,
-        "rider": "Lenny Martinez",
-        "team": "Bahrain–Victorious",
-        "gap": "+5:12"
-      },
-      {
-        "rank": 7,
-        "rider": "Davide Piganzoli",
-        "team": "Team Visma | Lease a Bike",
-        "gap": "+6:18"
-      },
-      {
-        "rank": 8,
-        "rider": "Lennert Van Eetvelt",
-        "team": "Lotto-Intermarché",
-        "gap": "+6:23"
-      },
-      {
-        "rank": 9,
-        "rider": "Raúl García Pierna",
-        "team": "Movistar Team",
-        "gap": "+7:27"
-      },
-      {
-        "rank": 10,
-        "rider": "Cian Uijtdebroeks",
-        "team": "Movistar Team",
-        "gap": "+7:44"
-      }
-    ],
-    "after_stage_num": 5,
-    "after_stage_date": "2026-07-08"
-  },
-  "ai": {
-    "confidence": "high",
-    "sources": [
-      "https://www.letour.fr/en/rankings/stage-5",
-      "https://www.letour.fr/en/rankings",
-      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-5",
-      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-3-tadej-pogacar-strips-yellow-from-jonas-vingegaard-as-alex-baudin-claims-polka-dots",
-      "https://www.letour.fr/en/withdrawal",
-      "https://www.domestiquecycling.com/en/news/tour-de-france-2026-withdrawals/",
-      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/"
-    ]
-  }
+  "abandoned": []
 };
