@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-09T14:00:00.140631+12:00",
+  "generated_at": "2026-07-09T20:05:14.932091+12:00",
   "nz_date": "2026-07-09",
   "as_of_date": "2026-07-09",
   "boundary_hour": 10,
@@ -20,16 +20,17 @@ window.STAGE_TODAY = {
     "type": "Mountain",
     "note": "Classic Pyrenean queen-of-the-week stage finishing high at Gavarnie-Gedre.",
     "headline": "Queen of the Pyrenees soars to Gavarnie-Gedre",
-    "watch_for": "Stage 6 is the race's first genuinely decisive mountain stage — 186 km from Pau into the high Pyrenees to the summit finish at Gavarnie-Gèdre — and it will almost certainly reshape the yellow jersey, with breakaway survivors Torstein Traeen (in yellow) and Sean Quinn in second (+0:28) facing terrain where their modest cushions will be crushed by the first real GC confrontation. Both Tadej Pogačar and Jonas Vingegaard are buried at roughly eight minutes down and have nothing to play for except attacking; expect UAE Team Emirates XRG and Visma | Lease a Bike to race at the front and push hard on the final climb, with the marquee duel between the sport's two biggest names set to define the day's tempo. Remco Evenepoel sits just 23 seconds behind Pogačar on GC and cannot afford to concede more ground — his long-engine climbing style makes him dangerous on a big Pyrenean day, either as an attacker or as the rider who simply refuses to crack. Richard Carapaz (EF Education-EasyPost, +9:38) is in attack-or-lose-the-Tour territory this early, and with Alex Baudin already leading the polka-dot jersey on 12 KOM points, EF have every incentive to light the race up from the early climbs and put Carapaz in position to take back serious time. Tom Pidcock (+9:15) and Tobias Halland Johannessen (+9:04) are both just inside the top 15 and have everything to gain on a summit finish that rewards pure climbing ability and tactical chaos. Lidl-Trek enter carrying the team classification lead with Juan Ayuso, Mattias Skjelmose, and white-jersey holder Mathias Vacek all in the race — making their collective game plan one of the most fascinating tactical puzzles of the day.",
+    "watch_for": "Stage 6 is the first true mountain test of the 2026 Tour — 186 km from Pau to the summit finish at Gavarnie-Gèdre, with 4,149 m of climbing. The yellow jersey sits on the shoulders of Torstein Træen, who holds just 28 seconds over Sean Quinn; neither is a pure climber and both face a genuine threat of losing significant time on this brutal summit finish, which could completely reshuffle the overall standings. With Tadej Pogačar and Jonas Vingegaard both sitting 7:53 back and level on time after Vingegaard's team successfully dragged him through the stage 5 finale chaos, this is the first real opportunity for the Tour's marquee GC duel to ignite — one or both will almost certainly be looking to probe the other on the final climb. Remco Evenepoel (8:16 back), Isaac del Toro (8:17) and Juan Ayuso (8:20) are separated by just four seconds on the GC, meaning their own three-way skirmish could be just as tense as the Pogačar–Vingegaard battle above them. Alex Baudin will be active over the early mountain passes to defend his polka-dot jersey lead, though with KOM runner-up Molenaar now out of the race after the stage 5 crash, a new rival could emerge from the day's breakaway. Mathias Vacek carries the white jersey into the mountains with a comfortable buffer over the other young riders, but a summit finish of this severity is the first serious test of whether the Lidl-Trek rouleur can stay with the pure climbers.",
     "riders_to_watch": [
+      "Torstein Træen",
+      "Sean Quinn",
       "Tadej Pogačar",
       "Jonas Vingegaard",
       "Remco Evenepoel",
-      "Richard Carapaz",
-      "Alex Baudin",
-      "Tom Pidcock",
+      "Isaac del Toro",
       "Juan Ayuso",
-      "Tobias Halland Johannessen"
+      "Alex Baudin",
+      "Mathias Vacek"
     ],
     "nz_note": "A big one, so settle in for the final climb; this is appointment viewing.",
     "climb_m": 4149,
@@ -40,7 +41,7 @@ window.STAGE_TODAY = {
     {
       "name": "Clément Berthet",
       "stage": 2,
-      "reason": "DNS — crash injuries"
+      "reason": "DNS — injuries due to crash"
     },
     {
       "name": "Arnaud De Lie",
@@ -55,14 +56,14 @@ window.STAGE_TODAY = {
     {
       "name": "Alex Molenaar",
       "stage": 5,
-      "reason": "fractured metacarpal (crash)"
+      "reason": "fractured metacarpal sustained in crash"
     }
   ],
   "standings": {
     "gc": [
       {
         "rank": 1,
-        "rider": "Torstein Traeen",
+        "rider": "Torstein Træen",
         "team": "Uno-X Mobility",
         "gap": "race lead"
       },
@@ -82,6 +83,12 @@ window.STAGE_TODAY = {
         "rank": 4,
         "rider": "Tadej Pogačar",
         "team": "UAE Team Emirates XRG",
+        "gap": "+7:53"
+      },
+      {
+        "rank": 5,
+        "rider": "Jonas Vingegaard",
+        "team": "Team Visma | Lease a Bike",
         "gap": "+7:53"
       },
       {
@@ -113,12 +120,6 @@ window.STAGE_TODAY = {
         "rider": "Paul Seixas",
         "team": "Decathlon CMA CGM Team",
         "gap": "+8:41"
-      },
-      {
-        "rank": 11,
-        "rider": "Florian Lipowitz",
-        "team": "Red Bull–BORA–hansgrohe",
-        "gap": "+8:46"
       }
     ],
     "points": [
@@ -126,61 +127,61 @@ window.STAGE_TODAY = {
         "rank": 1,
         "rider": "Mads Pedersen",
         "team": "Lidl-Trek",
-        "pts": 103
+        "pts": 143
       },
       {
         "rank": 2,
+        "rider": "Biniam Girmay",
+        "team": "NSN Cycling Team",
+        "pts": 79
+      },
+      {
+        "rank": 3,
+        "rider": "Max Kanter",
+        "team": "XDS Astana Team",
+        "pts": 77
+      },
+      {
+        "rank": 4,
+        "rider": "Jasper Philipsen",
+        "team": "Alpecin–Premier Tech",
+        "pts": 72
+      },
+      {
+        "rank": 5,
+        "rider": "Olav Kooij",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 70
+      },
+      {
+        "rank": 6,
         "rider": "Tadej Pogačar",
         "team": "UAE Team Emirates XRG",
         "pts": 55
       },
       {
-        "rank": 3,
-        "rider": "Jonas Vingegaard",
-        "team": "Team Visma | Lease a Bike",
-        "pts": 44
-      },
-      {
-        "rank": 4,
-        "rider": "Quinn Simmons",
-        "team": "Lidl-Trek",
-        "pts": 42
-      },
-      {
-        "rank": 5,
-        "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates XRG",
-        "pts": 39
-      },
-      {
-        "rank": 6,
-        "rider": "Biniam Girmay",
-        "team": "NSN Cycling Team",
-        "pts": 39
-      },
-      {
         "rank": 7,
-        "rider": "Remco Evenepoel",
-        "team": "Red Bull–BORA–hansgrohe",
-        "pts": 33
+        "rider": "Tim Merlier",
+        "team": "Soudal Quick-Step",
+        "pts": 55
       },
       {
         "rank": 8,
-        "rider": "Tobias Halland Johannessen",
-        "team": "Uno-X Mobility",
-        "pts": 32
+        "rider": "Quinn Simmons",
+        "team": "Lidl-Trek",
+        "pts": 45
       },
       {
         "rank": 9,
-        "rider": "Jasper Philipsen",
-        "team": "Alpecin–Premier Tech",
-        "pts": 30
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "pts": 44
       },
       {
         "rank": 10,
-        "rider": "Paul Seixas",
-        "team": "Decathlon CMA CGM Team",
-        "pts": 28
+        "rider": "Jonas Vingegaard",
+        "team": "Team Visma | Lease a Bike",
+        "pts": 39
       }
     ],
     "kom": [
@@ -188,7 +189,7 @@ window.STAGE_TODAY = {
         "rank": 1,
         "rider": "Alex Baudin",
         "team": "EF Education–EasyPost",
-        "pts": 12
+        "pts": 13
       },
       {
         "rank": 2,
@@ -275,18 +276,48 @@ window.STAGE_TODAY = {
         "rider": "Paul Seixas",
         "team": "Decathlon CMA CGM Team",
         "gap": "+4:51"
+      },
+      {
+        "rank": 6,
+        "rider": "Lenny Martinez",
+        "team": "Bahrain–Victorious",
+        "gap": "+5:12"
+      },
+      {
+        "rank": 7,
+        "rider": "Davide Piganzoli",
+        "team": "Team Visma | Lease a Bike",
+        "gap": "+6:18"
+      },
+      {
+        "rank": 8,
+        "rider": "Lennert Van Eetvelt",
+        "team": "Lotto-Intermarché",
+        "gap": "+6:23"
+      },
+      {
+        "rank": 9,
+        "rider": "Raúl García Pierna",
+        "team": "Movistar Team",
+        "gap": "+7:27"
+      },
+      {
+        "rank": 10,
+        "rider": "Cian Uijtdebroeks",
+        "team": "Movistar Team",
+        "gap": "+7:44"
       }
     ],
     "after_stage_num": 5,
     "after_stage_date": "2026-07-08"
   },
   "ai": {
-    "confidence": "medium",
+    "confidence": "high",
     "sources": [
       "https://www.letour.fr/en/rankings/stage-5",
-      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-5",
-      "https://www.idlprocycling.com/cycling/2026-tour-de-france-standings-new-yellow-white-and-green-jersey-wearers",
       "https://www.letour.fr/en/rankings",
+      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-5",
+      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-3-tadej-pogacar-strips-yellow-from-jonas-vingegaard-as-alex-baudin-claims-polka-dots",
       "https://www.letour.fr/en/withdrawal",
       "https://www.domestiquecycling.com/en/news/tour-de-france-2026-withdrawals/",
       "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/"
