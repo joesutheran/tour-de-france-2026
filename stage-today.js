@@ -2,36 +2,35 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-11T14:00:05.241480+12:00",
-  "nz_date": "2026-07-11",
-  "as_of_date": "2026-07-11",
+  "generated_at": "2026-07-12T10:00:00.951953+12:00",
+  "nz_date": "2026-07-12",
+  "as_of_date": "2026-07-12",
   "boundary_hour": 10,
   "status": "racing",
   "watched": {
-    "num": 7,
-    "date": "2026-07-10"
+    "num": 8,
+    "date": "2026-07-11"
   },
   "preview": {
-    "num": 8,
-    "date": "2026-07-11",
-    "start": "Perigueux",
-    "finish": "Bergerac",
-    "distance_km": 180.4,
-    "type": "Flat",
-    "note": "Dordogne flatlands; another sprint opportunity.",
-    "headline": "Dordogne flatlands set up another gallop",
-    "watch_for": "Stage 8 is a flat 180.4 km run through the Dordogne from Périgueux to Bergerac — prime sprint-finish country, and the GC teams will sit in gratefully, banking recovery ahead of the Vosges and the Alps. Mads Pedersen holds the green jersey by 59 points and Lidl-Trek will aim to control the closing kilometres so he can pad that lead further, with Mathias Vacek also capable of contesting. Jasper Philipsen (Alpecin–Premier Tech) and Tim Merlier (Soudal Quick-Step) have both already banked stage wins and know a flat finish like Bergerac suits them — each is trying to claw back ground on Pedersen in the points race. Biniam Girmay (NSN Cycling Team) sits just 59 points off green and his squad will fight hard to put him in position for the sprint, while Olav Kooij gives Decathlon CMA CGM Team another card to play. The wildcard is Richard Carapaz (EF Education–EasyPost), who deliberately surrendered nearly three minutes on Stage 7 to earn breakaway freedom — on a flat day where GC teams sit in, he and similarly positioned riders may probe for an early move before the sprint trains lock the race down.",
+    "num": 9,
+    "date": "2026-07-12",
+    "start": "Malemort",
+    "finish": "Ussel",
+    "distance_km": 185.5,
+    "type": "Hilly",
+    "note": "Lumpy entry into the Massif Central suited to a breakaway before the first rest day.",
+    "headline": "Lumpy Massif Central teases the break",
+    "watch_for": "Stage 9 drags the peloton 185.5 km from Malemort into the volcanic highlands of the Massif Central to Ussel, stacking 3,244m of climbing across rolling Corrèze roads that are far too punchy for the pure sprinters yet unlikely — without a summit finish — to shatter the yellow-jersey group outright. That combination is a standing invitation for a long-range breakaway, and riders like Guillaume Martin-Guyonnet (Groupama-FDJ United) — a hilly-stage connoisseur currently parked 31 minutes down on GC — or Uno-X's relentless escapers Magnus Cort and Jonas Abrahamsen will fancy their chances if they can slip away early and build a sufficient buffer. Tom Pidcock (Pinarello Q36.5, +9:50) is another dangerous presence: agile on descents and explosive on short punches, he has the freedom of a rider unconcerned by GC arithmetic and everything to gain from a stage win in exactly this kind of lumpy, technical terrain. Lenny Martinez (Bahrain Victorious, +4:21), whose climbing style suits repeated short kicks, could also use the day to consolidate his top-10 position ahead of the high-mountain battles still to come. Paul Seixas (Decathlon CMA CGM, +3:55) has more to manage: the 19-year-old Frenchman trails Ayuso by 21 seconds and Evenepoel by 25, and any gap on a day like this — in either direction — would reshape the fight for the GC podium before the race even reaches the Vosges and the decisive ITT on Lake Geneva. A red heatwave warning has already been flagged over the region, adding an unquantifiable layer of attrition to what could be a pivotal afternoon for several different ambitions.",
     "riders_to_watch": [
-      "Mads Pedersen",
-      "Jasper Philipsen",
-      "Tim Merlier",
-      "Biniam Girmay",
-      "Olav Kooij",
-      "Richard Carapaz",
-      "Søren Wærenskjold"
+      "Guillaume Martin-Guyonnet",
+      "Magnus Cort",
+      "Jonas Abrahamsen",
+      "Tom Pidcock",
+      "Lenny Martinez",
+      "Paul Seixas"
     ],
-    "nz_note": "Another finish-line-only stage if you're picking and choosing tonight.",
-    "climb_m": 1353,
+    "nz_note": "Break-day tactics reward watching a bit more than just the finish.",
+    "climb_m": 3244,
     "summit_finish": false,
     "contextual": true
   },
@@ -70,6 +69,11 @@ window.STAGE_TODAY = {
       "name": "Alex Molenaar",
       "stage": 6,
       "reason": "DNS"
+    },
+    {
+      "name": "Torstein Traen",
+      "stage": 7,
+      "reason": "DNS"
     }
   ],
   "standings": {
@@ -101,7 +105,7 @@ window.STAGE_TODAY = {
       {
         "rank": 5,
         "rider": "Juan Ayuso",
-        "team": "Lidl - Trek",
+        "team": "Lidl-Trek",
         "gap": "+3:34"
       },
       {
@@ -125,13 +129,13 @@ window.STAGE_TODAY = {
       {
         "rank": 9,
         "rider": "Mattias Skjelmose",
-        "team": "Lidl - Trek",
+        "team": "Lidl-Trek",
         "gap": "+4:57"
       },
       {
         "rank": 10,
         "rider": "Mathias Vacek",
-        "team": "Lidl - Trek",
+        "team": "Lidl-Trek",
         "gap": "+7:10"
       }
     ],
@@ -139,44 +143,62 @@ window.STAGE_TODAY = {
       {
         "rank": 1,
         "rider": "Mads Pedersen",
-        "team": "Lidl - Trek",
-        "pts": 204
+        "team": "Lidl-Trek",
+        "pts": 228
       },
       {
         "rank": 2,
-        "rider": "Biniam Girmay",
-        "team": "NSN Cycling Team",
-        "pts": 145
+        "rider": "Tim Merlier",
+        "team": "Soudal Quick-Step",
+        "pts": 213
       },
       {
         "rank": 3,
-        "rider": "Max Kanter",
-        "team": "XDS Astana Team",
-        "pts": 140
+        "rider": "Biniam Girmay",
+        "team": "NSN Cycling Team",
+        "pts": 203
       },
       {
         "rank": 4,
-        "rider": "Tim Merlier",
-        "team": "Soudal Quick-Step",
-        "pts": 134
+        "rider": "Jasper Philipsen",
+        "team": "Alpecin – Premier Tech",
+        "pts": 175
       },
       {
         "rank": 5,
-        "rider": "Jasper Philipsen",
-        "team": "Alpecin – Premier Tech",
-        "pts": 126
+        "rider": "Max Kanter",
+        "team": "XDS Astana Team",
+        "pts": 172
       },
       {
         "rank": 6,
-        "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates XRG",
-        "pts": 75
+        "rider": "Olav Kooij",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 110
       },
       {
         "rank": 7,
         "rider": "Søren Wærenskjold",
         "team": "Uno-X Mobility",
-        "pts": 73
+        "pts": 89
+      },
+      {
+        "rank": 8,
+        "rider": "Anthony Turgis",
+        "team": "TotalEnergies",
+        "pts": 79
+      },
+      {
+        "rank": 9,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "pts": 75
+      },
+      {
+        "rank": 10,
+        "rider": "Jonas Vingegaard",
+        "team": "Team Visma | Lease a Bike",
+        "pts": 61
       }
     ],
     "kom": [],
@@ -190,65 +212,47 @@ window.STAGE_TODAY = {
       {
         "rank": 2,
         "rider": "Juan Ayuso",
-        "team": "Lidl - Trek",
+        "team": "Lidl-Trek",
         "gap": "+0:07"
       },
       {
         "rank": 3,
-        "rider": "Lenny Martinez",
-        "team": "Bahrain – Victorious",
-        "gap": "+0:54"
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "gap": "+0:28"
       },
       {
         "rank": 4,
-        "rider": "Mathias Vacek",
-        "team": "Lidl - Trek",
-        "gap": "+3:43"
+        "rider": "Davide Piganzoli",
+        "team": "Team Visma | Lease a Bike",
+        "gap": "+7:19"
       },
       {
         "rank": 5,
-        "rider": "Tobias Halland Johannessen",
-        "team": "Uno-X Mobility",
-        "gap": "+6:15"
-      },
-      {
-        "rank": 6,
-        "rider": "Davide Piganzoli",
-        "team": "Pinarello Q36.5 Pro Cycling Team",
-        "gap": "+6:23"
-      },
-      {
-        "rank": 7,
         "rider": "Lennert Van Eetvelt",
         "team": "Lotto-Intermarché",
         "gap": "+7:24"
       },
       {
-        "rank": 8,
-        "rider": "Ramses Debruyne",
-        "team": "Alpecin – Premier Tech",
-        "gap": "+7:59"
-      },
-      {
-        "rank": 9,
-        "rider": "Pablo Castrillo",
-        "team": "Movistar Team",
-        "gap": "+9:57"
+        "rank": 6,
+        "rider": "Yannis Voisard",
+        "team": "Tudor Pro Cycling Team",
+        "gap": "+8:54"
       }
     ],
-    "after_stage_num": 7,
-    "after_stage_date": "2026-07-10"
+    "after_stage_num": 8,
+    "after_stage_date": "2026-07-11"
   },
   "ai": {
     "confidence": "medium",
     "sources": [
-      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-7-richard-carapaz-gives-up-gc-fight-whilst-pedersen-reinforces-green-jersey",
-      "https://www.letour.fr/en/rankings/stage-7?hasCookies=false&hideOnetrust=true&isRacecenter=true&isWebview=true",
-      "https://www.letour.fr/en/rankings",
+      "https://www.letour.fr/en/rankings/stage-8",
+      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-8-tadej-pogacar-stays-firmly-in-yellow-as-tim-merlier-closes-on-mads-pedersen",
       "https://www.olympics.com/en/news/tour-de-france-2026-full-schedule-all-stage-results-classification-standings",
+      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-8",
       "https://www.letour.fr/en/withdrawal",
       "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts",
-      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/"
+      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-8"
     ]
   }
 };
