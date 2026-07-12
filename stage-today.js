@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-12T10:00:00.951953+12:00",
+  "generated_at": "2026-07-12T14:00:05.644335+12:00",
   "nz_date": "2026-07-12",
   "as_of_date": "2026-07-12",
   "boundary_hour": 10,
@@ -20,13 +20,16 @@ window.STAGE_TODAY = {
     "type": "Hilly",
     "note": "Lumpy entry into the Massif Central suited to a breakaway before the first rest day.",
     "headline": "Lumpy Massif Central teases the break",
-    "watch_for": "Stage 9 drags the peloton 185.5 km from Malemort into the volcanic highlands of the Massif Central to Ussel, stacking 3,244m of climbing across rolling Corrèze roads that are far too punchy for the pure sprinters yet unlikely — without a summit finish — to shatter the yellow-jersey group outright. That combination is a standing invitation for a long-range breakaway, and riders like Guillaume Martin-Guyonnet (Groupama-FDJ United) — a hilly-stage connoisseur currently parked 31 minutes down on GC — or Uno-X's relentless escapers Magnus Cort and Jonas Abrahamsen will fancy their chances if they can slip away early and build a sufficient buffer. Tom Pidcock (Pinarello Q36.5, +9:50) is another dangerous presence: agile on descents and explosive on short punches, he has the freedom of a rider unconcerned by GC arithmetic and everything to gain from a stage win in exactly this kind of lumpy, technical terrain. Lenny Martinez (Bahrain Victorious, +4:21), whose climbing style suits repeated short kicks, could also use the day to consolidate his top-10 position ahead of the high-mountain battles still to come. Paul Seixas (Decathlon CMA CGM, +3:55) has more to manage: the 19-year-old Frenchman trails Ayuso by 21 seconds and Evenepoel by 25, and any gap on a day like this — in either direction — would reshape the fight for the GC podium before the race even reaches the Vosges and the decisive ITT on Lake Geneva. A red heatwave warning has already been flagged over the region, adding an unquantifiable layer of attrition to what could be a pivotal afternoon for several different ambitions.",
+    "watch_for": "Stage 9 rolls from Malemort to Ussel over 185.5 km of Massif Central terrain with 3,244 m of climbing, and the route has already been adapted due to a red heatwave warning — meaning heat stress could be as decisive as the road itself on a day that invites a long, attritional breakaway. Vingegaard, 2:42 behind Pogačar in yellow, faces the pursuer's perennial dilemma on a transition stage: let a dangerous move go free and concede another day, or burn UAE's lead-out train trying to force the pace on climbs that aren't decisive enough to justify the cost. The three-way squeeze between del Toro, Evenepoel and Ayuso — just seven seconds separating third, fourth and fifth — means UAE, Red Bull–BORA and Lidl-Trek will be watching each other through every undulation, knowing a single unguarded surge could reshuffle the podium pecking order before the Alps. Pidcock, parked in 15th at 9:50 and riding for an attack-minded Pinarello-Q36.5 outfit with no sprint train to protect, is perfectly suited to these punchy Corrèze hills and will be dangerous if a move forms that can stick. Breakaway veterans Cort, Martin-Guyonnet and Turgis will be first to sense when the right composition is in a break to survive to Ussel, while the remarkable 19-year-old Seixas — sixth overall — gives Decathlon a second reason beyond Kooij's green-jersey chase to race with real purpose all the way to the flag.",
     "riders_to_watch": [
-      "Guillaume Martin-Guyonnet",
-      "Magnus Cort",
-      "Jonas Abrahamsen",
+      "Jonas Vingegaard",
       "Tom Pidcock",
-      "Lenny Martinez",
+      "Remco Evenepoel",
+      "Juan Ayuso",
+      "Isaac del Toro",
+      "Magnus Cort",
+      "Guillaume Martin-Guyonnet",
+      "Anthony Turgis",
       "Paul Seixas"
     ],
     "nz_note": "Break-day tactics reward watching a bit more than just the finish.",
@@ -105,7 +108,7 @@ window.STAGE_TODAY = {
       {
         "rank": 5,
         "rider": "Juan Ayuso",
-        "team": "Lidl-Trek",
+        "team": "Lidl - Trek",
         "gap": "+3:34"
       },
       {
@@ -129,13 +132,13 @@ window.STAGE_TODAY = {
       {
         "rank": 9,
         "rider": "Mattias Skjelmose",
-        "team": "Lidl-Trek",
+        "team": "Lidl - Trek",
         "gap": "+4:57"
       },
       {
         "rank": 10,
         "rider": "Mathias Vacek",
-        "team": "Lidl-Trek",
+        "team": "Lidl - Trek",
         "gap": "+7:10"
       }
     ],
@@ -143,7 +146,7 @@ window.STAGE_TODAY = {
       {
         "rank": 1,
         "rider": "Mads Pedersen",
-        "team": "Lidl-Trek",
+        "team": "Lidl - Trek",
         "pts": 228
       },
       {
@@ -212,7 +215,7 @@ window.STAGE_TODAY = {
       {
         "rank": 2,
         "rider": "Juan Ayuso",
-        "team": "Lidl-Trek",
+        "team": "Lidl - Trek",
         "gap": "+0:07"
       },
       {
@@ -223,21 +226,15 @@ window.STAGE_TODAY = {
       },
       {
         "rank": 4,
-        "rider": "Davide Piganzoli",
-        "team": "Team Visma | Lease a Bike",
-        "gap": "+7:19"
+        "rider": "Mattias Skjelmose",
+        "team": "Lidl - Trek",
+        "gap": "+1:30"
       },
       {
         "rank": 5,
-        "rider": "Lennert Van Eetvelt",
-        "team": "Lotto-Intermarché",
-        "gap": "+7:24"
-      },
-      {
-        "rank": 6,
-        "rider": "Yannis Voisard",
-        "team": "Tudor Pro Cycling Team",
-        "gap": "+8:54"
+        "rider": "Ilan Van Wilder",
+        "team": "Soudal Quick-Step",
+        "gap": "+6:18"
       }
     ],
     "after_stage_num": 8,
@@ -248,11 +245,11 @@ window.STAGE_TODAY = {
     "sources": [
       "https://www.letour.fr/en/rankings/stage-8",
       "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-8-tadej-pogacar-stays-firmly-in-yellow-as-tim-merlier-closes-on-mads-pedersen",
-      "https://www.olympics.com/en/news/tour-de-france-2026-full-schedule-all-stage-results-classification-standings",
       "https://www.procyclingstats.com/race/tour-de-france/2026/stage-8",
+      "https://www.letour.fr/en/rankings",
       "https://www.letour.fr/en/withdrawal",
-      "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts",
-      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-8"
+      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-8",
+      "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts"
     ]
   }
 };
