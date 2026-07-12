@@ -2,38 +2,37 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-12T14:00:05.644335+12:00",
-  "nz_date": "2026-07-12",
-  "as_of_date": "2026-07-12",
+  "generated_at": "2026-07-13T10:00:01.913161+12:00",
+  "nz_date": "2026-07-13",
+  "as_of_date": "2026-07-13",
   "boundary_hour": 10,
   "status": "racing",
   "watched": {
-    "num": 8,
-    "date": "2026-07-11"
+    "num": 9,
+    "date": "2026-07-12"
   },
   "preview": {
-    "num": 9,
-    "date": "2026-07-12",
-    "start": "Malemort",
-    "finish": "Ussel",
-    "distance_km": 185.5,
-    "type": "Hilly",
-    "note": "Lumpy entry into the Massif Central suited to a breakaway before the first rest day.",
-    "headline": "Lumpy Massif Central teases the break",
-    "watch_for": "Stage 9 rolls from Malemort to Ussel over 185.5 km of Massif Central terrain with 3,244 m of climbing, and the route has already been adapted due to a red heatwave warning — meaning heat stress could be as decisive as the road itself on a day that invites a long, attritional breakaway. Vingegaard, 2:42 behind Pogačar in yellow, faces the pursuer's perennial dilemma on a transition stage: let a dangerous move go free and concede another day, or burn UAE's lead-out train trying to force the pace on climbs that aren't decisive enough to justify the cost. The three-way squeeze between del Toro, Evenepoel and Ayuso — just seven seconds separating third, fourth and fifth — means UAE, Red Bull–BORA and Lidl-Trek will be watching each other through every undulation, knowing a single unguarded surge could reshuffle the podium pecking order before the Alps. Pidcock, parked in 15th at 9:50 and riding for an attack-minded Pinarello-Q36.5 outfit with no sprint train to protect, is perfectly suited to these punchy Corrèze hills and will be dangerous if a move forms that can stick. Breakaway veterans Cort, Martin-Guyonnet and Turgis will be first to sense when the right composition is in a break to survive to Ussel, while the remarkable 19-year-old Seixas — sixth overall — gives Decathlon a second reason beyond Kooij's green-jersey chase to race with real purpose all the way to the flag.",
+    "num": 10,
+    "date": "2026-07-14",
+    "start": "Aurillac",
+    "finish": "Le Lioran",
+    "distance_km": 166.6,
+    "type": "Mountain",
+    "note": "Relentlessly up-and-down Massif Central stage into the Le Lioran resort; Bastille Day breakaway bait.",
+    "headline": "Bastille Day fireworks at Le Lioran",
+    "watch_for": "Stage 10 is the first genuine summit finish of the 2026 Tour — 166.6 km from Aurillac to Le Lioran deep in the Massif Central, with nearly 3,800 m of climbing — and it arrives at a tantalising GC crossroads. The sharpest subplot is the razor-thin fight for positions 3–5: del Toro, Evenepoel and Ayuso are separated by just 7 seconds, so every kick in the finale becomes a potential flashpoint where all three will feel compelled to test each other. Vingegaard, carrying the polka-dot jersey and sitting 2:42 behind Pogačar, faces a genuine strategic dilemma: launch something here in the Massif Central, or protect his legs for the decisive Alpine showdown — either call carries real risk. Pidcock vaulted to 3rd on Stage 9 and now sits 13th at +9:40; his climbing punch and tactical boldness make him a prime candidate for a long-range move on a summit finish that could drag him into real GC contention. Johannessen, who crossed 2nd on Stage 9 and sits 11th at +9:30, arrives in the best form of his Tour and will fancy this terrain if the final ramp rewards sustained climbing output over a pure explosive kick.",
     "riders_to_watch": [
+      "Tadej Pogačar",
       "Jonas Vingegaard",
-      "Tom Pidcock",
+      "Isaac del Toro",
       "Remco Evenepoel",
       "Juan Ayuso",
-      "Isaac del Toro",
-      "Magnus Cort",
-      "Guillaume Martin-Guyonnet",
-      "Anthony Turgis",
-      "Paul Seixas"
+      "Paul Seixas",
+      "Tom Pidcock",
+      "Tobias Halland Johannessen"
     ],
-    "nz_note": "Break-day tactics reward watching a bit more than just the finish.",
-    "climb_m": 3244,
+    "nz_note": "Bastille Day break stages are pure theatre, so give this one a bit more of your evening.",
+    "climb_m": 3791,
     "summit_finish": false,
     "contextual": true
   },
@@ -51,7 +50,7 @@ window.STAGE_TODAY = {
     {
       "name": "Kelland O'Brien",
       "stage": 4,
-      "reason": "outside time limit"
+      "reason": "outside the time limit"
     },
     {
       "name": "Bert Van Lerberghe",
@@ -84,7 +83,7 @@ window.STAGE_TODAY = {
       {
         "rank": 1,
         "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates XRG",
+        "team": "UAE Team Emirates - XRG",
         "gap": "race lead"
       },
       {
@@ -96,13 +95,13 @@ window.STAGE_TODAY = {
       {
         "rank": 3,
         "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates XRG",
+        "team": "UAE Team Emirates - XRG",
         "gap": "+3:27"
       },
       {
         "rank": 4,
         "rider": "Remco Evenepoel",
-        "team": "Red Bull – BORA – hansgrohe",
+        "team": "Red Bull - BORA - hansgrohe",
         "gap": "+3:30"
       },
       {
@@ -120,13 +119,13 @@ window.STAGE_TODAY = {
       {
         "rank": 7,
         "rider": "Florian Lipowitz",
-        "team": "Red Bull – BORA – hansgrohe",
+        "team": "Red Bull - BORA - hansgrohe",
         "gap": "+4:00"
       },
       {
         "rank": 8,
         "rider": "Lenny Martinez",
-        "team": "Bahrain – Victorious",
+        "team": "Bahrain - Victorious",
         "gap": "+4:21"
       },
       {
@@ -137,9 +136,9 @@ window.STAGE_TODAY = {
       },
       {
         "rank": 10,
-        "rider": "Mathias Vacek",
-        "team": "Lidl - Trek",
-        "gap": "+7:10"
+        "rider": "Egan Bernal",
+        "team": "Netcompany INEOS",
+        "gap": "+9:12"
       }
     ],
     "points": [
@@ -147,25 +146,25 @@ window.STAGE_TODAY = {
         "rank": 1,
         "rider": "Mads Pedersen",
         "team": "Lidl - Trek",
-        "pts": 228
+        "pts": 268
       },
       {
         "rank": 2,
+        "rider": "Biniam Girmay",
+        "team": "NSN Cycling Team",
+        "pts": 223
+      },
+      {
+        "rank": 3,
         "rider": "Tim Merlier",
         "team": "Soudal Quick-Step",
         "pts": 213
       },
       {
-        "rank": 3,
-        "rider": "Biniam Girmay",
-        "team": "NSN Cycling Team",
-        "pts": 203
-      },
-      {
         "rank": 4,
         "rider": "Jasper Philipsen",
-        "team": "Alpecin – Premier Tech",
-        "pts": 175
+        "team": "Alpecin - Premier Tech",
+        "pts": 191
       },
       {
         "rank": 5,
@@ -180,28 +179,16 @@ window.STAGE_TODAY = {
         "pts": 110
       },
       {
-        "rank": 7,
-        "rider": "Søren Wærenskjold",
-        "team": "Uno-X Mobility",
-        "pts": 89
-      },
-      {
         "rank": 8,
-        "rider": "Anthony Turgis",
-        "team": "TotalEnergies",
-        "pts": 79
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates - XRG",
+        "pts": 87
       },
       {
         "rank": 9,
-        "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates XRG",
-        "pts": 75
-      },
-      {
-        "rank": 10,
-        "rider": "Jonas Vingegaard",
-        "team": "Team Visma | Lease a Bike",
-        "pts": 61
+        "rider": "Anthony Turgis",
+        "team": "TotalEnergies",
+        "pts": 79
       }
     ],
     "kom": [],
@@ -209,7 +196,7 @@ window.STAGE_TODAY = {
       {
         "rank": 1,
         "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates XRG",
+        "team": "UAE Team Emirates - XRG",
         "gap": "race lead"
       },
       {
@@ -220,36 +207,24 @@ window.STAGE_TODAY = {
       },
       {
         "rank": 3,
-        "rider": "Paul Seixas",
-        "team": "Decathlon CMA CGM Team",
-        "gap": "+0:28"
-      },
-      {
-        "rank": 4,
-        "rider": "Mattias Skjelmose",
-        "team": "Lidl - Trek",
-        "gap": "+1:30"
-      },
-      {
-        "rank": 5,
-        "rider": "Ilan Van Wilder",
-        "team": "Soudal Quick-Step",
-        "gap": "+6:18"
+        "rider": "Lenny Martinez",
+        "team": "Bahrain - Victorious",
+        "gap": "+0:54"
       }
     ],
-    "after_stage_num": 8,
-    "after_stage_date": "2026-07-11"
+    "after_stage_num": 9,
+    "after_stage_date": "2026-07-12"
   },
   "ai": {
     "confidence": "medium",
     "sources": [
-      "https://www.letour.fr/en/rankings/stage-8",
-      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-8-tadej-pogacar-stays-firmly-in-yellow-as-tim-merlier-closes-on-mads-pedersen",
-      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-8",
+      "https://www.letour.fr/en/rankings/stage-9?hasCookies=false&hasIframeResizer=true&isWebview=true&partner=sbsapN",
+      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-9-mads-pedersen-extends-green-jersey-lead-as-tadej-pogacar-remains-untouched-in-yellow",
       "https://www.letour.fr/en/rankings",
+      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-9/result/result",
       "https://www.letour.fr/en/withdrawal",
-      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-8",
-      "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts"
+      "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts",
+      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/"
     ]
   }
 };
