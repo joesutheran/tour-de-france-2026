@@ -2,35 +2,35 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-15T08:19:43.798362+12:00",
+  "generated_at": "2026-07-15T10:00:01.896358+12:00",
   "nz_date": "2026-07-15",
-  "as_of_date": "2026-07-14",
+  "as_of_date": "2026-07-15",
   "boundary_hour": 10,
   "status": "racing",
   "watched": {
-    "num": 9,
-    "date": "2026-07-12"
+    "num": 10,
+    "date": "2026-07-14"
   },
   "preview": {
-    "num": 10,
-    "date": "2026-07-14",
-    "start": "Aurillac",
-    "finish": "Le Lioran",
-    "distance_km": 166.6,
-    "type": "Mountain",
-    "note": "Relentlessly up-and-down Massif Central stage into the Le Lioran resort; Bastille Day breakaway bait.",
-    "headline": "Bastille Day fireworks at Le Lioran",
-    "watch_for": "A relentlessly up-and-down Massif Central stage into Le Lioran, landing on Bastille Day, which historically lights a fire under the French riders desperate for a home win. It's perfect breakaway bait, with no summit finish but no respite either. Watch the French aggression from kilometre zero and the war to make the day's move.",
+    "num": 11,
+    "date": "2026-07-15",
+    "start": "Vichy",
+    "finish": "Nevers",
+    "distance_km": 161.3,
+    "type": "Flat",
+    "note": "Flat transition through central France; sprinters back in play.",
+    "headline": "Sprinters resurface in Nevers",
+    "watch_for": "A flat transition through central France brings the fast men back into play, with the sprint teams keen to control a straightforward run to Nevers. The question is whether a stubborn break can spoil the party on a day everyone expects to end in a bunch kick. Watch the peloton's willingness to chase.",
     "riders_to_watch": [
-      "Julian Alaphilippe",
-      "Romain Gregoire",
-      "Paul Seixas",
-      "Jordan Jegat",
-      "Ben Healy",
-      "Tom Pidcock"
+      "Tim Merlier",
+      "Jasper Philipsen",
+      "Arnaud De Lie",
+      "Fernando Gaviria",
+      "Pavel Bittner",
+      "Milan Fretin"
     ],
-    "nz_note": "Bastille Day break stages are pure theatre, so give this one a bit more of your evening.",
-    "climb_m": 3791,
+    "nz_note": "Comfortably a last-3km watch.",
+    "climb_m": 1107,
     "summit_finish": false
   },
   "abandoned": []
