@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-15T10:00:01.896358+12:00",
+  "generated_at": "2026-07-15T14:00:05.838405+12:00",
   "nz_date": "2026-07-15",
   "as_of_date": "2026-07-15",
   "boundary_hour": 10,
@@ -20,18 +20,310 @@ window.STAGE_TODAY = {
     "type": "Flat",
     "note": "Flat transition through central France; sprinters back in play.",
     "headline": "Sprinters resurface in Nevers",
-    "watch_for": "A flat transition through central France brings the fast men back into play, with the sprint teams keen to control a straightforward run to Nevers. The question is whether a stubborn break can spoil the party on a day everyone expects to end in a bunch kick. Watch the peloton's willingness to chase.",
+    "watch_for": "Stage 11 is a flat 161.3 km run from Vichy to Nevers with barely any climbing — almost certain to come down to a massed bunch sprint and a welcome breather for GC legs still aching from Le Lioran's summit finish. Mads Pedersen (Lidl-Trek) defends the green jersey with a 54-point cushion over Biniam Girmay (NSN Cycling Team), and Lidl-Trek will be expected to drive a lead-out for him — though the same squad is simultaneously managing the GC ambitions of Ayuso, who sits fourth overall, creating a dual-agenda tension that rival sprint teams will be watching closely. Tim Merlier (Soudal Quick-Step) is third in points at 213 and desperate to close the gap, but Soudal lost lead-out specialist Bert Van Lerberghe to a stage-6 withdrawal, leaving their sprint train shorthanded at exactly the moment they need it most. Jasper Philipsen (Alpecin–Premier Tech), fourth in points at 205, is arguably the most dangerous pure finisher in the peloton on a dead-flat road and will fancy his chances of leapfrogging Merlier if the finale plays to his strengths. GC contenders will sit safely in the bunch recovering — though a shaken Isaac del Toro, who cracked badly on stage 10 and now trails Ayuso by 46 seconds in the white jersey fight, will know that even a crash-filled flat stage could shift that knife-edge standings.",
     "riders_to_watch": [
+      "Mads Pedersen",
+      "Biniam Girmay",
       "Tim Merlier",
       "Jasper Philipsen",
-      "Arnaud De Lie",
-      "Fernando Gaviria",
-      "Pavel Bittner",
-      "Milan Fretin"
+      "Isaac del Toro"
     ],
     "nz_note": "Comfortably a last-3km watch.",
     "climb_m": 1107,
-    "summit_finish": false
+    "summit_finish": false,
+    "contextual": true
   },
-  "abandoned": []
+  "abandoned": [
+    {
+      "name": "Clément Berthet",
+      "stage": 2,
+      "reason": "DNS"
+    },
+    {
+      "name": "Arnaud De Lie",
+      "stage": 3,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Kelland O'Brien",
+      "stage": 4,
+      "reason": "outside time limit"
+    },
+    {
+      "name": "Bert Van Lerberghe",
+      "stage": 6,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Cian Uijtdebroeks",
+      "stage": 6,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Arvid de Kleijn",
+      "stage": 6,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Alex Molenaar",
+      "stage": 6,
+      "reason": "DNS"
+    },
+    {
+      "name": "Torstein Traen",
+      "stage": 7,
+      "reason": "DNS"
+    },
+    {
+      "name": "Matteo Trentin",
+      "stage": 10,
+      "reason": "DNS"
+    }
+  ],
+  "standings": {
+    "gc": [
+      {
+        "rank": 1,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "gap": "race lead"
+      },
+      {
+        "rank": 2,
+        "rider": "Jonas Vingegaard",
+        "team": "Team Visma | Lease a Bike",
+        "gap": "+3:36"
+      },
+      {
+        "rank": 3,
+        "rider": "Remco Evenepoel",
+        "team": "Red Bull – BORA – hansgrohe",
+        "gap": "+4:06"
+      },
+      {
+        "rank": 4,
+        "rider": "Juan Ayuso",
+        "team": "Lidl-Trek",
+        "gap": "+4:22"
+      },
+      {
+        "rank": 5,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "gap": "+4:35"
+      },
+      {
+        "rank": 6,
+        "rider": "Florian Lipowitz",
+        "team": "Red Bull – BORA – hansgrohe",
+        "gap": "+4:44"
+      },
+      {
+        "rank": 7,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "gap": "+5:08"
+      },
+      {
+        "rank": 8,
+        "rider": "Mattias Skjelmose",
+        "team": "Lidl-Trek",
+        "gap": "+5:45"
+      },
+      {
+        "rank": 9,
+        "rider": "Lenny Martinez",
+        "team": "Bahrain – Victorious",
+        "gap": "+6:34"
+      },
+      {
+        "rank": 10,
+        "rider": "Tom Pidcock",
+        "team": "Pinarello Q36.5 Pro Cycling Team",
+        "gap": "+11:49"
+      }
+    ],
+    "points": [
+      {
+        "rank": 1,
+        "rider": "Mads Pedersen",
+        "team": "Lidl-Trek",
+        "pts": 293
+      },
+      {
+        "rank": 2,
+        "rider": "Biniam Girmay",
+        "team": "NSN Cycling Team",
+        "pts": 239
+      },
+      {
+        "rank": 3,
+        "rider": "Tim Merlier",
+        "team": "Soudal Quick-Step",
+        "pts": 213
+      },
+      {
+        "rank": 4,
+        "rider": "Jasper Philipsen",
+        "team": "Alpecin – Premier Tech",
+        "pts": 205
+      },
+      {
+        "rank": 5,
+        "rider": "Max Kanter",
+        "team": "XDS Astana Team",
+        "pts": 192
+      },
+      {
+        "rank": 6,
+        "rider": "Olav Kooij",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 110
+      },
+      {
+        "rank": 7,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "pts": 107
+      },
+      {
+        "rank": 8,
+        "rider": "Søren Wærenskjold",
+        "team": "Uno-X Mobility",
+        "pts": 89
+      },
+      {
+        "rank": 9,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "pts": 80
+      },
+      {
+        "rank": 10,
+        "rider": "Anthony Turgis",
+        "team": "Team TotalEnergies",
+        "pts": 79
+      }
+    ],
+    "kom": [
+      {
+        "rank": 1,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "pts": 42
+      },
+      {
+        "rank": 2,
+        "rider": "Jonas Vingegaard",
+        "team": "Team Visma | Lease a Bike",
+        "pts": 27
+      },
+      {
+        "rank": 3,
+        "rider": "Richard Carapaz",
+        "team": "EF Education–EasyPost",
+        "pts": 19
+      },
+      {
+        "rank": 4,
+        "rider": "Valentin Paret-Peintre",
+        "team": "Soudal Quick-Step",
+        "pts": 18
+      },
+      {
+        "rank": 5,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 18
+      },
+      {
+        "rank": 6,
+        "rider": "Nicolas Prodhomme",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 17
+      },
+      {
+        "rank": 7,
+        "rider": "Alex Baudin",
+        "team": "EF Education–EasyPost",
+        "pts": 16
+      },
+      {
+        "rank": 8,
+        "rider": "Lenny Martinez",
+        "team": "Bahrain – Victorious",
+        "pts": 16
+      },
+      {
+        "rank": 9,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "pts": 14
+      },
+      {
+        "rank": 10,
+        "rider": "Florian Lipowitz",
+        "team": "Red Bull – BORA – hansgrohe",
+        "pts": 12
+      }
+    ],
+    "youth": [
+      {
+        "rank": 1,
+        "rider": "Juan Ayuso",
+        "team": "Lidl-Trek",
+        "gap": "race lead"
+      },
+      {
+        "rank": 2,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "gap": "+0:13"
+      },
+      {
+        "rank": 3,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "gap": "+0:46"
+      },
+      {
+        "rank": 4,
+        "rider": "Lenny Martinez",
+        "team": "Bahrain – Victorious",
+        "gap": "+2:12"
+      },
+      {
+        "rank": 5,
+        "rider": "Davide Piganzoli",
+        "team": "Team Visma | Lease a Bike",
+        "gap": "+9:16"
+      },
+      {
+        "rank": 6,
+        "rider": "Ramses Debruyne",
+        "team": "Alpecin – Premier Tech",
+        "gap": "+11:51"
+      },
+      {
+        "rank": 7,
+        "rider": "Pablo Castrillo",
+        "team": "Movistar Team",
+        "gap": "+16:10"
+      }
+    ],
+    "after_stage_num": 10,
+    "after_stage_date": "2026-07-14"
+  },
+  "ai": {
+    "confidence": "medium",
+    "sources": [
+      "https://www.letour.fr/en/rankings",
+      "https://www.letour.fr/en/rankings/stage-10?hasCookies=false&hideOnetrust=true&isWebview=true",
+      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-10-pogacar-extends-race-lead-vingegaard-loses-time-to-evenepoel-del-toro-cracks",
+      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-10",
+      "https://www.letour.fr/en/withdrawal",
+      "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts",
+      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-10-tom-pidcock-and-matteo-jorgenson-amongst-victims-of-a-dangerous-stage"
+    ]
+  }
 };
