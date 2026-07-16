@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-16T10:00:02.081337+12:00",
+  "generated_at": "2026-07-16T15:01:20.526889+12:00",
   "nz_date": "2026-07-16",
   "as_of_date": "2026-07-16",
   "boundary_hour": 10,
@@ -20,14 +20,14 @@ window.STAGE_TODAY = {
     "type": "Flat",
     "note": "Starts at the Magny-Cours motor racing circuit; flat and sprint-friendly.",
     "headline": "Green light at Magny-Cours",
-    "watch_for": "Stage 12 is a 179.1 km flat run from the iconic Circuit de Nevers Magny-Cours to Chalon-sur-Saône, and with only ~1,412 m of climbing this is a day that almost certainly ends in a bunch sprint — meaning the green jersey battle takes centre stage. Biniam Girmay has cut Mads Pedersen's lead to just 45 points, and NSN Cycling Team will be gunning to eat further into that gap at the intermediate sprint and the finish, while Pedersen and Lidl-Trek will be equally determined to protect that green. Jasper Philipsen — who vaulted above Tim Merlier into third in the points after his Nevers podium — arrives with Mathieu van der Poel's engine available as a lead-out card, giving Alpecin–Premier Tech a dangerous hand to play. Søren Wærenskjold arrives with fresh confidence off his Stage 11 win and could be a threat again in a tight gallop, while Merlier needs to respond after being pushed down to fourth. For the GC favourites, the absolute priority is to reach Chalon safely: Vingegaard and Evenepoel are separated by just 30 seconds, and neither can afford to lose time through a crash or echelon split on a day that offers no time-bonus reward — every second must be banked for the Vosges summit at Le Markstein, the Lake Geneva individual time trial, Orcières-Merlette, and the bruising back-to-back double ascent of Alpe d'Huez that will decide this race.",
+    "watch_for": "Stage 12 departs from the iconic Circuit de Nevers Magny-Cours — the famous Formula 1 circuit — for a largely flat 179.1 km run to Chalon-sur-Saône, and the sprinters will be hungry to reassert themselves after Søren Wærenskjold's stage 11 upset. The maillot vert battle is the dominant subplot: Mads Pedersen leads Biniam Girmay by just 45 points, and a Girmay stage win here could dramatically swing the green jersey competition his way with more sprint opportunities still ahead. Jasper Philipsen — who climbed to third in the points standings after his Nevers podium — will need Alpecin-Premier Tech to deliver him a perfectly timed lead-out as he chases his first stage win of this Tour; expect Tim Merlier (fourth in points) and Max Kanter (fifth) to contest any gap those two leave open. For Pogačar, Vingegaard and Evenepoel — separated by just 30 seconds across the top three — this is a day of pure risk management: stay safe in the bunch and conserve energy before the Vosges summit at Le Markstein, the 26 km Lake Geneva time trial and the decisive Alpine showdowns at Orcières-Merlette and the back-to-back Alpe d'Huez days put the yellow jersey truly on the line.",
     "riders_to_watch": [
-      "Biniam Girmay",
       "Mads Pedersen",
-      "Jasper Philipsen",
-      "Mathieu van der Poel",
+      "Biniam Girmay",
       "Søren Wærenskjold",
-      "Tim Merlier"
+      "Jasper Philipsen",
+      "Tim Merlier",
+      "Max Kanter"
     ],
     "nz_note": "The petrolhead start is a fun touch, but the highlights are all in the finale.",
     "climb_m": 1412,
@@ -38,37 +38,37 @@ window.STAGE_TODAY = {
     {
       "name": "Clément Berthet",
       "stage": 2,
-      "reason": "DNS — crash injuries"
+      "reason": "crash injuries (DNS)"
     },
     {
       "name": "Arnaud De Lie",
       "stage": 3,
-      "reason": "Withdrawal — illness"
+      "reason": "sickness (withdrawal)"
     },
     {
       "name": "Kelland O'Brien",
       "stage": 4,
-      "reason": "Outside time limit"
-    },
-    {
-      "name": "Bert Van Lerberghe",
-      "stage": 6,
-      "reason": "Withdrawal"
-    },
-    {
-      "name": "Cian Uijtdebroeks",
-      "stage": 6,
-      "reason": "Withdrawal"
-    },
-    {
-      "name": "Arvid de Kleijn",
-      "stage": 6,
-      "reason": "Withdrawal"
+      "reason": "outside time limit"
     },
     {
       "name": "Alex Molenaar",
       "stage": 6,
-      "reason": "DNS — fractured metacarpal (crash sustained in stage 5)"
+      "reason": "fractured metacarpal from stage 5 crash (DNS)"
+    },
+    {
+      "name": "Bert Van Lerberghe",
+      "stage": 6,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Cian Uijtdebroeks",
+      "stage": 6,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Arvid de Kleijn",
+      "stage": 6,
+      "reason": "DNS"
     },
     {
       "name": "Torstein Traen",
@@ -91,7 +91,7 @@ window.STAGE_TODAY = {
       {
         "rank": 1,
         "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates – XRG",
+        "team": "UAE Team Emirates XRG",
         "gap": "race lead"
       },
       {
@@ -109,7 +109,7 @@ window.STAGE_TODAY = {
       {
         "rank": 4,
         "rider": "Juan Ayuso",
-        "team": "Lidl – Trek",
+        "team": "Lidl - Trek",
         "gap": "+4:22"
       },
       {
@@ -127,13 +127,13 @@ window.STAGE_TODAY = {
       {
         "rank": 7,
         "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates – XRG",
+        "team": "UAE Team Emirates XRG",
         "gap": "+5:08"
       },
       {
         "rank": 8,
         "rider": "Mattias Skjelmose",
-        "team": "Lidl – Trek",
+        "team": "Lidl - Trek",
         "gap": "+5:45"
       },
       {
@@ -153,7 +153,7 @@ window.STAGE_TODAY = {
       {
         "rank": 1,
         "rider": "Mads Pedersen",
-        "team": "Lidl – Trek",
+        "team": "Lidl - Trek",
         "pts": 317
       },
       {
@@ -195,89 +195,28 @@ window.STAGE_TODAY = {
       {
         "rank": 8,
         "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates – XRG",
+        "team": "UAE Team Emirates XRG",
         "pts": 107
       },
       {
         "rank": 9,
         "rider": "Anthony Turgis",
-        "team": "TotalEnergies",
+        "team": "Team TotalEnergies",
         "pts": 103
       },
       {
         "rank": 10,
         "rider": "Huub Artz",
-        "team": "Lotto Intermarché",
+        "team": "Lotto-Intermarché",
         "pts": 89
       }
     ],
-    "kom": [
-      {
-        "rank": 1,
-        "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates – XRG",
-        "pts": 42
-      },
-      {
-        "rank": 2,
-        "rider": "Jonas Vingegaard",
-        "team": "Team Visma | Lease a Bike",
-        "pts": 27
-      },
-      {
-        "rank": 3,
-        "rider": "Richard Carapaz",
-        "team": "EF Education – EasyPost",
-        "pts": 19
-      },
-      {
-        "rank": 4,
-        "rider": "Valentin Paret-Peintre",
-        "team": "Soudal Quick-Step",
-        "pts": 18
-      },
-      {
-        "rank": 5,
-        "rider": "Paul Seixas",
-        "team": "Decathlon CMA CGM Team",
-        "pts": 18
-      },
-      {
-        "rank": 6,
-        "rider": "Nicolas Prodhomme",
-        "team": "Decathlon CMA CGM Team",
-        "pts": 17
-      },
-      {
-        "rank": 7,
-        "rider": "Alex Baudin",
-        "team": "EF Education – EasyPost",
-        "pts": 16
-      },
-      {
-        "rank": 8,
-        "rider": "Lenny Martinez",
-        "team": "Bahrain – Victorious",
-        "pts": 16
-      },
-      {
-        "rank": 9,
-        "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates – XRG",
-        "pts": 14
-      },
-      {
-        "rank": 10,
-        "rider": "Florian Lipowitz",
-        "team": "Red Bull – BORA – hansgrohe",
-        "pts": 12
-      }
-    ],
+    "kom": [],
     "youth": [
       {
         "rank": 1,
         "rider": "Juan Ayuso",
-        "team": "Lidl – Trek",
+        "team": "Lidl - Trek",
         "gap": "race lead"
       },
       {
@@ -289,62 +228,50 @@ window.STAGE_TODAY = {
       {
         "rank": 3,
         "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates – XRG",
+        "team": "UAE Team Emirates XRG",
         "gap": "+0:46"
       },
       {
         "rank": 4,
-        "rider": "Lenny Martinez",
-        "team": "Bahrain – Victorious",
-        "gap": "+2:12"
-      },
-      {
-        "rank": 5,
         "rider": "Davide Piganzoli",
         "team": "Team Visma | Lease a Bike",
         "gap": "+9:16"
       },
       {
+        "rank": 5,
+        "rider": "Tobias Halland Johannessen",
+        "team": "Uno-X Mobility",
+        "gap": "+10:28"
+      },
+      {
         "rank": 6,
-        "rider": "Ramses Debruyne",
-        "team": "Alpecin – Premier Tech",
-        "gap": "+11:51"
+        "rider": "Sean Quinn",
+        "team": "EF Education–EasyPost",
+        "gap": "+10:46"
       },
       {
         "rank": 7,
-        "rider": "Pablo Castrillo",
-        "team": "Movistar Team",
-        "gap": "+16:10"
+        "rider": "Yannis Voisard",
+        "team": "Tudor Pro Cycling Team",
+        "gap": "+11:14"
       },
       {
         "rank": 8,
-        "rider": "Lennert Van Eetvelt",
-        "team": "Lotto Intermarché",
-        "gap": "+34:24"
-      },
-      {
-        "rank": 9,
-        "rider": "Mathias Vacek",
-        "team": "Lidl – Trek",
-        "gap": "+48:57"
-      },
-      {
-        "rank": 10,
-        "rider": "Kévin Vauquelin",
-        "team": "Netcompany INEOS",
-        "gap": "+1:01:54"
+        "rider": "Ramses Debruyne",
+        "team": "Alpecin – Premier Tech",
+        "gap": "+11:51"
       }
     ],
     "after_stage_num": 11,
     "after_stage_date": "2026-07-15"
   },
   "ai": {
-    "confidence": "high",
+    "confidence": "medium",
     "sources": [
-      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-11-biniam-girmay-closes-on-mads-pedersen-as-tadej-pogacar-keeps-336-lead",
       "https://www.letour.fr/en/rankings",
+      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-11-biniam-girmay-closes-on-mads-pedersen-as-tadej-pogacar-keeps-336-lead",
       "https://www.letour.fr/en/rankings/stage-11?hasCookies=false&hasIframeResizer=true&isWebview=true&partner=sbsapN",
-      "https://www.europesays.com/france/51911/",
+      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-11/live",
       "https://www.letour.fr/en/withdrawal",
       "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts",
       "https://www.domestiquecycling.com/en/news/tour-de-france-2026-withdrawals/"
