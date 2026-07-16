@@ -2,35 +2,36 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-16T15:01:20.526889+12:00",
-  "nz_date": "2026-07-16",
-  "as_of_date": "2026-07-16",
+  "generated_at": "2026-07-17T10:00:01.884244+12:00",
+  "nz_date": "2026-07-17",
+  "as_of_date": "2026-07-17",
   "boundary_hour": 10,
   "status": "racing",
   "watched": {
-    "num": 11,
-    "date": "2026-07-15"
+    "num": 12,
+    "date": "2026-07-16"
   },
   "preview": {
-    "num": 12,
-    "date": "2026-07-16",
-    "start": "Circuit de Nevers Magny-Cours",
-    "finish": "Chalon-sur-Saone",
-    "distance_km": 179.1,
-    "type": "Flat",
-    "note": "Starts at the Magny-Cours motor racing circuit; flat and sprint-friendly.",
-    "headline": "Green light at Magny-Cours",
-    "watch_for": "Stage 12 departs from the iconic Circuit de Nevers Magny-Cours — the famous Formula 1 circuit — for a largely flat 179.1 km run to Chalon-sur-Saône, and the sprinters will be hungry to reassert themselves after Søren Wærenskjold's stage 11 upset. The maillot vert battle is the dominant subplot: Mads Pedersen leads Biniam Girmay by just 45 points, and a Girmay stage win here could dramatically swing the green jersey competition his way with more sprint opportunities still ahead. Jasper Philipsen — who climbed to third in the points standings after his Nevers podium — will need Alpecin-Premier Tech to deliver him a perfectly timed lead-out as he chases his first stage win of this Tour; expect Tim Merlier (fourth in points) and Max Kanter (fifth) to contest any gap those two leave open. For Pogačar, Vingegaard and Evenepoel — separated by just 30 seconds across the top three — this is a day of pure risk management: stay safe in the bunch and conserve energy before the Vosges summit at Le Markstein, the 26 km Lake Geneva time trial and the decisive Alpine showdowns at Orcières-Merlette and the back-to-back Alpe d'Huez days put the yellow jersey truly on the line.",
+    "num": 13,
+    "date": "2026-07-17",
+    "start": "Dole",
+    "finish": "Belfort",
+    "distance_km": 205.8,
+    "type": "Hilly",
+    "note": "Longest stage of the race, rolling towards the Vosges - a day for the break or puncheurs.",
+    "headline": "The Tour's longest day rolls to Belfort",
+    "watch_for": "Stage 13 is 205.8 km from Dole to Belfort with the legendary Ballon d'Alsace — a first-category climb punching through the finale before a technical descent into the finish — making it unsuitable for the pure sprinters who have dominated the flat days. With the major GC battles still a week away and UAE Team Emirates likely to grant a controlled breakaway some freedom, climbers chasing the polka-dot jersey will be energised: Richard Carapaz (third in KOM on 19 points) and Alex Baudin will be highly motivated to go early and bank points on the Ballon to chip into Pogačar's dominant 42-point lead. Tom Pidcock — tenth on GC at +11:49, freed from GC obligations and renowned as one of the peloton's most dangerous descenders — is precisely the profile to bridge to a move, summit the Ballon in front and use the technical plunge to Belfort to build an unassailable gap. In the green jersey battle only 50 points separate the top four of Pedersen (357), Girmay (317), Philipsen (311) and Merlier (307), making the intermediate sprint a fierce battleground before the Ballon splinters the bunch and ends the fast men's day. Mathieu van der Poel's explosive punch-over-climbs profile suits the Ballon perfectly, and after days riding lead-out duties for Philipsen he may look to launch his own move for one of the last purely opportunistic stage wins before the Alps take full control of this race.",
     "riders_to_watch": [
+      "Richard Carapaz",
+      "Alex Baudin",
+      "Tom Pidcock",
       "Mads Pedersen",
-      "Biniam Girmay",
-      "Søren Wærenskjold",
-      "Jasper Philipsen",
+      "Mathieu van der Poel",
       "Tim Merlier",
-      "Max Kanter"
+      "Jasper Philipsen"
     ],
-    "nz_note": "The petrolhead start is a fun touch, but the highlights are all in the finale.",
-    "climb_m": 1412,
+    "nz_note": "A long one, so the highlights edit will do you a favour here.",
+    "climb_m": 2309,
     "summit_finish": false,
     "contextual": true
   },
@@ -38,22 +39,17 @@ window.STAGE_TODAY = {
     {
       "name": "Clément Berthet",
       "stage": 2,
-      "reason": "crash injuries (DNS)"
+      "reason": "DNS"
     },
     {
       "name": "Arnaud De Lie",
       "stage": 3,
-      "reason": "sickness (withdrawal)"
+      "reason": "withdrawal"
     },
     {
       "name": "Kelland O'Brien",
       "stage": 4,
-      "reason": "outside time limit"
-    },
-    {
-      "name": "Alex Molenaar",
-      "stage": 6,
-      "reason": "fractured metacarpal from stage 5 crash (DNS)"
+      "reason": "outside the time limit"
     },
     {
       "name": "Bert Van Lerberghe",
@@ -67,6 +63,11 @@ window.STAGE_TODAY = {
     },
     {
       "name": "Arvid de Kleijn",
+      "stage": 6,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Alex Molenaar",
       "stage": 6,
       "reason": "DNS"
     },
@@ -84,6 +85,11 @@ window.STAGE_TODAY = {
       "name": "Chris Harper",
       "stage": 11,
       "reason": "DNS"
+    },
+    {
+      "name": "Fernando Gaviria",
+      "stage": 12,
+      "reason": "fractured collarbone"
     }
   ],
   "standings": {
@@ -154,37 +160,37 @@ window.STAGE_TODAY = {
         "rank": 1,
         "rider": "Mads Pedersen",
         "team": "Lidl - Trek",
-        "pts": 317
+        "pts": 357
       },
       {
         "rank": 2,
         "rider": "Biniam Girmay",
         "team": "NSN Cycling Team",
-        "pts": 272
+        "pts": 317
       },
       {
         "rank": 3,
         "rider": "Jasper Philipsen",
         "team": "Alpecin – Premier Tech",
-        "pts": 255
+        "pts": 311
       },
       {
         "rank": 4,
         "rider": "Tim Merlier",
         "team": "Soudal Quick-Step",
-        "pts": 223
+        "pts": 307
       },
       {
         "rank": 5,
         "rider": "Max Kanter",
         "team": "XDS Astana Team",
-        "pts": 203
+        "pts": 239
       },
       {
         "rank": 6,
         "rider": "Olav Kooij",
         "team": "Decathlon CMA CGM Team",
-        "pts": 160
+        "pts": 210
       },
       {
         "rank": 7,
@@ -194,24 +200,85 @@ window.STAGE_TODAY = {
       },
       {
         "rank": 8,
-        "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates XRG",
-        "pts": 107
+        "rider": "Anthony Turgis",
+        "team": "Team TotalEnergies",
+        "pts": 129
       },
       {
         "rank": 9,
-        "rider": "Anthony Turgis",
-        "team": "Team TotalEnergies",
-        "pts": 103
+        "rider": "Milan Fretin",
+        "team": "Cofidis",
+        "pts": 117
       },
       {
         "rank": 10,
-        "rider": "Huub Artz",
-        "team": "Lotto-Intermarché",
-        "pts": 89
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "pts": 107
       }
     ],
-    "kom": [],
+    "kom": [
+      {
+        "rank": 1,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "pts": 42
+      },
+      {
+        "rank": 2,
+        "rider": "Jonas Vingegaard",
+        "team": "Team Visma | Lease a Bike",
+        "pts": 27
+      },
+      {
+        "rank": 3,
+        "rider": "Richard Carapaz",
+        "team": "EF Education–EasyPost",
+        "pts": 19
+      },
+      {
+        "rank": 4,
+        "rider": "Valentin Paret-Peintre",
+        "team": "Soudal Quick-Step",
+        "pts": 18
+      },
+      {
+        "rank": 5,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 18
+      },
+      {
+        "rank": 6,
+        "rider": "Nicolas Prodhomme",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 17
+      },
+      {
+        "rank": 7,
+        "rider": "Alex Baudin",
+        "team": "EF Education–EasyPost",
+        "pts": 16
+      },
+      {
+        "rank": 8,
+        "rider": "Lenny Martinez",
+        "team": "Bahrain – Victorious",
+        "pts": 16
+      },
+      {
+        "rank": 9,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "pts": 14
+      },
+      {
+        "rank": 10,
+        "rider": "Florian Lipowitz",
+        "team": "Red Bull – BORA – hansgrohe",
+        "pts": 12
+      }
+    ],
     "youth": [
       {
         "rank": 1,
@@ -233,48 +300,60 @@ window.STAGE_TODAY = {
       },
       {
         "rank": 4,
+        "rider": "Lenny Martinez",
+        "team": "Bahrain – Victorious",
+        "gap": "+2:12"
+      },
+      {
+        "rank": 5,
         "rider": "Davide Piganzoli",
         "team": "Team Visma | Lease a Bike",
         "gap": "+9:16"
       },
       {
-        "rank": 5,
-        "rider": "Tobias Halland Johannessen",
-        "team": "Uno-X Mobility",
-        "gap": "+10:28"
-      },
-      {
         "rank": 6,
-        "rider": "Sean Quinn",
-        "team": "EF Education–EasyPost",
-        "gap": "+10:46"
-      },
-      {
-        "rank": 7,
-        "rider": "Yannis Voisard",
-        "team": "Tudor Pro Cycling Team",
-        "gap": "+11:14"
-      },
-      {
-        "rank": 8,
         "rider": "Ramses Debruyne",
         "team": "Alpecin – Premier Tech",
         "gap": "+11:51"
+      },
+      {
+        "rank": 7,
+        "rider": "Pablo Castrillo",
+        "team": "Movistar Team",
+        "gap": "+16:10"
+      },
+      {
+        "rank": 8,
+        "rider": "Mathias Vacek",
+        "team": "Lidl - Trek",
+        "gap": "+48:57"
+      },
+      {
+        "rank": 9,
+        "rider": "Quinn Simmons",
+        "team": "Lidl - Trek",
+        "gap": "+1:04:49"
+      },
+      {
+        "rank": 10,
+        "rider": "Antonio Tiberi",
+        "team": "Bahrain – Victorious",
+        "gap": "+1:09:10"
       }
     ],
-    "after_stage_num": 11,
-    "after_stage_date": "2026-07-15"
+    "after_stage_num": 12,
+    "after_stage_date": "2026-07-16"
   },
   "ai": {
-    "confidence": "medium",
+    "confidence": "high",
     "sources": [
-      "https://www.letour.fr/en/rankings",
-      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-11-biniam-girmay-closes-on-mads-pedersen-as-tadej-pogacar-keeps-336-lead",
-      "https://www.letour.fr/en/rankings/stage-11?hasCookies=false&hasIframeResizer=true&isWebview=true&partner=sbsapN",
-      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-11/live",
+      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-12-tim-merlier-hat-trick-closes-green-jersey-top-four-to-50-points-as-tadej-pogacars-lead-survives-unchanged",
+      "https://www.letour.fr/en/rankings/stage-12",
+      "https://www.tntsports.co.uk/cycling/tour-de-france/2026/standings.shtml",
+      "https://sport.quotidiano.net/en/ciclismo/tour-de-france-2026-tappa-12-ordine-darrivo-classifica-generale-0f20d20c",
       "https://www.letour.fr/en/withdrawal",
       "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts",
-      "https://www.domestiquecycling.com/en/news/tour-de-france-2026-withdrawals/"
+      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-12-fernando-gaviria-abandons-with-fractured-collarbone-dorian-godon-and-three-uno-x-riders-caught-in-mass-crash"
     ]
   }
 };
