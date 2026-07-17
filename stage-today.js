@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-17T10:00:01.884244+12:00",
+  "generated_at": "2026-07-17T14:00:05.688761+12:00",
   "nz_date": "2026-07-17",
   "as_of_date": "2026-07-17",
   "boundary_hour": 10,
@@ -20,15 +20,14 @@ window.STAGE_TODAY = {
     "type": "Hilly",
     "note": "Longest stage of the race, rolling towards the Vosges - a day for the break or puncheurs.",
     "headline": "The Tour's longest day rolls to Belfort",
-    "watch_for": "Stage 13 is 205.8 km from Dole to Belfort with the legendary Ballon d'Alsace — a first-category climb punching through the finale before a technical descent into the finish — making it unsuitable for the pure sprinters who have dominated the flat days. With the major GC battles still a week away and UAE Team Emirates likely to grant a controlled breakaway some freedom, climbers chasing the polka-dot jersey will be energised: Richard Carapaz (third in KOM on 19 points) and Alex Baudin will be highly motivated to go early and bank points on the Ballon to chip into Pogačar's dominant 42-point lead. Tom Pidcock — tenth on GC at +11:49, freed from GC obligations and renowned as one of the peloton's most dangerous descenders — is precisely the profile to bridge to a move, summit the Ballon in front and use the technical plunge to Belfort to build an unassailable gap. In the green jersey battle only 50 points separate the top four of Pedersen (357), Girmay (317), Philipsen (311) and Merlier (307), making the intermediate sprint a fierce battleground before the Ballon splinters the bunch and ends the fast men's day. Mathieu van der Poel's explosive punch-over-climbs profile suits the Ballon perfectly, and after days riding lead-out duties for Philipsen he may look to launch his own move for one of the last purely opportunistic stage wins before the Alps take full control of this race.",
+    "watch_for": "Stage 13 rolls 205.8 km from Dole to Belfort through the Vosges foothills with roughly 2,309 m of climbing — hilly enough to eliminate the pure sprinters (Tim Merlier and the fast men almost certainly won't get another chance until Stage 17 at the earliest) but unlikely to shatter the yellow-jersey group, making it prime hunting ground for breakaway artists and puncheurs. Tom Pidcock (Pinarello Q36.5, +11:49 on GC) has the all-round versatility and the motivation of limited GC ambitions to go deep in an early move; Anthony Turgis (TotalEnergies, 8th in points) and Romain Grégoire (Groupama-FDJ United) will be equally eager on terrain where pure climbing ability is less decisive than punch and diesel endurance. Lidl-Trek hold two cards in the top eight of the GC with Juan Ayuso (+4:22) and Mattias Skjelmose (+5:45) — expect the team to probe if any late acceleration splinters the reduced bunch near Belfort, especially with Skjelmose capable of a sharp puncheur-style finish. UAE Team Emirates XRG carry the burden of control knowing a poorly managed break on rolling terrain can balloon, while Red Bull–BORA–hansgrohe will be watching for any moment that inches Evenepoel (+4:06) or Lipowitz (+4:44) closer to Pogačar ahead of the decisive Vosges summit at Le Markstein and the Alpine battles beyond. This is likely the last realistic stage-win opportunity for the opportunists before the race tilts firmly into pure climber territory.",
     "riders_to_watch": [
-      "Richard Carapaz",
-      "Alex Baudin",
       "Tom Pidcock",
-      "Mads Pedersen",
-      "Mathieu van der Poel",
-      "Tim Merlier",
-      "Jasper Philipsen"
+      "Juan Ayuso",
+      "Mattias Skjelmose",
+      "Anthony Turgis",
+      "Romain Grégoire",
+      "Remco Evenepoel"
     ],
     "nz_note": "A long one, so the highlights edit will do you a favour here.",
     "climb_m": 2309,
@@ -39,57 +38,52 @@ window.STAGE_TODAY = {
     {
       "name": "Clément Berthet",
       "stage": 2,
-      "reason": "DNS"
+      "reason": "DNS — concussion sustained in stage 1 crash"
     },
     {
       "name": "Arnaud De Lie",
       "stage": 3,
-      "reason": "withdrawal"
+      "reason": "Withdrawal — illness and stomach problems"
     },
     {
       "name": "Kelland O'Brien",
       "stage": 4,
-      "reason": "outside the time limit"
-    },
-    {
-      "name": "Bert Van Lerberghe",
-      "stage": 6,
-      "reason": "withdrawal"
+      "reason": "Outside time limit — missed time cut after heat-affected stage"
     },
     {
       "name": "Cian Uijtdebroeks",
       "stage": 6,
-      "reason": "withdrawal"
+      "reason": "Withdrawal — illness and fever"
+    },
+    {
+      "name": "Bert Van Lerberghe",
+      "stage": 6,
+      "reason": "Withdrawal — reason not publicly detailed"
     },
     {
       "name": "Arvid de Kleijn",
       "stage": 6,
-      "reason": "withdrawal"
+      "reason": "Withdrawal — stomach problems and cumulative fatigue"
     },
     {
       "name": "Alex Molenaar",
       "stage": 6,
-      "reason": "DNS"
+      "reason": "DNS — concussion and fractured first metacarpal"
     },
     {
       "name": "Torstein Traen",
       "stage": 7,
-      "reason": "DNS"
+      "reason": "DNS — concussion and multiple fractured ribs"
     },
     {
       "name": "Matteo Trentin",
       "stage": 10,
-      "reason": "DNS"
+      "reason": "DNS — fever developed during the rest day"
     },
     {
       "name": "Chris Harper",
       "stage": 11,
-      "reason": "DNS"
-    },
-    {
-      "name": "Fernando Gaviria",
-      "stage": 12,
-      "reason": "fractured collarbone"
+      "reason": "DNS — serious left thumb injury after stage 10 crash"
     }
   ],
   "standings": {
@@ -347,13 +341,13 @@ window.STAGE_TODAY = {
   "ai": {
     "confidence": "high",
     "sources": [
-      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-12-tim-merlier-hat-trick-closes-green-jersey-top-four-to-50-points-as-tadej-pogacars-lead-survives-unchanged",
       "https://www.letour.fr/en/rankings/stage-12",
+      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-12-tim-merlier-hat-trick-closes-green-jersey-top-four-to-50-points-as-tadej-pogacars-lead-survives-unchanged",
+      "https://www.bbc.co.uk/sport/cycling/articles/cqx7jyewwnro",
       "https://www.tntsports.co.uk/cycling/tour-de-france/2026/standings.shtml",
-      "https://sport.quotidiano.net/en/ciclismo/tour-de-france-2026-tappa-12-ordine-darrivo-classifica-generale-0f20d20c",
       "https://www.letour.fr/en/withdrawal",
       "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts",
-      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-12-fernando-gaviria-abandons-with-fractured-collarbone-dorian-godon-and-three-uno-x-riders-caught-in-mass-crash"
+      "https://procyclinguk.com/which-riders-have-abandoned-the-tour-de-france-2026-full-withdrawal-list-and-reasons/"
     ]
   }
 };
