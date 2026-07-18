@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-18T10:00:00.963734+12:00",
+  "generated_at": "2026-07-18T14:00:01.426821+12:00",
   "nz_date": "2026-07-18",
   "as_of_date": "2026-07-18",
   "boundary_hour": 10,
@@ -20,18 +20,15 @@ window.STAGE_TODAY = {
     "type": "Mountain",
     "note": "Short, sharp Vosges stage over multiple climbs finishing at Le Markstein; GC skirmishing likely.",
     "headline": "Short, savage Vosges skirmish to Le Markstein",
-    "watch_for": "Stage 14 brings the Tour's first summit finish since the Pyrenees, up the short, punchy Vosges slopes to Le Markstein — terrain that rewards explosivity over sheer altitude, and with Pogačar's lead a manageable 3:36 over Vingegaard and 4:06 over Evenepoel, none of the podium contenders can afford to sit still. Tom Pidcock's stunning stage 13 breakaway vaulted him to 4th overall, just 9 seconds shy of Evenepoel's podium spot, so watch whether Red Bull-BORA-hansgrohe ride defensively to protect Evenepoel or whether Pidcock's Pinarello Q36.5 squad senses weakness and attacks the final ramps directly. In the white jersey fight, Juan Ayuso's edge over Decathlon's teenage climber Paul Seixas is a razor-thin 13 seconds, and a summit finish is exactly the kind of stage where that margin gets rewritten. Further back, Mattias Skjelmose, Isaac del Toro and Lenny Martinez all sit within a couple of minutes of the youth lead and have every reason to go on the offensive rather than mark each other. Keep an eye on how UAE Team Emirates XRG and Team Visma | Lease a Bike deploy their climbing domestiques on the last kilometre of steep gradient, since neither has yet been forced to fully commit on a summit finish this Tour. Green jersey holder Mads Pedersen is unlikely to be a factor once the road tilts up, so expect the bunch to fragment early and the day's points and stage spoils to be fought out by whoever survives longest in the early break.",
+    "watch_for": "Stage 14 is the Tour's first true summit finish since the Pyrenees and the opening blow of the Vosges/Jura/Alps trilogy that carries the real GC weight in this Tour, so expect the top of the overall standings to be tested hard on the final climb to Le Markstein. Tadej Pogačar takes his 3:36 yellow-jersey cushion over Jonas Vingegaard into the mountains for the first time since Gavarnie-Gèdre, and with the Dane arriving off a Giro-winning season, this is the first real chance for Vingegaard to probe Pogačar's legs on a summit rather than just defend. Behind them, Remco Evenepoel holds the final podium spot by a wafer-thin 9 seconds over an in-form Tom Pidcock, who arrives full of confidence after his stage 13 breakaway heroics vaulted him to 4th — a gradient finish suits a climber of Pidcock's calibre far more than the rolling terrain that made his move possible, so watch whether he can back it up on demand rather than by surprise. Further down, the white jersey fight is compressed into 46 seconds between Juan Ayuso, Paul Seixas and Isaac del Toro, all of whom will be forced to answer selection moves on the Vosges slopes rather than simply follow wheels. With Pogačar also holding the polka-dot lead, expect UAE and Visma | Lease a Bike to control the pace on the approach climbs while the pure climbers in the group — Seixas, del Toro, Lenny Martinez — look for opportunities to make up ground before the harder Alpine and Jura tests still to come.",
     "riders_to_watch": [
       "Tadej Pogačar",
       "Jonas Vingegaard",
       "Remco Evenepoel",
       "Tom Pidcock",
-      "Juan Ayuso",
       "Paul Seixas",
-      "Mattias Skjelmose",
-      "Isaac del Toro",
-      "Lenny Martinez",
-      "Mads Pedersen"
+      "Juan Ayuso",
+      "Isaac del Toro"
     ],
     "nz_note": "Short and combustible, worth the full final hour tonight.",
     "climb_m": 3941,
@@ -42,52 +39,52 @@ window.STAGE_TODAY = {
     {
       "name": "Clément Berthet",
       "stage": 2,
-      "reason": "Concussion after stage 1 crash"
+      "reason": "DNS"
     },
     {
       "name": "Arnaud De Lie",
       "stage": 3,
-      "reason": "Illness and stomach problems"
+      "reason": "withdrawal"
     },
     {
       "name": "Kelland O'Brien",
       "stage": 4,
-      "reason": "Missed the time cut after a difficult heat-affected stage"
-    },
-    {
-      "name": "Alex Molenaar",
-      "stage": 6,
-      "reason": "Concussion and fractured first metacarpal"
+      "reason": "outside the time limit"
     },
     {
       "name": "Bert Van Lerberghe",
       "stage": 6,
-      "reason": "Withdrawal, reason not publicly detailed"
+      "reason": "withdrawal"
     },
     {
       "name": "Cian Uijtdebroeks",
       "stage": 6,
-      "reason": "Illness and fever"
+      "reason": "withdrawal"
     },
     {
       "name": "Arvid de Kleijn",
       "stage": 6,
-      "reason": "Stomach problems and cumulative fatigue"
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Alex Molenaar",
+      "stage": 6,
+      "reason": "DNS"
     },
     {
       "name": "Torstein Traen",
       "stage": 7,
-      "reason": "Concussion and multiple fractured ribs"
+      "reason": "DNS"
     },
     {
       "name": "Matteo Trentin",
       "stage": 10,
-      "reason": "Fever developed during the rest day"
+      "reason": "DNS"
     },
     {
       "name": "Chris Harper",
       "stage": 11,
-      "reason": "Serious left thumb injury after a stage 10 crash"
+      "reason": "DNS"
     }
   ],
   "standings": {
@@ -95,7 +92,7 @@ window.STAGE_TODAY = {
       {
         "rank": 1,
         "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates XRG",
+        "team": "UAE Team Emirates - XRG",
         "gap": "race lead"
       },
       {
@@ -107,7 +104,7 @@ window.STAGE_TODAY = {
       {
         "rank": 3,
         "rider": "Remco Evenepoel",
-        "team": "Red Bull – BORA – hansgrohe",
+        "team": "Red Bull - BORA - hansgrohe",
         "gap": "+4:06"
       },
       {
@@ -131,19 +128,19 @@ window.STAGE_TODAY = {
       {
         "rank": 7,
         "rider": "Florian Lipowitz",
-        "team": "Red Bull – BORA – hansgrohe",
+        "team": "Red Bull - BORA - hansgrohe",
         "gap": "+4:44"
       },
       {
         "rank": 8,
         "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates XRG",
+        "team": "UAE Team Emirates - XRG",
         "gap": "+5:08"
       },
       {
         "rank": 9,
         "rider": "Lenny Martinez",
-        "team": "Bahrain – Victorious",
+        "team": "Bahrain - Victorious",
         "gap": "+5:45"
       },
       {
@@ -163,7 +160,7 @@ window.STAGE_TODAY = {
       {
         "rank": 2,
         "rider": "Jasper Philipsen",
-        "team": "Alpecin – Premier Tech",
+        "team": "Alpecin - Premier Tech",
         "pts": 336
       },
       {
@@ -199,7 +196,7 @@ window.STAGE_TODAY = {
       {
         "rank": 8,
         "rider": "Anthony Turgis",
-        "team": "Team TotalEnergies",
+        "team": "TotalEnergies",
         "pts": 129
       },
       {
@@ -211,11 +208,72 @@ window.STAGE_TODAY = {
       {
         "rank": 10,
         "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates XRG",
+        "team": "UAE Team Emirates - XRG",
         "pts": 107
       }
     ],
-    "kom": [],
+    "kom": [
+      {
+        "rank": 1,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates - XRG",
+        "pts": 42
+      },
+      {
+        "rank": 2,
+        "rider": "Jonas Vingegaard",
+        "team": "Team Visma | Lease a Bike",
+        "pts": 27
+      },
+      {
+        "rank": 3,
+        "rider": "Richard Carapaz",
+        "team": "EF Education - EasyPost",
+        "pts": 19
+      },
+      {
+        "rank": 4,
+        "rider": "Tom Pidcock",
+        "team": "Pinarello Q36.5 Pro Cycling Team",
+        "pts": 18
+      },
+      {
+        "rank": 5,
+        "rider": "Valentin Paret-Peintre",
+        "team": "Soudal Quick-Step",
+        "pts": 18
+      },
+      {
+        "rank": 6,
+        "rider": "Nicolas Prodhomme",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 18
+      },
+      {
+        "rank": 7,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 17
+      },
+      {
+        "rank": 8,
+        "rider": "Alex Baudin",
+        "team": "EF Education - EasyPost",
+        "pts": 16
+      },
+      {
+        "rank": 9,
+        "rider": "Lenny Martinez",
+        "team": "Bahrain - Victorious",
+        "pts": 16
+      },
+      {
+        "rank": 10,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates - XRG",
+        "pts": 14
+      }
+    ],
     "youth": [
       {
         "rank": 1,
@@ -232,53 +290,53 @@ window.STAGE_TODAY = {
       {
         "rank": 3,
         "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates XRG",
+        "team": "UAE Team Emirates - XRG",
         "gap": "+0:46"
       },
       {
         "rank": 4,
         "rider": "Lenny Martinez",
-        "team": "Bahrain – Victorious",
-        "gap": "+1:23"
-      },
-      {
-        "rank": 5,
-        "rider": "Mattias Skjelmose",
-        "team": "Lidl - Trek",
+        "team": "Bahrain - Victorious",
         "gap": "+2:12"
       },
       {
-        "rank": 6,
+        "rank": 5,
         "rider": "Davide Piganzoli",
         "team": "Team Visma | Lease a Bike",
         "gap": "+9:16"
       },
       {
-        "rank": 7,
+        "rank": 6,
         "rider": "Ramses Debruyne",
-        "team": "Alpecin – Premier Tech",
+        "team": "Alpecin - Premier Tech",
         "gap": "+11:51"
       },
       {
-        "rank": 8,
+        "rank": 7,
         "rider": "Pablo Castrillo",
         "team": "Movistar Team",
         "gap": "+25:57"
+      },
+      {
+        "rank": 8,
+        "rider": "Lennert Van Eetvelt",
+        "team": "Lotto-Intermarché",
+        "gap": "+44:11"
       }
     ],
     "after_stage_num": 13,
     "after_stage_date": "2026-07-17"
   },
   "ai": {
-    "confidence": "medium",
+    "confidence": "high",
     "sources": [
       "https://www.letour.fr/en/rankings/stage-13",
       "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-13-tom-pidcock-enters-the-fight-for-podium-after-magical-breakaway",
       "https://www.letour.fr/en/rankings",
-      "https://www.cyclingstage.com/tour-de-france-2026-points-classification/stage-13-green-jersey-tdf-2026/",
+      "https://www.olympics.com/en/news/tour-de-france-2026-full-schedule-all-stage-results-classification-standings",
       "https://www.letour.fr/en/withdrawal",
       "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts",
-      "https://procyclinguk.com/which-riders-have-abandoned-the-tour-de-france-2026-full-withdrawal-list-and-reasons/"
+      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-13-injuries-take-their-toll-as-three-more-riders-withdraw"
     ]
   }
 };
