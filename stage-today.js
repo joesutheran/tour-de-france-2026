@@ -2,8 +2,8 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-19T14:00:05.814084+12:00",
-  "nz_date": "2026-07-19",
+  "generated_at": "2026-07-20T08:35:07.788436+12:00",
+  "nz_date": "2026-07-20",
   "as_of_date": "2026-07-19",
   "boundary_hour": 10,
   "status": "racing",
@@ -20,216 +20,18 @@ window.STAGE_TODAY = {
     "type": "Mountain",
     "note": "Jura/pre-Alps summit finish at Plateau de Solaison to close week two.",
     "headline": "Pre-Alps summit finish closes week two",
-    "watch_for": "Stage 15 brings the first summit finish of the mountain-heavy final third of this Tour: 183.9km from Champagnole to Plateau de Solaison with roughly 4,098m of climbing over four categorised ascents, capped by a Hors Catégorie summit finish. Jonas Vingegaard sits 4:30 down on race leader Tadej Pogačar after another solo stage win for the Slovenian in the Vosges, and with the Lake Geneva time trial and the Alpe d'Huez double still ahead, a summit finish like this is exactly the kind of terrain where he needs to start clawing back time rather than just limiting losses. Remco Evenepoel holds third overall at +5:04, but white-jersey holder Paul Seixas is now just 15 seconds behind him after leapfrogging Juan Ayuso on stage 14, making the podium fight one of the tightest storylines on the road. Florian Lipowitz (+5:44) and UAE's Isaac del Toro (+5:50) are separated by only six seconds, setting up a close scrap for the 6th-7th spots and raising questions about how UAE Team Emirates - XRG splits its climbing support between del Toro and Pogačar. Tom Pidcock, who twice tried to force the issue from breakaways on stages 13 and 14 only to slip to ninth overall, has shown he's willing to gamble on tough terrain, so watch whether he tries another long-range move rather than waiting for the final week. And with a healthy cushion in yellow already banked, whether Pogačar rides for a fifth stage win outright or simply manages the gap will say plenty about how he wants to play the remaining week of racing.",
+    "watch_for": "The Jura and pre-Alps deliver a summit finish at Plateau de Solaison to sign off the second week, a serious mountaintop test right before the rest day. Riders on the limit have nowhere to hide on the final ascent, and the GC picture can shift sharply. Watch who commits everything knowing a rest day follows.",
     "riders_to_watch": [
+      "Tadej Pogacar",
       "Jonas Vingegaard",
-      "Paul Seixas",
       "Remco Evenepoel",
-      "Florian Lipowitz",
-      "Isaac del Toro",
-      "Tom Pidcock",
-      "Tadej Pogačar"
+      "Juan Ayuso",
+      "Ben O'Connor",
+      "Tobias Halland Johannessen"
     ],
     "nz_note": "A proper summit finish, so settle in for the climb.",
     "climb_m": 4098,
-    "summit_finish": true,
-    "contextual": true
+    "summit_finish": true
   },
-  "abandoned": [
-    {
-      "name": "Clément Berthet",
-      "stage": 2,
-      "reason": "did not start"
-    },
-    {
-      "name": "Arnaud De Lie",
-      "stage": 3,
-      "reason": "withdrew"
-    },
-    {
-      "name": "Kelland O'Brien",
-      "stage": 4,
-      "reason": "outside time limit"
-    },
-    {
-      "name": "Bert Van Lerberghe",
-      "stage": 6,
-      "reason": "withdrew"
-    },
-    {
-      "name": "Cian Uijtdebroeks",
-      "stage": 6,
-      "reason": "withdrew"
-    },
-    {
-      "name": "Arvid de Kleijn",
-      "stage": 6,
-      "reason": "withdrew"
-    },
-    {
-      "name": "Alex Molenaar",
-      "stage": 6,
-      "reason": "did not start"
-    },
-    {
-      "name": "Torstein Traen",
-      "stage": 7,
-      "reason": "did not start"
-    },
-    {
-      "name": "Matteo Trentin",
-      "stage": 10,
-      "reason": "did not start"
-    },
-    {
-      "name": "Chris Harper",
-      "stage": 11,
-      "reason": "did not start"
-    },
-    {
-      "name": "Jenno Berckmoes",
-      "stage": 13,
-      "reason": "did not start"
-    },
-    {
-      "name": "Frits Biesterbos",
-      "stage": 13,
-      "reason": "did not start"
-    },
-    {
-      "name": "Fernando Gaviria",
-      "stage": 13,
-      "reason": "did not start"
-    },
-    {
-      "name": "Ramses Debruyne",
-      "stage": 14,
-      "reason": "did not start"
-    }
-  ],
-  "standings": {
-    "gc": [
-      {
-        "rank": 1,
-        "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates - XRG",
-        "gap": "race lead"
-      },
-      {
-        "rank": 2,
-        "rider": "Jonas Vingegaard",
-        "team": "Team Visma | Lease a Bike",
-        "gap": "+4:30"
-      },
-      {
-        "rank": 3,
-        "rider": "Remco Evenepoel",
-        "team": "Red Bull - BORA - hansgrohe",
-        "gap": "+5:04"
-      },
-      {
-        "rank": 4,
-        "rider": "Paul Seixas",
-        "team": "Decathlon CMA CGM Team",
-        "gap": "+5:19"
-      },
-      {
-        "rank": 5,
-        "rider": "Juan Ayuso",
-        "team": "Lidl - Trek",
-        "gap": "+5:22"
-      },
-      {
-        "rank": 6,
-        "rider": "Florian Lipowitz",
-        "team": "Red Bull - BORA - hansgrohe",
-        "gap": "+5:44"
-      },
-      {
-        "rank": 7,
-        "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates - XRG",
-        "gap": "+5:50"
-      },
-      {
-        "rank": 8,
-        "rider": "Mattias Skjelmose",
-        "team": "Lidl - Trek",
-        "gap": "+7:35"
-      },
-      {
-        "rank": 9,
-        "rider": "Tom Pidcock",
-        "team": "Pinarello Q36.5 Pro Cycling Team",
-        "gap": "+7:59"
-      },
-      {
-        "rank": 10,
-        "rider": "Lenny Martinez",
-        "team": "Bahrain - Victorious",
-        "gap": "+8:25"
-      }
-    ],
-    "points": [
-      {
-        "rank": 1,
-        "rider": "Mads Pedersen",
-        "team": "Lidl - Trek",
-        "pts": 397
-      },
-      {
-        "rank": 2,
-        "rider": "Jasper Philipsen",
-        "team": "Alpecin - Premier Tech",
-        "pts": 361
-      },
-      {
-        "rank": 3,
-        "rider": "Biniam Girmay",
-        "team": "NSN Cycling Team",
-        "pts": 347
-      }
-    ],
-    "kom": [],
-    "youth": [
-      {
-        "rank": 1,
-        "rider": "Paul Seixas",
-        "team": "Decathlon CMA CGM Team",
-        "gap": "race lead"
-      },
-      {
-        "rank": 2,
-        "rider": "Juan Ayuso",
-        "team": "Lidl - Trek",
-        "gap": "+0:03"
-      },
-      {
-        "rank": 3,
-        "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates - XRG",
-        "gap": "+0:31"
-      },
-      {
-        "rank": 4,
-        "rider": "Lenny Martinez",
-        "team": "Bahrain - Victorious",
-        "gap": "+3:06"
-      }
-    ],
-    "after_stage_num": 14,
-    "after_stage_date": "2026-07-18"
-  },
-  "ai": {
-    "confidence": "medium",
-    "sources": [
-      "https://www.letour.fr/en/rankings/stage-14",
-      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-14-pogacar-now-has-over-4-minutes-over-vingegaard-evenepoel-defends-podium-from-seixas",
-      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-14/live/livestats",
-      "https://sport.quotidiano.net/en/ciclismo/tour-tappa-14-pogacar-classifica-7ea90b12",
-      "https://www.letour.fr/en/withdrawal",
-      "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts",
-      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-14-a-second-rider-leaves-the-tour-after-arriving-out-of-time-limit"
-    ]
-  }
+  "abandoned": []
 };
