@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-19T10:00:01.156718+12:00",
+  "generated_at": "2026-07-19T14:00:05.814084+12:00",
   "nz_date": "2026-07-19",
   "as_of_date": "2026-07-19",
   "boundary_hour": 10,
@@ -20,16 +20,15 @@ window.STAGE_TODAY = {
     "type": "Mountain",
     "note": "Jura/pre-Alps summit finish at Plateau de Solaison to close week two.",
     "headline": "Pre-Alps summit finish closes week two",
-    "watch_for": "Stage 15 brings the Tour's first summit finish of the Alps campaign, a brutal 183.9km haul into Plateau de Solaison with roughly 4,100m of climbing — terrain where Tadej Pogačar has already stamped his authority with four stage wins, and with a 4:30 cushion over Jonas Vingegaard he can afford to sit on wheels rather than force the pace himself. Vingegaard is the man under most pressure to change the script: his recent Giro-winning form means he has the engine to attack on a true HC finish rather than simply defend, and with Remco Evenepoel only 34 seconds further back in third, any Visma move could ripple through the whole podium picture. Just behind, the margins are wafer-thin — Evenepoel holds third by a mere 15 seconds over white-jersey wearer Paul Seixas, who has climbed to fourth overall and looks fresh enough to keep pressing for a podium spot, while Florian Lipowitz and Isaac del Toro are separated by only six seconds for sixth and seventh. Tom Pidcock, who slipped to ninth after his breakaway bid was reeled in on stage 14, will be eyeing another long-range move on a stage shaped for exactly that kind of climber, and with Richard Carapaz already up to 15th after infiltrating the day's big break, EF Education-EasyPost may again send numbers up the road early. Watch too for how UAE Team Emirates-XRG ride collectively — with both Pogačar and del Toro inside the top seven, they have the strength in depth to control the tempo all day and dictate exactly when the real fireworks start on the HC summit finish.",
+    "watch_for": "Stage 15 brings the first summit finish of the mountain-heavy final third of this Tour: 183.9km from Champagnole to Plateau de Solaison with roughly 4,098m of climbing over four categorised ascents, capped by a Hors Catégorie summit finish. Jonas Vingegaard sits 4:30 down on race leader Tadej Pogačar after another solo stage win for the Slovenian in the Vosges, and with the Lake Geneva time trial and the Alpe d'Huez double still ahead, a summit finish like this is exactly the kind of terrain where he needs to start clawing back time rather than just limiting losses. Remco Evenepoel holds third overall at +5:04, but white-jersey holder Paul Seixas is now just 15 seconds behind him after leapfrogging Juan Ayuso on stage 14, making the podium fight one of the tightest storylines on the road. Florian Lipowitz (+5:44) and UAE's Isaac del Toro (+5:50) are separated by only six seconds, setting up a close scrap for the 6th-7th spots and raising questions about how UAE Team Emirates - XRG splits its climbing support between del Toro and Pogačar. Tom Pidcock, who twice tried to force the issue from breakaways on stages 13 and 14 only to slip to ninth overall, has shown he's willing to gamble on tough terrain, so watch whether he tries another long-range move rather than waiting for the final week. And with a healthy cushion in yellow already banked, whether Pogačar rides for a fifth stage win outright or simply manages the gap will say plenty about how he wants to play the remaining week of racing.",
     "riders_to_watch": [
-      "Tadej Pogačar",
       "Jonas Vingegaard",
-      "Remco Evenepoel",
       "Paul Seixas",
+      "Remco Evenepoel",
       "Florian Lipowitz",
       "Isaac del Toro",
       "Tom Pidcock",
-      "Richard Carapaz"
+      "Tadej Pogačar"
     ],
     "nz_note": "A proper summit finish, so settle in for the climb.",
     "climb_m": 4098,
@@ -50,7 +49,7 @@ window.STAGE_TODAY = {
     {
       "name": "Kelland O'Brien",
       "stage": 4,
-      "reason": "eliminated (outside time limit)"
+      "reason": "outside time limit"
     },
     {
       "name": "Bert Van Lerberghe",
@@ -222,7 +221,7 @@ window.STAGE_TODAY = {
     "after_stage_date": "2026-07-18"
   },
   "ai": {
-    "confidence": "high",
+    "confidence": "medium",
     "sources": [
       "https://www.letour.fr/en/rankings/stage-14",
       "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-14-pogacar-now-has-over-4-minutes-over-vingegaard-evenepoel-defends-podium-from-seixas",
