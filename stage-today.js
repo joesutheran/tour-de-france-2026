@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-21T10:00:01.006759+12:00",
+  "generated_at": "2026-07-21T14:00:04.953019+12:00",
   "nz_date": "2026-07-21",
   "as_of_date": "2026-07-21",
   "boundary_hour": 10,
@@ -20,15 +20,17 @@ window.STAGE_TODAY = {
     "type": "Individual time trial",
     "note": "26km ITT along the shore of Lake Geneva - a pivotal race-against-the-clock for the GC.",
     "headline": "Race of truth on Lake Geneva",
-    "watch_for": "Stage 16 is the Lake Geneva time trial — 26.1km from Evian-les-Bains to Thonon-les-Bains with roughly 470m of climbing — and it's the last individual test before the Alps. Remco Evenepoel, a multiple world and Olympic ITT champion, sits second overall at +5:00 and this rolling, technical parcours is tailor-made for him to chip into Tadej Pogačar's lead before the race hits the high mountains. Pogačar, in yellow by five minutes, has to defend against arguably the best time-triallist in the peloton on a course that isn't a pure power drag, rewarding position and technique through Lake Geneva's corners. Isaac del Toro, third overall and now also leading the white jersey after his stage 15 breakthrough, faces unfamiliar territory — a specialist discipline rather than a mountain finish — with Paul Seixas (+6:23) and Florian Lipowitz (+6:48) both close enough behind to gain if the young Mexican struggles against the watch. Further down the day's classification, INEOS's time-trial engines Filippo Ganna and Josh Tarling, and Movistar's Nelson Oliveira, are the kind of specialists who could set the pace on paper without factoring into the GC fight at all. With Jonas Vingegaard out of the race, the podium picture is unusually open, and this is the first hard numbers check on who among the GC group can genuinely handle a discipline outside their comfort zone.",
+    "watch_for": "Stage 16 trades mountains for the clock: a lakeside 26.1km individual time trial from Évian-les-Bains to Thonon-les-Bains with only around 470m of climbing to trouble the pure specialists. Remco Evenepoel, one of the sport's premier time-triallists, sits 5:00 back on GC and this is precisely the terrain where he has built his reputation, while Tadej Pogačar defends a lead that only grew to five minutes after the Plateau de Solaison. Further back, the fight for the final overall podium spot is razor-tight — Isaac del Toro, Paul Seixas, Florian Lipowitz and Juan Ayuso are covered by barely a minute and a half, so a strong or shaky ride against the watch could reorder that entire group before the race reaches the Alps. Pure time-trial engines like Josh Tarling and Filippo Ganna of Netcompany INEOS, well outside GC contention, are built for exactly this kind of day and will target the stage win on raw power alone. Egan Bernal, still rebuilding his GC standing well down the overall classification, is another to watch as a gauge of where his form sits against the watch. With the double Alpe d'Huez block and the Orcières-Merlette summit finish still ahead, this is the last real chance for the time-trial specialists to make their mark before the race tips decisively toward the climbers.",
     "riders_to_watch": [
       "Remco Evenepoel",
       "Tadej Pogačar",
       "Isaac del Toro",
       "Paul Seixas",
       "Florian Lipowitz",
+      "Juan Ayuso",
+      "Josh Tarling",
       "Filippo Ganna",
-      "Josh Tarling"
+      "Egan Bernal"
     ],
     "nz_note": "TT riders go off individually, so the highlights format actually suits it; catch the key GC times.",
     "climb_m": 470,
@@ -59,7 +61,7 @@ window.STAGE_TODAY = {
     {
       "name": "Bert Van Lerberghe",
       "stage": 6,
-      "reason": "Withdrawal, reason not publicly detailed"
+      "reason": "Full reason not publicly detailed"
     },
     {
       "name": "Cian Uijtdebroeks",
@@ -84,32 +86,37 @@ window.STAGE_TODAY = {
     {
       "name": "Chris Harper",
       "stage": 11,
-      "reason": "Serious left thumb injury after stage 10 crash, underwent surgery"
+      "reason": "Serious left thumb injury after stage 10 crash"
     },
     {
       "name": "Jenno Berckmoes",
       "stage": 13,
-      "reason": "Did not start"
+      "reason": "Not specified in source"
     },
     {
       "name": "Frits Biesterbos",
       "stage": 13,
-      "reason": "Did not start"
+      "reason": "Not specified in source"
     },
     {
       "name": "Fernando Gaviria",
       "stage": 13,
-      "reason": "Did not start"
+      "reason": "Not specified in source"
     },
     {
       "name": "Ramses Debruyne",
       "stage": 14,
-      "reason": "Did not start"
+      "reason": "Not specified in source"
     },
     {
       "name": "Jonas Vingegaard",
       "stage": 15,
-      "reason": "Withdrew from the race after a crash"
+      "reason": "Withdrew from the race; reason not specified in source"
+    },
+    {
+      "name": "Tim Merlier",
+      "stage": 15,
+      "reason": "Withdrew from the race; reason not specified in source"
     }
   ],
   "standings": {
@@ -196,45 +203,15 @@ window.STAGE_TODAY = {
       },
       {
         "rank": 4,
-        "rider": "Max Kanter",
-        "team": "XDS Astana Team",
-        "pts": 271
+        "rider": "Tim Merlier",
+        "team": "Soudal Quick-Step",
+        "pts": 307
       },
       {
         "rank": 5,
-        "rider": "Olav Kooij",
-        "team": "Decathlon CMA CGM Team",
-        "pts": 210
-      },
-      {
-        "rank": 6,
-        "rider": "Søren Wærenskjold",
-        "team": "Uno-X Mobility",
-        "pts": 159
-      },
-      {
-        "rank": 7,
-        "rider": "Anthony Turgis",
-        "team": "Team TotalEnergies",
-        "pts": 129
-      },
-      {
-        "rank": 8,
-        "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates XRG",
-        "pts": 127
-      },
-      {
-        "rank": 9,
-        "rider": "Milan Fretin",
-        "team": "Cofidis",
-        "pts": 117
-      },
-      {
-        "rank": 10,
-        "rider": "Huub Artz",
-        "team": "Lotto-Intermarché",
-        "pts": 107
+        "rider": "Max Kanter",
+        "team": "XDS Astana Team",
+        "pts": 271
       }
     ],
     "kom": [
@@ -335,12 +312,12 @@ window.STAGE_TODAY = {
     "after_stage_date": "2026-07-19"
   },
   "ai": {
-    "confidence": "high",
+    "confidence": "medium",
     "sources": [
       "https://www.letour.fr/en/rankings/stage-15",
-      "https://www.letour.fr/en/rankings",
+      "https://www.nbcsports.com/cycling/news/2026-tour-de-france-standings",
       "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-15-vingegaard-out-evenepoel-and-del-toro-take-over-podium-alongside-pogacar",
-      "https://www.idlprocycling.com/cycling/2026-tour-de-france-standings-the-battle-for-green-spices-up-even-more-with-new-player",
+      "https://www.letour.fr/en/rankings",
       "https://www.letour.fr/en/withdrawal",
       "https://procyclinguk.com/which-riders-have-abandoned-the-tour-de-france-2026-full-withdrawal-list-and-reasons/",
       "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts"
