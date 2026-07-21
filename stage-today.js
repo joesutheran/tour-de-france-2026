@@ -2,8 +2,8 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-21T14:00:04.953019+12:00",
-  "nz_date": "2026-07-21",
+  "generated_at": "2026-07-22T08:33:56.963881+12:00",
+  "nz_date": "2026-07-22",
   "as_of_date": "2026-07-21",
   "boundary_hour": 10,
   "status": "racing",
@@ -20,7 +20,7 @@ window.STAGE_TODAY = {
     "type": "Individual time trial",
     "note": "26km ITT along the shore of Lake Geneva - a pivotal race-against-the-clock for the GC.",
     "headline": "Race of truth on Lake Geneva",
-    "watch_for": "Stage 16 trades mountains for the clock: a lakeside 26.1km individual time trial from Évian-les-Bains to Thonon-les-Bains with only around 470m of climbing to trouble the pure specialists. Remco Evenepoel, one of the sport's premier time-triallists, sits 5:00 back on GC and this is precisely the terrain where he has built his reputation, while Tadej Pogačar defends a lead that only grew to five minutes after the Plateau de Solaison. Further back, the fight for the final overall podium spot is razor-tight — Isaac del Toro, Paul Seixas, Florian Lipowitz and Juan Ayuso are covered by barely a minute and a half, so a strong or shaky ride against the watch could reorder that entire group before the race reaches the Alps. Pure time-trial engines like Josh Tarling and Filippo Ganna of Netcompany INEOS, well outside GC contention, are built for exactly this kind of day and will target the stage win on raw power alone. Egan Bernal, still rebuilding his GC standing well down the overall classification, is another to watch as a gauge of where his form sits against the watch. With the double Alpe d'Huez block and the Orcières-Merlette summit finish still ahead, this is the last real chance for the time-trial specialists to make their mark before the race tips decisively toward the climbers.",
+    "watch_for": "Stage 16's 26.1km individual time trial around Lake Geneva is the Tour's first pure test of raw engine power since the Barcelona opener, and with Jonas Vingegaard now out of the race, Remco Evenepoel — 5:00 down on GC and one of the sport's most decorated time-triallists — has the clearest incentive to attack the clock and close in on yellow-jersey holder Tadej Pogačar, who is no slouch against the watch himself. Third-placed Isaac del Toro is defending both a podium spot and the white jersey against a cluster of capable engines close behind him — Paul Seixas, Florian Lipowitz, Juan Ayuso and Mattias Skjelmose are all within two and a half minutes and have the TT pedigree to threaten his positions. Seixas in particular faces his sternest test yet of a discipline he's shown the least of so far in defending fourth overall. The rolling, 470m-of-climbing course may suit powerful rouleurs like Lipowitz and Skjelmose better than pure climbing specialists, while Tom Pidcock, ninth at +10:59, will likely be more focused on limiting losses than gaining time. With no intermediate sprint or categorised climb on the route, Mads Pedersen's green jersey and Pogačar's mountains lead are effectively frozen for the day, leaving the GC order established at Plateau de Solaison as the day's central story.",
     "riders_to_watch": [
       "Remco Evenepoel",
       "Tadej Pogačar",
@@ -28,9 +28,8 @@ window.STAGE_TODAY = {
       "Paul Seixas",
       "Florian Lipowitz",
       "Juan Ayuso",
-      "Josh Tarling",
-      "Filippo Ganna",
-      "Egan Bernal"
+      "Mattias Skjelmose",
+      "Tom Pidcock"
     ],
     "nz_note": "TT riders go off individually, so the highlights format actually suits it; catch the key GC times.",
     "climb_m": 470,
@@ -41,7 +40,7 @@ window.STAGE_TODAY = {
     {
       "name": "Clément Berthet",
       "stage": 2,
-      "reason": "Concussion after stage 1 crash"
+      "reason": "Concussion after a stage 1 crash (DNS)"
     },
     {
       "name": "Arnaud De Lie",
@@ -51,17 +50,17 @@ window.STAGE_TODAY = {
     {
       "name": "Kelland O'Brien",
       "stage": 4,
-      "reason": "Missed the time cut after a difficult heat-affected stage"
+      "reason": "Missed the time cut after a heat-affected stage"
     },
     {
       "name": "Alex Molenaar",
       "stage": 6,
-      "reason": "Concussion and fractured first metacarpal"
+      "reason": "Concussion and fractured first metacarpal (DNS)"
     },
     {
       "name": "Bert Van Lerberghe",
       "stage": 6,
-      "reason": "Full reason not publicly detailed"
+      "reason": "Withdrawal, reason not detailed"
     },
     {
       "name": "Cian Uijtdebroeks",
@@ -76,47 +75,42 @@ window.STAGE_TODAY = {
     {
       "name": "Torstein Traen",
       "stage": 7,
-      "reason": "Concussion and multiple fractured ribs"
+      "reason": "Concussion and multiple fractured ribs (DNS)"
     },
     {
       "name": "Matteo Trentin",
       "stage": 10,
-      "reason": "Fever developed during the rest day"
+      "reason": "Fever developed during the rest day (DNS)"
     },
     {
       "name": "Chris Harper",
       "stage": 11,
-      "reason": "Serious left thumb injury after stage 10 crash"
+      "reason": "Serious left thumb injury after a stage 10 crash (DNS)"
     },
     {
       "name": "Jenno Berckmoes",
       "stage": 13,
-      "reason": "Not specified in source"
+      "reason": "DNS, reason not specified"
     },
     {
       "name": "Frits Biesterbos",
       "stage": 13,
-      "reason": "Not specified in source"
+      "reason": "DNS, reason not specified"
     },
     {
       "name": "Fernando Gaviria",
       "stage": 13,
-      "reason": "Not specified in source"
+      "reason": "DNS, reason not specified"
     },
     {
       "name": "Ramses Debruyne",
       "stage": 14,
-      "reason": "Not specified in source"
+      "reason": "DNS, reason not specified"
     },
     {
       "name": "Jonas Vingegaard",
       "stage": 15,
-      "reason": "Withdrew from the race; reason not specified in source"
-    },
-    {
-      "name": "Tim Merlier",
-      "stage": 15,
-      "reason": "Withdrew from the race; reason not specified in source"
+      "reason": "Abandoned during the stage, reason not specified in source"
     }
   ],
   "standings": {
@@ -131,55 +125,55 @@ window.STAGE_TODAY = {
         "rank": 2,
         "rider": "Remco Evenepoel",
         "team": "Red Bull – BORA – hansgrohe",
-        "gap": "+5:00"
+        "gap": "+00:05:00"
       },
       {
         "rank": 3,
         "rider": "Isaac del Toro",
         "team": "UAE Team Emirates XRG",
-        "gap": "+5:58"
+        "gap": "+00:05:58"
       },
       {
         "rank": 4,
         "rider": "Paul Seixas",
         "team": "Decathlon CMA CGM Team",
-        "gap": "+6:23"
+        "gap": "+00:06:23"
       },
       {
         "rank": 5,
         "rider": "Florian Lipowitz",
         "team": "Red Bull – BORA – hansgrohe",
-        "gap": "+6:48"
+        "gap": "+00:06:48"
       },
       {
         "rank": 6,
         "rider": "Juan Ayuso",
         "team": "Lidl - Trek",
-        "gap": "+7:28"
+        "gap": "+00:07:28"
       },
       {
         "rank": 7,
         "rider": "Mattias Skjelmose",
         "team": "Lidl - Trek",
-        "gap": "+9:38"
+        "gap": "+00:09:38"
       },
       {
         "rank": 8,
         "rider": "Lenny Martinez",
         "team": "Bahrain – Victorious",
-        "gap": "+10:28"
+        "gap": "+00:10:28"
       },
       {
         "rank": 9,
         "rider": "Tom Pidcock",
         "team": "Pinarello Q36.5 Pro Cycling Team",
-        "gap": "+10:59"
+        "gap": "+00:10:59"
       },
       {
         "rank": 10,
         "rider": "Jordan Jegat",
         "team": "Team TotalEnergies",
-        "gap": "+19:26"
+        "gap": "+00:19:26"
       }
     ],
     "points": [
@@ -235,45 +229,15 @@ window.STAGE_TODAY = {
       },
       {
         "rank": 4,
-        "rider": "Paul Seixas",
-        "team": "Decathlon CMA CGM Team",
-        "pts": 34
-      },
-      {
-        "rank": 5,
-        "rider": "Remco Evenepoel",
-        "team": "Red Bull – BORA – hansgrohe",
-        "pts": 31
-      },
-      {
-        "rank": 6,
-        "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates XRG",
-        "pts": 30
-      },
-      {
-        "rank": 7,
         "rider": "Tom Pidcock",
         "team": "Pinarello Q36.5 Pro Cycling Team",
         "pts": 28
       },
       {
-        "rank": 8,
-        "rider": "Lenny Martinez",
-        "team": "Bahrain – Victorious",
-        "pts": 22
-      },
-      {
-        "rank": 9,
-        "rider": "Florian Lipowitz",
-        "team": "Red Bull – BORA – hansgrohe",
-        "pts": 20
-      },
-      {
-        "rank": 10,
-        "rider": "Nicolas Prodhomme",
+        "rank": 5,
+        "rider": "Paul Seixas",
         "team": "Decathlon CMA CGM Team",
-        "pts": 17
+        "pts": 24
       }
     ],
     "youth": [
@@ -287,25 +251,25 @@ window.STAGE_TODAY = {
         "rank": 2,
         "rider": "Paul Seixas",
         "team": "Decathlon CMA CGM Team",
-        "gap": "+0:25"
+        "gap": "+00:00:25"
       },
       {
         "rank": 3,
         "rider": "Juan Ayuso",
         "team": "Lidl - Trek",
-        "gap": "+1:30"
+        "gap": "+00:01:30"
       },
       {
         "rank": 4,
         "rider": "Lenny Martinez",
         "team": "Bahrain – Victorious",
-        "gap": "+4:30"
+        "gap": "+00:04:30"
       },
       {
         "rank": 5,
         "rider": "Davide Piganzoli",
         "team": "Team Visma | Lease a Bike",
-        "gap": "+18:44"
+        "gap": "+00:18:44"
       }
     ],
     "after_stage_num": 15,
@@ -316,8 +280,8 @@ window.STAGE_TODAY = {
     "sources": [
       "https://www.letour.fr/en/rankings/stage-15",
       "https://www.nbcsports.com/cycling/news/2026-tour-de-france-standings",
-      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-15-vingegaard-out-evenepoel-and-del-toro-take-over-podium-alongside-pogacar",
-      "https://www.letour.fr/en/rankings",
+      "https://www.olympics.com/en/news/tour-de-france-2026-full-schedule-all-stage-results-classification-standings",
+      "https://www.domestiquecycling.com/en/news/tour-de-france-2026-standings/",
       "https://www.letour.fr/en/withdrawal",
       "https://procyclinguk.com/which-riders-have-abandoned-the-tour-de-france-2026-full-withdrawal-list-and-reasons/",
       "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts"
