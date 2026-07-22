@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-22T10:00:01.070938+12:00",
+  "generated_at": "2026-07-22T14:00:04.393913+12:00",
   "nz_date": "2026-07-22",
   "as_of_date": "2026-07-22",
   "boundary_hour": 10,
@@ -20,17 +20,17 @@ window.STAGE_TODAY = {
     "type": "Flat",
     "note": "Valley stage into Voiron; last chance for the sprinters before the Alps explode.",
     "headline": "Last dance for the sprinters before the Alps",
-    "watch_for": "Stage 17 is the last transition day before the Tour's decisive final week, a 174.7km run from Chambéry to Voiron that's officially flat but still carries roughly 2,362m of climbing — enough lumpy terrain in the Alpine foothills to tempt a breakaway rather than guarantee a straightforward bunch sprint. With Tim Merlier already out of the race, the reduced sprint cast — Jasper Philipsen, Mads Pedersen, Biniam Girmay, Milan Fretin and Olav Kooij among them — will lean on their lead-out trains if they want to keep any escape in check for a chance at the line. Puncheurs and break specialists like Julian Alaphilippe, Marc Hirschi, Matej Mohorič and home favourite Romain Grégoire are exactly the type of riders who thrive on a day like this, where a well-timed move can outrun a disorganised bunch. For the GC men it's mostly about staying upright and out of the crosswinds: Tadej Pogačar defends a 4:32 cushion over Remco Evenepoel, who now has to manage the final week without key mountain lieutenant Florian Lipowitz following his withdrawal after the Lake Geneva time trial. Expect UAE Team Emirates XRG and Red Bull-BORA-hansgrohe to keep things controlled and low-drama, conserving their leaders' legs before the Orcières-Merlette summit finish and brutal Alpe d'Huez double still to come.",
+    "watch_for": "Stage 17 is the Tour's first real flat/sprint chance since the Vosges summit at Le Markstein, and it lands with the sprint field already thinned — Tim Merlier and Arnaud De Lie have both abandoned, so Mads Pedersen defends a slim 31-point green-jersey edge over Jasper Philipsen (and 56 over Biniam Girmay) on a day their teams will want to control. At 174.7km with roughly 2,362m of climbing it isn't pan-flat, so punchy finishers like Mathieu van der Poel or Tudor's Julian Alaphilippe and Marc Hirschi could look to disrupt a straight bunch sprint on any late rise. For the GC group this is a stage to survive, not attack: Tadej Pogačar defends yellow with Remco Evenepoel now just 4:32 back after his stage 16 time-trial win, and both camps will be wary of crashes and crosswinds with the Orcières-Merlette summit finish and back-to-back Alpe d'Huez stages still looming. Red Bull-BORA-hansgrohe is a rider light after Florian Lipowitz's abandonment, adding to the load on Evenepoel's remaining domestiques. Polka-dot leader Pogačar and Valentin Paret-Peintre, only 25 points back, may also probe for any climbing points on offer.",
     "riders_to_watch": [
-      "Jasper Philipsen",
       "Mads Pedersen",
+      "Jasper Philipsen",
       "Biniam Girmay",
+      "Mathieu van der Poel",
       "Julian Alaphilippe",
       "Marc Hirschi",
-      "Matej Mohorič",
-      "Romain Grégoire",
       "Tadej Pogačar",
-      "Remco Evenepoel"
+      "Remco Evenepoel",
+      "Valentin Paret-Peintre"
     ],
     "nz_note": "The last bunch sprint of the Tour, worth the finale even if you skip the middle.",
     "climb_m": 2362,
@@ -41,97 +41,102 @@ window.STAGE_TODAY = {
     {
       "name": "Clément Berthet",
       "stage": 2,
-      "reason": "Concussion after a stage 1 crash"
+      "reason": "did not start (DNS)"
     },
     {
       "name": "Arnaud De Lie",
       "stage": 3,
-      "reason": "Illness and stomach problems"
+      "reason": "withdrawal"
     },
     {
       "name": "Kelland O'Brien",
       "stage": 4,
-      "reason": "Missed the time cut after a heat-affected stage"
+      "reason": "outside the time limit"
     },
     {
       "name": "Bert Van Lerberghe",
       "stage": 6,
-      "reason": "Withdrawal, reason not publicly detailed"
+      "reason": "withdrawal"
     },
     {
       "name": "Cian Uijtdebroeks",
       "stage": 6,
-      "reason": "Illness and fever"
+      "reason": "withdrawal"
     },
     {
       "name": "Arvid de Kleijn",
       "stage": 6,
-      "reason": "Stomach problems and cumulative fatigue"
+      "reason": "withdrawal"
     },
     {
       "name": "Alex Molenaar",
       "stage": 6,
-      "reason": "Concussion and a fractured metacarpal"
+      "reason": "did not start (DNS)"
     },
     {
       "name": "Torstein Traen",
       "stage": 7,
-      "reason": "Concussion and multiple fractured ribs"
+      "reason": "did not start (DNS)"
     },
     {
       "name": "Matteo Trentin",
       "stage": 10,
-      "reason": "Fever developed during the rest day"
+      "reason": "did not start (DNS)"
     },
     {
       "name": "Chris Harper",
       "stage": 11,
-      "reason": "Left thumb injury requiring surgery after a stage 10 crash"
+      "reason": "did not start (DNS) - serious thumb injury requiring surgery"
     },
     {
       "name": "Jenno Berckmoes",
       "stage": 13,
-      "reason": "Did not start; reason not specified in source"
+      "reason": "did not start (DNS)"
     },
     {
       "name": "Frits Biesterbos",
       "stage": 13,
-      "reason": "Did not start; reason not specified in source"
+      "reason": "did not start (DNS)"
     },
     {
       "name": "Fernando Gaviria",
       "stage": 13,
-      "reason": "Did not start; reason not specified in source"
+      "reason": "did not start (DNS)"
     },
     {
       "name": "Ramses Debruyne",
       "stage": 14,
-      "reason": "Did not start; reason not specified in source"
+      "reason": "did not start (DNS)"
     },
     {
       "name": "Anthon Charmig",
       "stage": 14,
-      "reason": "Outside the time limit"
+      "reason": "outside the time limit"
     },
     {
       "name": "Jonas Vingegaard",
       "stage": 15,
-      "reason": "Withdrawal; reason not specified in source"
+      "reason": "withdrawal - broken collarbone, surgery"
     },
     {
       "name": "Tim Merlier",
       "stage": 15,
-      "reason": "Withdrawal; reason not specified in source"
+      "reason": "withdrawal"
     },
     {
       "name": "Tom Van Asbroeck",
       "stage": 15,
-      "reason": "Withdrawal; reason not specified in source"
+      "reason": "withdrawal"
     },
     {
       "name": "Florian Lipowitz",
       "stage": 16,
-      "reason": "Withdrawal; reason not specified in source"
+      "reason": "abandoned (reason not specified in source)"
+    },
+    {
+      "name": "Lars Craps",
+      "stage": 16,
+      "reason": "withdrew before the time trial"
     }
   ],
   "standings": {
@@ -174,15 +179,15 @@ window.STAGE_TODAY = {
       },
       {
         "rank": 7,
-        "rider": "Lenny Martinez",
-        "team": "Bahrain – Victorious",
-        "gap": "+12:50"
+        "rider": "Tom Pidcock",
+        "team": "Pinarello Q36.5 Pro Cycling Team",
+        "gap": "+12:38"
       },
       {
         "rank": 8,
-        "rider": "Tom Pidcock",
-        "team": "Pinarello Q36.5 Pro Cycling Team",
-        "gap": "+12:58"
+        "rider": "Lenny Martinez",
+        "team": "Bahrain – Victorious",
+        "gap": "+12:50"
       },
       {
         "rank": 9,
@@ -197,8 +202,52 @@ window.STAGE_TODAY = {
         "gap": "+24:18"
       }
     ],
-    "points": [],
-    "kom": [],
+    "points": [
+      {
+        "rank": 1,
+        "rider": "Mads Pedersen",
+        "team": "Lidl - Trek",
+        "pts": 417
+      },
+      {
+        "rank": 2,
+        "rider": "Jasper Philipsen",
+        "team": "Alpecin – Premier Tech",
+        "pts": 386
+      },
+      {
+        "rank": 3,
+        "rider": "Biniam Girmay",
+        "team": "NSN Cycling Team",
+        "pts": 361
+      }
+    ],
+    "kom": [
+      {
+        "rank": 1,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "pts": 70
+      },
+      {
+        "rank": 2,
+        "rider": "Valentin Paret-Peintre",
+        "team": "Soudal Quick-Step",
+        "pts": 45
+      },
+      {
+        "rank": 3,
+        "rider": "Richard Carapaz",
+        "team": "EF Education–EasyPost",
+        "pts": 39
+      },
+      {
+        "rank": 4,
+        "rider": "Remco Evenepoel",
+        "team": "Red Bull – BORA – hansgrohe",
+        "pts": 36
+      }
+    ],
     "youth": [
       {
         "rank": 1,
@@ -220,45 +269,15 @@ window.STAGE_TODAY = {
       },
       {
         "rank": 4,
-        "rider": "Mattias Skjelmose",
-        "team": "Lidl - Trek",
-        "gap": "+3:23"
-      },
-      {
-        "rank": 5,
         "rider": "Lenny Martinez",
         "team": "Bahrain – Victorious",
         "gap": "+5:59"
       },
       {
-        "rank": 6,
+        "rank": 5,
         "rider": "Davide Piganzoli",
         "team": "Team Visma | Lease a Bike",
         "gap": "+20:37"
-      },
-      {
-        "rank": 7,
-        "rider": "Pablo Castrillo",
-        "team": "Movistar Team",
-        "gap": "+1:28:44"
-      },
-      {
-        "rank": 8,
-        "rider": "Matthew Riccitello",
-        "team": "Decathlon CMA CGM Team",
-        "gap": "+1:54:51"
-      },
-      {
-        "rank": 9,
-        "rider": "Raúl García Pierna",
-        "team": "Movistar Team",
-        "gap": "+1:56:08"
-      },
-      {
-        "rank": 10,
-        "rider": "Romain Grégoire",
-        "team": "Groupama-FDJ United",
-        "gap": "+2:28:33"
       }
     ],
     "after_stage_num": 16,
@@ -269,11 +288,11 @@ window.STAGE_TODAY = {
     "sources": [
       "https://www.letour.fr/en/rankings",
       "https://www.letour.fr/en/rankings/stage-16?hasCookies=false&hasIframeResizer=true&isWebview=true&partner=sbsapN",
-      "https://www.olympics.com/en/news/tour-de-france-2026-full-schedule-all-stage-results-classification-standings",
-      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-16",
+      "https://www.nbcsports.com/cycling/news/2026-tour-de-france-standings",
+      "https://www.europesays.com/uk/1103437/",
       "https://www.letour.fr/en/withdrawal",
       "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts",
-      "https://procyclinguk.com/which-riders-have-abandoned-the-tour-de-france-2026-full-withdrawal-list-and-reasons/"
+      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/"
     ]
   }
 };
