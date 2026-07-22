@@ -2,8 +2,8 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-22T19:44:03.985239+12:00",
-  "nz_date": "2026-07-22",
+  "generated_at": "2026-07-23T09:24:33.260499+12:00",
+  "nz_date": "2026-07-23",
   "as_of_date": "2026-07-22",
   "boundary_hour": 10,
   "status": "racing",
@@ -20,15 +20,16 @@ window.STAGE_TODAY = {
     "type": "Flat",
     "note": "Valley stage into Voiron; last chance for the sprinters before the Alps explode.",
     "headline": "Last dance for the sprinters before the Alps",
-    "watch_for": "Stage 17 is the first fully flat stage since the Lake Geneva time trial, and it lands as a rare calm day before the brutal final week — Orcières-Merlette and back-to-back Alpe d'Huez summits loom on stages 18-20. Expect the sprinters' trains to dictate the finale into Voiron: Mads Pedersen (Lidl-Trek) defends a 31-point green jersey lead over Jasper Philipsen (Alpecin-Premier Tech), with Biniam Girmay (NSN Cycling Team) a further 56 points back, giving all three squads reason to fight for control late on. With no summit finish to force the pace, GC leader Tadej Pogačar (UAE Team Emirates XRG) and his 4:32 cushion over Remco Evenepoel (Red Bull – BORA – hansgrohe) should be content to sit in and stay safe in the bunch, while Evenepoel's team — down to one GC card after Florian Lipowitz's stage 16 abandonment — will be wary of crosswinds or a crash costing time nobody can afford to lose. The tight podium fight, with Isaac del Toro clinging to third just 20 seconds ahead of Paul Seixas, gives UAE and Decathlon CMA CGM extra incentive to shield their leaders on a day where bad luck is a bigger threat to GC hopes than the terrain. With only modest late climbing (~2,362m), the door is also open for a breakaway to have its say before the road points back upward into the Alps.",
+    "watch_for": "Stage 17 from Chambéry to Voiron is billed as flat but still packs roughly 2,362m of climbing into 174.7km, so expect a rolling, nervy day rather than a pure procession. Green jersey holder Mads Pedersen leads Jasper Philipsen by just 31 points, and with intermediate sprint points on offer, Lidl-Trek and Alpecin-Premier Tech both have reason to control the bunch and launch their fast men, while third-placed Biniam Girmay and Decathlon's Olav Kooij lurk as fresh threats in any reduced sprint. The lumpy profile could also tempt a breakaway push from riders like Jordan Jegat, already a revelation in ninth overall for TotalEnergies, or Quinn Simmons, looking to steal a win before the road tilts upward again. For the general classification riders this is a day to survive rather than attack: Tadej Pogačar carries a healthy 4:32 over Remco Evenepoel into it, and with the del Toro-Seixas battle for the final podium spot separated by only 20 seconds, nobody in the top group can afford a lapse in positioning if the day turns swirly or splits form. With Orcières-Merlette and the brutal back-to-back Alpe d'Huez stages still to come, most GC contenders will simply be trying to stay upright and near the front, mindful that crashes have already ended the Tours of Jonas Vingegaard and Florian Lipowitz.",
     "riders_to_watch": [
       "Mads Pedersen",
       "Jasper Philipsen",
       "Biniam Girmay",
+      "Olav Kooij",
+      "Jordan Jegat",
+      "Quinn Simmons",
       "Tadej Pogačar",
-      "Remco Evenepoel",
-      "Isaac del Toro",
-      "Paul Seixas"
+      "Remco Evenepoel"
     ],
     "nz_note": "The last bunch sprint of the Tour, worth the finale even if you skip the middle.",
     "climb_m": 2362,
@@ -44,27 +45,27 @@ window.STAGE_TODAY = {
     {
       "name": "Arnaud De Lie",
       "stage": 3,
-      "reason": "withdrawal"
+      "reason": "withdrew during stage"
     },
     {
       "name": "Kelland O'Brien",
       "stage": 4,
-      "reason": "outside the time limit"
+      "reason": "eliminated, outside time limit"
     },
     {
       "name": "Bert Van Lerberghe",
       "stage": 6,
-      "reason": "withdrawal"
+      "reason": "withdrew during stage"
     },
     {
       "name": "Cian Uijtdebroeks",
       "stage": 6,
-      "reason": "withdrawal"
+      "reason": "withdrew during stage"
     },
     {
       "name": "Arvid de Kleijn",
       "stage": 6,
-      "reason": "withdrawal"
+      "reason": "withdrew during stage"
     },
     {
       "name": "Alex Molenaar",
@@ -109,27 +110,27 @@ window.STAGE_TODAY = {
     {
       "name": "Anthon Charmig",
       "stage": 14,
-      "reason": "outside the time limit"
+      "reason": "eliminated, outside time limit"
     },
     {
       "name": "Jonas Vingegaard",
       "stage": 15,
-      "reason": "withdrawal — crash, broken collarbone"
+      "reason": "withdrew during stage (broken collarbone crash)"
     },
     {
       "name": "Tim Merlier",
       "stage": 15,
-      "reason": "withdrawal"
+      "reason": "withdrew during stage"
     },
     {
       "name": "Tom Van Asbroeck",
       "stage": 15,
-      "reason": "withdrawal"
+      "reason": "withdrew during stage"
     },
     {
       "name": "Florian Lipowitz",
       "stage": 16,
-      "reason": "withdrawal — crash"
+      "reason": "crashed and abandoned"
     }
   ],
   "standings": {
@@ -195,130 +196,8 @@ window.STAGE_TODAY = {
         "gap": "+24:18"
       }
     ],
-    "points": [
-      {
-        "rank": 1,
-        "rider": "Mads Pedersen",
-        "team": "Lidl - Trek",
-        "pts": 417
-      },
-      {
-        "rank": 2,
-        "rider": "Jasper Philipsen",
-        "team": "Alpecin – Premier Tech",
-        "pts": 386
-      },
-      {
-        "rank": 3,
-        "rider": "Biniam Girmay",
-        "team": "NSN Cycling Team",
-        "pts": 361
-      },
-      {
-        "rank": 4,
-        "rider": "Max Kanter",
-        "team": "XDS Astana Team",
-        "pts": 271
-      },
-      {
-        "rank": 5,
-        "rider": "Olav Kooij",
-        "team": "Decathlon CMA CGM Team",
-        "pts": 210
-      },
-      {
-        "rank": 6,
-        "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates XRG",
-        "pts": 161
-      },
-      {
-        "rank": 7,
-        "rider": "Søren Wærenskjold",
-        "team": "Uno-X Mobility",
-        "pts": 159
-      },
-      {
-        "rank": 8,
-        "rider": "Anthony Turgis",
-        "team": "Team TotalEnergies",
-        "pts": 129
-      },
-      {
-        "rank": 9,
-        "rider": "Remco Evenepoel",
-        "team": "Red Bull – BORA – hansgrohe",
-        "pts": 123
-      },
-      {
-        "rank": 10,
-        "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates XRG",
-        "pts": 121
-      }
-    ],
-    "kom": [
-      {
-        "rank": 1,
-        "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates XRG",
-        "pts": 70
-      },
-      {
-        "rank": 2,
-        "rider": "Valentin Paret-Peintre",
-        "team": "Soudal Quick-Step",
-        "pts": 45
-      },
-      {
-        "rank": 3,
-        "rider": "Richard Carapaz",
-        "team": "EF Education – EasyPost",
-        "pts": 39
-      },
-      {
-        "rank": 4,
-        "rider": "Remco Evenepoel",
-        "team": "Red Bull – BORA – hansgrohe",
-        "pts": 36
-      },
-      {
-        "rank": 5,
-        "rider": "Paul Seixas",
-        "team": "Decathlon CMA CGM Team",
-        "pts": 34
-      },
-      {
-        "rank": 6,
-        "rider": "Lenny Martinez",
-        "team": "Bahrain – Victorious",
-        "pts": 30
-      },
-      {
-        "rank": 7,
-        "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates XRG",
-        "pts": 22
-      },
-      {
-        "rank": 8,
-        "rider": "Tom Pidcock",
-        "team": "Pinarello Q36.5 Pro Cycling Team",
-        "pts": 20
-      },
-      {
-        "rank": 9,
-        "rider": "Nicolas Prodhomme",
-        "team": "Decathlon CMA CGM Team",
-        "pts": 17
-      },
-      {
-        "rank": 10,
-        "rider": "Alex Baudin",
-        "team": "EF Education – EasyPost",
-        "pts": 16
-      }
-    ],
+    "points": [],
+    "kom": [],
     "youth": [
       {
         "rank": 1,
@@ -343,57 +222,21 @@ window.STAGE_TODAY = {
         "rider": "Lenny Martinez",
         "team": "Bahrain – Victorious",
         "gap": "+5:59"
-      },
-      {
-        "rank": 5,
-        "rider": "Davide Piganzoli",
-        "team": "Team Visma | Lease a Bike",
-        "gap": "+20:37"
-      },
-      {
-        "rank": 6,
-        "rider": "Quinn Simmons",
-        "team": "Lidl - Trek",
-        "gap": "+1:20:34"
-      },
-      {
-        "rank": 7,
-        "rider": "Pablo Castrillo",
-        "team": "Movistar Team",
-        "gap": "+1:28:44"
-      },
-      {
-        "rank": 8,
-        "rider": "Kévin Vauquelin",
-        "team": "Netcompany INEOS",
-        "gap": "+1:33:01"
-      },
-      {
-        "rank": 9,
-        "rider": "Lennert Van Eetvelt",
-        "team": "Lotto-Intermarché",
-        "gap": "+1:41:05"
-      },
-      {
-        "rank": 10,
-        "rider": "Antonio Tiberi",
-        "team": "Bahrain – Victorious",
-        "gap": "+1:52:00"
       }
     ],
     "after_stage_num": 16,
     "after_stage_date": "2026-07-21"
   },
   "ai": {
-    "confidence": "high",
+    "confidence": "medium",
     "sources": [
-      "https://www.letour.fr/en/rankings",
+      "https://www.letour.fr/en/rankings/stage-16?hasCookies=false&hasIframeResizer=true&isWebview=true&partner=sbsapN",
       "https://procyclinguk.com/gc-and-jerseys-after-tour-de-france-2026-stage-16-pogacar-holds-yellow-as-evenepoel-wins-time-trial/",
       "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-16-remco-evenepoel-cuts-gap-to-tadej-pogacar-at-the-top-as-florian-lipowitz-crashes-out-of-gc-fight",
-      "https://www.letour.fr/en/rankings/stage-16?hasCookies=false&hasIframeResizer=true&isWebview=true&partner=sbsapN",
+      "https://www.olympics.com/en/news/tour-de-france-2026-full-schedule-all-stage-results-classification-standings",
       "https://www.letour.fr/en/withdrawal",
-      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/",
-      "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts"
+      "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts",
+      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/"
     ]
   }
 };
