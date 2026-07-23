@@ -2,36 +2,148 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-24T07:27:42.934123+12:00",
+  "generated_at": "2026-07-24T10:00:01.183273+12:00",
   "nz_date": "2026-07-24",
-  "as_of_date": "2026-07-23",
+  "as_of_date": "2026-07-24",
   "boundary_hour": 10,
   "status": "racing",
   "watched": {
-    "num": 17,
-    "date": "2026-07-22"
+    "num": 18,
+    "date": "2026-07-23"
   },
   "preview": {
-    "num": 18,
-    "date": "2026-07-23",
-    "start": "Voiron",
-    "finish": "Orcieres-Merlette",
-    "distance_km": 185.2,
+    "num": 19,
+    "date": "2026-07-24",
+    "start": "Gap",
+    "finish": "Alpe d'Huez",
+    "distance_km": 127.9,
     "type": "Mountain",
-    "note": "Return of the Orcieres-Merlette ski-resort summit finish - opens the Alpine endgame.",
-    "headline": "Alpine endgame opens at Orcieres-Merlette",
-    "watch_for": "The return of the Orcieres-Merlette ski-resort summit finish flings open the Alpine endgame, the first of a brutal closing run of mountaintop finishes. With the overall on a knife edge, the favourites must weigh attacking now against saving something for what's coming. Watch the body language on the final climb for signs of who's flying and who's suffering.",
+    "note": "Short, explosive first ascent of the 21 hairpins to Alpe d'Huez.",
+    "headline": "Twenty-one hairpins, full gas",
+    "watch_for": "Stage 19 opens the Tour's back-to-back Alpe d'Huez block, and it arrives with the GC picture unusually compressed: on stage 18 into Orcières-Merlette, Richard Carapaz soloed clear for the win while every major GC favourite — Tadej Pogačar, Remco Evenepoel, Juan Ayuso, Mattias Skjelmose, Isaac del Toro and Paul Seixas among them — crossed the line together in one large group, so none of them gained or lost meaningful time on each other that day. That leaves this brutal 127.9km run over roughly 3,572m of climbing to a summit finish as one of the first real chances to break up that bunched group of favourites. Watch how EF Education-EasyPost ride around Carapaz, who arrives with real form and, per team reporting, has pushed into GC contention off the back of his stage-hunting — the question is whether he chases stage glory again or rides for time. With Jonas Vingegaard out of the race since stage 15, Team Visma | Lease a Bike's climbing hopes now sit with Matteo Jorgenson and Sepp Kuss, worth watching for any move on the lower slopes before the summit ramps up. Pure climbers Isaac del Toro and Paul Seixas, both in the mix for the white jersey conversation, look built for a finish like this, while Ayuso, Skjelmose and Evenepoel will need to answer whether they can live with the climbers once the road tilts skyward toward the Dutch Corner.",
     "riders_to_watch": [
-      "Tadej Pogacar",
-      "Jonas Vingegaard",
+      "Richard Carapaz",
+      "Tadej Pogačar",
       "Remco Evenepoel",
       "Juan Ayuso",
-      "Egan Bernal",
-      "Richard Carapaz"
+      "Mattias Skjelmose",
+      "Isaac del Toro",
+      "Paul Seixas",
+      "Matteo Jorgenson",
+      "Sepp Kuss"
     ],
-    "nz_note": "The Alps begin here, so this is where the evenings get essential.",
-    "climb_m": 3944,
-    "summit_finish": true
+    "nz_note": "Alpe d'Huez, short and explosive; an unmissable evening.",
+    "climb_m": 3572,
+    "summit_finish": true,
+    "contextual": true
   },
-  "abandoned": []
+  "abandoned": [
+    {
+      "name": "Clément Berthet",
+      "stage": 2,
+      "reason": "DNS"
+    },
+    {
+      "name": "Arnaud De Lie",
+      "stage": 3,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Kelland O'Brien",
+      "stage": 4,
+      "reason": "outside the time limit"
+    },
+    {
+      "name": "Bert Van Lerberghe",
+      "stage": 6,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Cian Uijtdebroeks",
+      "stage": 6,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Arvid de Kleijn",
+      "stage": 6,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Alex Molenaar",
+      "stage": 6,
+      "reason": "DNS"
+    },
+    {
+      "name": "Torstein Traen",
+      "stage": 7,
+      "reason": "DNS"
+    },
+    {
+      "name": "Matteo Trentin",
+      "stage": 10,
+      "reason": "DNS"
+    },
+    {
+      "name": "Chris Harper",
+      "stage": 11,
+      "reason": "DNS"
+    },
+    {
+      "name": "Jenno Berckmoes",
+      "stage": 13,
+      "reason": "DNS"
+    },
+    {
+      "name": "Frits Biesterbos",
+      "stage": 13,
+      "reason": "DNS"
+    },
+    {
+      "name": "Fernando Gaviria",
+      "stage": 13,
+      "reason": "DNS"
+    },
+    {
+      "name": "Ramses Debruyne",
+      "stage": 14,
+      "reason": "DNS"
+    },
+    {
+      "name": "Anthon Charmig",
+      "stage": 14,
+      "reason": "outside the time limit"
+    },
+    {
+      "name": "Jonas Vingegaard",
+      "stage": 15,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Tim Merlier",
+      "stage": 15,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Tom Van Asbroeck",
+      "stage": 15,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Florian Lipowitz",
+      "stage": 16,
+      "reason": "withdrawal (exact reason truncated in source)"
+    }
+  ],
+  "ai": {
+    "confidence": "low",
+    "sources": [
+      "https://www.letour.fr/en/rankings/stage-18",
+      "https://www.letour.fr/en/rankings",
+      "https://www.olympics.com/en/news/tour-de-france-2026-full-schedule-all-stage-results-classification-standings",
+      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-gc-standings-2026/",
+      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/",
+      "https://www.letour.fr/en/withdrawal",
+      "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts"
+    ]
+  }
 };
