@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-23T10:00:01.136653+12:00",
+  "generated_at": "2026-07-23T14:00:05.103608+12:00",
   "nz_date": "2026-07-23",
   "as_of_date": "2026-07-23",
   "boundary_hour": 10,
@@ -20,7 +20,7 @@ window.STAGE_TODAY = {
     "type": "Mountain",
     "note": "Return of the Orcieres-Merlette ski-resort summit finish - opens the Alpine endgame.",
     "headline": "Alpine endgame opens at Orcieres-Merlette",
-    "watch_for": "Stage 18 is the Tour's next summit finish, and it's prime territory for Tadej Pogačar to press his 4:32 lead over Remco Evenepoel before the back-to-back Alpe d'Huez days — watch how hard UAE Team Emirates rides on the front to deny anyone else a free run at the finish. Isaac del Toro and Paul Seixas arrive locked in a 20-second fight for the final GC podium spot and the white jersey, so expect them to mark each other on the last climb rather than chase time elsewhere. Juan Ayuso and Mattias Skjelmose, fifth and sixth for Lidl-Trek, have every incentive to isolate Pogačar's teammates early and make UAE work. Further back, Jordan Jegat, Yannis Voisard, Ilan Van Wilder, Richard Carapaz and Davide Piganzoli are separated by only a few minutes around eighth-to-thirteenth on GC, so a steep summit finish could easily stir that whole group up. Valentin Paret-Peintre and Carapaz sit well behind Pogačar in the King of the Mountains standings and may hunt points on the categorised climbs en route to Orcières-Merlette, while Mads Pedersen's green jersey lead over Jasper Philipsen has shrunk to just 7 points, making any intermediate sprint before the climbing starts worth watching too.",
+    "watch_for": "Stage 18 is the Tour's first true summit finish since Plateau de Solaison, and with Tadej Pogačar sitting on a healthy but not unassailable 4:32 lead over Remco Evenepoel, all eyes are on whether Red Bull-BORA can isolate Pogačar on the long climb to Orcières-Merlette and force a reaction, or whether Pogačar simply extends the gap again as he has done through the Pyrenees and Jura. Barely 20 seconds separate Isaac del Toro and Paul Seixas for third overall and the white jersey, so a hard summit finish is exactly the terrain where that gap could move fastest — watch how UAE's del Toro and Decathlon's teenage prodigy Seixas mark each other on the steepest pitches. Behind them, Lidl-Trek's Juan Ayuso and Mattias Skjelmose have ridden as a defensive pair through the mountains and will be tested again trying to hold fifth and sixth as a unit. Jordan Jegat's stunning breakaway on stage 17 hauled him into ninth with over ten minutes in hand over Yannis Voisard, Ilan Van Wilder, Richard Carapaz and Davide Piganzoli, so watch whether TotalEnergies again send him up the road or whether that chasing group uses the summit finish to close in. In the battle for green, Jasper Philipsen's stage-17 sprint win has cut Mads Pedersen's lead to just seven points, keeping the points classification alive even on a day when neither is likely to contest the finish. And with Pogačar holding a commanding King of the Mountains lead, Soudal Quick-Step's Valentin Paret-Peintre and EF's Richard Carapaz will be hunting the categorised climbs early to chip away at the gap before it's put further out of reach in the final week.",
     "riders_to_watch": [
       "Tadej Pogačar",
       "Remco Evenepoel",
@@ -30,10 +30,12 @@ window.STAGE_TODAY = {
       "Mattias Skjelmose",
       "Jordan Jegat",
       "Yannis Voisard",
-      "Valentin Paret-Peintre",
+      "Ilan Van Wilder",
       "Richard Carapaz",
+      "Davide Piganzoli",
+      "Jasper Philipsen",
       "Mads Pedersen",
-      "Jasper Philipsen"
+      "Valentin Paret-Peintre"
     ],
     "nz_note": "The Alps begin here, so this is where the evenings get essential.",
     "climb_m": 3944,
@@ -44,97 +46,97 @@ window.STAGE_TODAY = {
     {
       "name": "Clément Berthet",
       "stage": 2,
-      "reason": "did not start (DNS)"
+      "reason": "Did not start"
     },
     {
       "name": "Arnaud De Lie",
       "stage": 3,
-      "reason": "withdrawal"
+      "reason": "Withdrew from race"
     },
     {
       "name": "Kelland O'Brien",
       "stage": 4,
-      "reason": "outside time limit"
+      "reason": "Eliminated - outside time limit"
     },
     {
       "name": "Bert Van Lerberghe",
       "stage": 6,
-      "reason": "withdrawal"
+      "reason": "Withdrew from race"
     },
     {
       "name": "Cian Uijtdebroeks",
       "stage": 6,
-      "reason": "withdrawal"
+      "reason": "Withdrew from race"
     },
     {
       "name": "Arvid de Kleijn",
       "stage": 6,
-      "reason": "withdrawal"
+      "reason": "Withdrew from race"
     },
     {
       "name": "Alex Molenaar",
       "stage": 6,
-      "reason": "did not start (DNS)"
+      "reason": "Did not start"
     },
     {
       "name": "Torstein Traen",
       "stage": 7,
-      "reason": "did not start (DNS)"
+      "reason": "Did not start"
     },
     {
       "name": "Matteo Trentin",
       "stage": 10,
-      "reason": "did not start (DNS)"
+      "reason": "Did not start"
     },
     {
       "name": "Chris Harper",
       "stage": 11,
-      "reason": "did not start (DNS) — thumb injury requiring surgery"
+      "reason": "Did not start (thumb injury requiring surgery)"
     },
     {
       "name": "Jenno Berckmoes",
       "stage": 13,
-      "reason": "did not start (DNS)"
+      "reason": "Did not start"
     },
     {
       "name": "Frits Biesterbos",
       "stage": 13,
-      "reason": "did not start (DNS)"
+      "reason": "Did not start"
     },
     {
       "name": "Fernando Gaviria",
       "stage": 13,
-      "reason": "did not start (DNS)"
+      "reason": "Did not start"
     },
     {
       "name": "Ramses Debruyne",
       "stage": 14,
-      "reason": "did not start (DNS)"
+      "reason": "Did not start"
     },
     {
       "name": "Anthon Charmig",
       "stage": 14,
-      "reason": "outside time limit"
+      "reason": "Eliminated - outside time limit"
     },
     {
       "name": "Jonas Vingegaard",
       "stage": 15,
-      "reason": "withdrawal — crash, broken collarbone, surgery required"
+      "reason": "Withdrew after crash - broken collarbone, underwent surgery"
     },
     {
       "name": "Tim Merlier",
       "stage": 15,
-      "reason": "withdrawal"
+      "reason": "Withdrew from race"
     },
     {
       "name": "Tom Van Asbroeck",
       "stage": 15,
-      "reason": "withdrawal"
+      "reason": "Withdrew from race"
     },
     {
       "name": "Florian Lipowitz",
       "stage": 16,
-      "reason": "withdrawal"
+      "reason": "Withdrew from race"
     }
   ],
   "standings": {
@@ -142,19 +144,19 @@ window.STAGE_TODAY = {
       {
         "rank": 1,
         "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates - XRG",
+        "team": "UAE Team Emirates XRG",
         "gap": "race lead"
       },
       {
         "rank": 2,
         "rider": "Remco Evenepoel",
-        "team": "Red Bull - BORA - hansgrohe",
+        "team": "Red Bull – BORA – hansgrohe",
         "gap": "+4:32"
       },
       {
         "rank": 3,
         "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates - XRG",
+        "team": "UAE Team Emirates XRG",
         "gap": "+6:51"
       },
       {
@@ -178,7 +180,7 @@ window.STAGE_TODAY = {
       {
         "rank": 7,
         "rider": "Lenny Martinez",
-        "team": "Bahrain - Victorious",
+        "team": "Bahrain – Victorious",
         "gap": "+12:50"
       },
       {
@@ -190,7 +192,7 @@ window.STAGE_TODAY = {
       {
         "rank": 9,
         "rider": "Jordan Jegat",
-        "team": "TotalEnergies",
+        "team": "Team TotalEnergies",
         "gap": "+14:04"
       },
       {
@@ -210,7 +212,7 @@ window.STAGE_TODAY = {
       {
         "rank": 2,
         "rider": "Jasper Philipsen",
-        "team": "Alpecin - Premier Tech",
+        "team": "Alpecin – Premier Tech",
         "pts": 445
       },
       {
@@ -234,7 +236,7 @@ window.STAGE_TODAY = {
       {
         "rank": 6,
         "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates - XRG",
+        "team": "UAE Team Emirates XRG",
         "pts": 161
       },
       {
@@ -246,19 +248,19 @@ window.STAGE_TODAY = {
       {
         "rank": 8,
         "rider": "Anthony Turgis",
-        "team": "TotalEnergies",
+        "team": "Team TotalEnergies",
         "pts": 129
       },
       {
         "rank": 9,
         "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates - XRG",
+        "team": "UAE Team Emirates XRG",
         "pts": 123
       },
       {
         "rank": 10,
         "rider": "Remco Evenepoel",
-        "team": "Red Bull - BORA - hansgrohe",
+        "team": "Red Bull – BORA – hansgrohe",
         "pts": 121
       }
     ],
@@ -266,7 +268,7 @@ window.STAGE_TODAY = {
       {
         "rank": 1,
         "rider": "Tadej Pogačar",
-        "team": "UAE Team Emirates - XRG",
+        "team": "UAE Team Emirates XRG",
         "pts": 70
       },
       {
@@ -278,13 +280,13 @@ window.STAGE_TODAY = {
       {
         "rank": 3,
         "rider": "Richard Carapaz",
-        "team": "EF Education - EasyPost",
+        "team": "EF Education–EasyPost",
         "pts": 40
       },
       {
         "rank": 4,
         "rider": "Remco Evenepoel",
-        "team": "Red Bull - BORA - hansgrohe",
+        "team": "Red Bull – BORA – hansgrohe",
         "pts": 36
       },
       {
@@ -296,13 +298,13 @@ window.STAGE_TODAY = {
       {
         "rank": 6,
         "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates - XRG",
+        "team": "UAE Team Emirates XRG",
         "pts": 30
       },
       {
         "rank": 7,
         "rider": "Lenny Martinez",
-        "team": "Bahrain - Victorious",
+        "team": "Bahrain – Victorious",
         "pts": 22
       },
       {
@@ -320,7 +322,7 @@ window.STAGE_TODAY = {
       {
         "rank": 10,
         "rider": "Alex Baudin",
-        "team": "EF Education - EasyPost",
+        "team": "EF Education–EasyPost",
         "pts": 16
       }
     ],
@@ -328,7 +330,7 @@ window.STAGE_TODAY = {
       {
         "rank": 1,
         "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates - XRG",
+        "team": "UAE Team Emirates XRG",
         "gap": "race lead"
       },
       {
@@ -346,7 +348,7 @@ window.STAGE_TODAY = {
       {
         "rank": 4,
         "rider": "Lenny Martinez",
-        "team": "Bahrain - Victorious",
+        "team": "Bahrain – Victorious",
         "gap": "+5:59"
       },
       {
