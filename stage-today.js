@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-24T10:00:01.183273+12:00",
+  "generated_at": "2026-07-24T14:00:05.938095+12:00",
   "nz_date": "2026-07-24",
   "as_of_date": "2026-07-24",
   "boundary_hour": 10,
@@ -20,17 +20,18 @@ window.STAGE_TODAY = {
     "type": "Mountain",
     "note": "Short, explosive first ascent of the 21 hairpins to Alpe d'Huez.",
     "headline": "Twenty-one hairpins, full gas",
-    "watch_for": "Stage 19 opens the Tour's back-to-back Alpe d'Huez block, and it arrives with the GC picture unusually compressed: on stage 18 into Orcières-Merlette, Richard Carapaz soloed clear for the win while every major GC favourite — Tadej Pogačar, Remco Evenepoel, Juan Ayuso, Mattias Skjelmose, Isaac del Toro and Paul Seixas among them — crossed the line together in one large group, so none of them gained or lost meaningful time on each other that day. That leaves this brutal 127.9km run over roughly 3,572m of climbing to a summit finish as one of the first real chances to break up that bunched group of favourites. Watch how EF Education-EasyPost ride around Carapaz, who arrives with real form and, per team reporting, has pushed into GC contention off the back of his stage-hunting — the question is whether he chases stage glory again or rides for time. With Jonas Vingegaard out of the race since stage 15, Team Visma | Lease a Bike's climbing hopes now sit with Matteo Jorgenson and Sepp Kuss, worth watching for any move on the lower slopes before the summit ramps up. Pure climbers Isaac del Toro and Paul Seixas, both in the mix for the white jersey conversation, look built for a finish like this, while Ayuso, Skjelmose and Evenepoel will need to answer whether they can live with the climbers once the road tilts skyward toward the Dutch Corner.",
+    "watch_for": "Stage 19 is the first of back-to-back Alpe d'Huez summit finishes, and with Tadej Pogačar's overall lead sitting at 4:32 over Remco Evenepoel, this is exactly the terrain where a gap that size can genuinely be tested — watch how Evenepoel and third-placed Isaac del Toro respond to a pure climbing effort. Only 20 seconds separate del Toro from Paul Seixas in the white jersey fight, and with Juan Ayuso and Mattias Skjelmose both sitting inside the top six for Lidl-Trek, their collective response on a summit finish like this is worth following. Just behind, Lenny Martinez and Tom Pidcock are split by a mere 8 seconds in 7th and 8th — a margin that rarely survives a day this steep untouched. Richard Carapaz arrives fresh off his stage 18 breakaway win and a new top-10 GC berth, with Yannis Voisard and Ilan van Wilder just outside looking to claw it back, and his climbing legs also put him within reach of the King of the Mountains lead, where Pogačar's advantage over Valentin Paret-Peintre is a razor-thin single point heading into the day's mountain scoring. On a summit finish of this severity, expect the specialist climbers across the peloton to come to the fore ahead of the rouleurs and puncheurs who shaped the more mixed terrain earlier in the race.",
     "riders_to_watch": [
-      "Richard Carapaz",
       "Tadej Pogačar",
       "Remco Evenepoel",
-      "Juan Ayuso",
-      "Mattias Skjelmose",
       "Isaac del Toro",
       "Paul Seixas",
-      "Matteo Jorgenson",
-      "Sepp Kuss"
+      "Juan Ayuso",
+      "Mattias Skjelmose",
+      "Lenny Martinez",
+      "Tom Pidcock",
+      "Richard Carapaz",
+      "Valentin Paret-Peintre"
     ],
     "nz_note": "Alpe d'Huez, short and explosive; an unmissable evening.",
     "climb_m": 3572,
@@ -131,18 +132,249 @@ window.STAGE_TODAY = {
     {
       "name": "Florian Lipowitz",
       "stage": 16,
-      "reason": "withdrawal (exact reason truncated in source)"
+      "reason": "withdrawal"
+    },
+    {
+      "name": "Lars Craps",
+      "stage": 16,
+      "reason": "DNS"
+    },
+    {
+      "name": "Brandon McNulty",
+      "stage": 18,
+      "reason": "withdrawal"
+    },
+    {
+      "name": "José Félix Parra",
+      "stage": 18,
+      "reason": "DNS"
     }
   ],
+  "standings": {
+    "gc": [
+      {
+        "rank": 1,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "gap": "race lead"
+      },
+      {
+        "rank": 2,
+        "rider": "Remco Evenepoel",
+        "team": "Red Bull – BORA – hansgrohe",
+        "gap": "+4:32"
+      },
+      {
+        "rank": 3,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "gap": "+6:51"
+      },
+      {
+        "rank": 4,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "gap": "+7:11"
+      },
+      {
+        "rank": 5,
+        "rider": "Juan Ayuso",
+        "team": "Lidl - Trek",
+        "gap": "+9:22"
+      },
+      {
+        "rank": 6,
+        "rider": "Mattias Skjelmose",
+        "team": "Lidl - Trek",
+        "gap": "+10:14"
+      },
+      {
+        "rank": 7,
+        "rider": "Lenny Martinez",
+        "team": "Bahrain – Victorious",
+        "gap": "+12:50"
+      },
+      {
+        "rank": 8,
+        "rider": "Tom Pidcock",
+        "team": "Pinarello Q36.5 Pro Cycling Team",
+        "gap": "+12:58"
+      },
+      {
+        "rank": 9,
+        "rider": "Jordan Jegat",
+        "team": "Team TotalEnergies",
+        "gap": "+14:04"
+      },
+      {
+        "rank": 10,
+        "rider": "Richard Carapaz",
+        "team": "EF Education–EasyPost",
+        "gap": "+21:00"
+      }
+    ],
+    "points": [
+      {
+        "rank": 1,
+        "rider": "Mads Pedersen",
+        "team": "Lidl - Trek",
+        "pts": 477
+      },
+      {
+        "rank": 2,
+        "rider": "Jasper Philipsen",
+        "team": "Alpecin – Premier Tech",
+        "pts": 445
+      },
+      {
+        "rank": 3,
+        "rider": "Biniam Girmay",
+        "team": "NSN Cycling Team",
+        "pts": 361
+      },
+      {
+        "rank": 4,
+        "rider": "Max Kanter",
+        "team": "XDS Astana Team",
+        "pts": 271
+      },
+      {
+        "rank": 5,
+        "rider": "Olav Kooij",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 230
+      },
+      {
+        "rank": 6,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "pts": 165
+      },
+      {
+        "rank": 7,
+        "rider": "Søren Wærenskjold",
+        "team": "Uno-X Mobility",
+        "pts": 159
+      },
+      {
+        "rank": 8,
+        "rider": "Mauro Schmid",
+        "team": "Team Jayco AlUla",
+        "pts": 131
+      },
+      {
+        "rank": 9,
+        "rider": "Remco Evenepoel",
+        "team": "Red Bull – BORA – hansgrohe",
+        "pts": 130
+      },
+      {
+        "rank": 10,
+        "rider": "Anthony Turgis",
+        "team": "Team TotalEnergies",
+        "pts": 129
+      }
+    ],
+    "kom": [
+      {
+        "rank": 1,
+        "rider": "Tadej Pogačar",
+        "team": "UAE Team Emirates XRG",
+        "pts": 70
+      },
+      {
+        "rank": 2,
+        "rider": "Valentin Paret-Peintre",
+        "team": "Soudal Quick-Step",
+        "pts": 69
+      },
+      {
+        "rank": 3,
+        "rider": "Richard Carapaz",
+        "team": "EF Education–EasyPost",
+        "pts": 63
+      },
+      {
+        "rank": 4,
+        "rider": "Remco Evenepoel",
+        "team": "Red Bull – BORA – hansgrohe",
+        "pts": 36
+      },
+      {
+        "rank": 5,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 34
+      },
+      {
+        "rank": 6,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "pts": 30
+      },
+      {
+        "rank": 7,
+        "rider": "Lenny Martinez",
+        "team": "Bahrain – Victorious",
+        "pts": 22
+      },
+      {
+        "rank": 8,
+        "rider": "Mauro Schmid",
+        "team": "Team Jayco AlUla",
+        "pts": 22
+      },
+      {
+        "rank": 9,
+        "rider": "Tom Pidcock",
+        "team": "Pinarello Q36.5 Pro Cycling Team",
+        "pts": 20
+      },
+      {
+        "rank": 10,
+        "rider": "Tobias Halland Johannessen",
+        "team": "Uno-X Mobility",
+        "pts": 18
+      }
+    ],
+    "youth": [
+      {
+        "rank": 1,
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates XRG",
+        "gap": "race lead"
+      },
+      {
+        "rank": 2,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "gap": "+0:20"
+      },
+      {
+        "rank": 3,
+        "rider": "Juan Ayuso",
+        "team": "Lidl - Trek",
+        "gap": "+2:31"
+      },
+      {
+        "rank": 4,
+        "rider": "Lenny Martinez",
+        "team": "Bahrain – Victorious",
+        "gap": "+5:59"
+      }
+    ],
+    "after_stage_num": 18,
+    "after_stage_date": "2026-07-23"
+  },
   "ai": {
-    "confidence": "low",
+    "confidence": "high",
     "sources": [
       "https://www.letour.fr/en/rankings/stage-18",
+      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-18-carapaz-jumps-into-top10-pedersen-reinforces-green-jersey-and-pogacar-risks-losing-kom",
       "https://www.letour.fr/en/rankings",
-      "https://www.olympics.com/en/news/tour-de-france-2026-full-schedule-all-stage-results-classification-standings",
-      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-gc-standings-2026/",
-      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/",
+      "https://www.procyclingstats.com/race/tour-de-france/2026/stage-18/result/result",
       "https://www.letour.fr/en/withdrawal",
+      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/",
       "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts"
     ]
   }
