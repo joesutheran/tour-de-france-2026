@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-25T10:00:01.107774+12:00",
+  "generated_at": "2026-07-25T14:00:03.611758+12:00",
   "nz_date": "2026-07-25",
   "as_of_date": "2026-07-25",
   "boundary_hour": 10,
@@ -20,16 +20,14 @@ window.STAGE_TODAY = {
     "type": "Mountain",
     "note": "Queen stage: Col de la Croix de Fer, Telegraphe and Galibier before a second Alpe d'Huez finish - ~5,600m climbing, the GC decider.",
     "headline": "Queen stage decides it all",
-    "watch_for": "Stage 20 delivers the Tour's most brutal single day and the last chance for the overall standings to shift: after the Croix de Fer, Télégraphe and Galibier stack up roughly 5,600m of climbing, the race finishes for a second consecutive day atop Alpe d'Huez. Tadej Pogačar carries a commanding 7:11 lead over Remco Evenepoel into the stage, but with this much vertical gain still to come the gaps further down the top ten are far from settled. The polka-dot jersey is on a knife-edge — Richard Carapaz leads Pogačar by just a single point (91 to 90), with Valentin Paret-Peintre only seven points back — so all three have every incentive to chase points on the HC-rated Galibier and the summit finish. Isaac del Toro holds third overall and the white jersey, but Paul Seixas sits only 24 seconds behind him on GC, making their fight for both the final podium spot and the youth classification one to watch on Alpe d'Huez's 21 hairpins. Lenny Martinez, fresh off a big breakaway ride into fifth on stage 19, and Juan Ayuso, who slipped to seventh, both have reasons to go on the offensive on a course this demanding. As the last major mountain test before Paris, expect every contender behind Pogačar to leave nothing in reserve.",
+    "watch_for": "Stage 20 is the second of two consecutive Alpe d'Huez summit finishes, this time preceded by the Croix de Fer, Télégraphe and Galibier for roughly 5,600m of climbing — a brutal double-Alpe day that will punish anyone carrying fatigue from the day before. Remco Evenepoel sits 7:11 down on Tadej Pogačar and is fast running out of road to change the overall picture, so expect Red Bull to force the pace early on the Croix de Fer to isolate the yellow jersey before the final ascent. The final podium spot is on a knife-edge, with Paul Seixas just 24 seconds behind Isaac del Toro for third overall and the white jersey, so any split among that group on the lower slopes of Alpe d'Huez matters enormously. Richard Carapaz took the polka-dot jersey by a single point from Pogačar on stage 19, and with three categorised climbs on the menu he has every incentive to attack for points long before the finish, dragging Pogačar into a decision about whether to follow for jersey defence or sit up. Lenny Martinez, fresh off a breakaway ride into fifth overall, is another rider capable of going long given his climbing legs over the past week, while GC riders further back such as Sepp Kuss and Tobias Halland Johannessen will be racing simply to defend their placings on a stage where the time gaps could open up fast.",
     "riders_to_watch": [
       "Tadej Pogačar",
       "Remco Evenepoel",
-      "Richard Carapaz",
-      "Valentin Paret-Peintre",
       "Isaac del Toro",
       "Paul Seixas",
-      "Lenny Martinez",
-      "Juan Ayuso"
+      "Richard Carapaz",
+      "Lenny Martinez"
     ],
     "nz_note": "The GC decider and the climax of the whole race, so clear the evening for this one.",
     "climb_m": 5624,
@@ -146,16 +144,6 @@ window.STAGE_TODAY = {
       "name": "José Félix Parra",
       "stage": 18,
       "reason": "DNS"
-    },
-    {
-      "name": "Edoardo Affini",
-      "stage": 19,
-      "reason": "abandoned"
-    },
-    {
-      "name": "Einer Rubio",
-      "stage": 19,
-      "reason": "crash - abandoned"
     }
   ],
   "standings": {
@@ -403,11 +391,11 @@ window.STAGE_TODAY = {
     "sources": [
       "https://www.letour.fr/en/rankings",
       "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-19-tadej-pogacar-extends-yellow-jersey-lead-as-evenepoel-puts-time-into-del-toro-and-carapaz-takes-over-polka-dots",
-      "https://www.letour.fr/en/rankings/stage-19?hasCookies=false&hideOnetrust=true&isWebview=true",
-      "https://www.cyclingstage.com/tour-de-france-2026-points-classification/stage-19-green-jersey-tdf-2026/",
-      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/",
+      "https://www.olympics.com/en/news/tour-de-france-2026-full-schedule-all-stage-results-classification-standings",
+      "https://www.tntsports.co.uk/cycling/tour-de-france/2026/standings.shtml",
       "https://www.letour.fr/en/withdrawal",
-      "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-tour-de-france-2026-stage-19-another-blow-for-visma-as-affini-abandons-but-rubios-disaster-alpe-dhuez-crash-out-takes-the-headlines"
+      "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/",
+      "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts"
     ]
   }
 };
