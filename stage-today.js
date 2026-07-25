@@ -2,48 +2,49 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-25T14:00:03.611758+12:00",
-  "nz_date": "2026-07-25",
-  "as_of_date": "2026-07-25",
+  "generated_at": "2026-07-26T10:00:02.311456+12:00",
+  "nz_date": "2026-07-26",
+  "as_of_date": "2026-07-26",
   "boundary_hour": 10,
   "status": "racing",
   "watched": {
-    "num": 19,
-    "date": "2026-07-24"
+    "num": 20,
+    "date": "2026-07-25"
   },
   "preview": {
-    "num": 20,
-    "date": "2026-07-25",
-    "start": "Le Bourg d'Oisans",
-    "finish": "Alpe d'Huez",
-    "distance_km": 170.9,
-    "type": "Mountain",
-    "note": "Queen stage: Col de la Croix de Fer, Telegraphe and Galibier before a second Alpe d'Huez finish - ~5,600m climbing, the GC decider.",
-    "headline": "Queen stage decides it all",
-    "watch_for": "Stage 20 is the second of two consecutive Alpe d'Huez summit finishes, this time preceded by the Croix de Fer, Télégraphe and Galibier for roughly 5,600m of climbing — a brutal double-Alpe day that will punish anyone carrying fatigue from the day before. Remco Evenepoel sits 7:11 down on Tadej Pogačar and is fast running out of road to change the overall picture, so expect Red Bull to force the pace early on the Croix de Fer to isolate the yellow jersey before the final ascent. The final podium spot is on a knife-edge, with Paul Seixas just 24 seconds behind Isaac del Toro for third overall and the white jersey, so any split among that group on the lower slopes of Alpe d'Huez matters enormously. Richard Carapaz took the polka-dot jersey by a single point from Pogačar on stage 19, and with three categorised climbs on the menu he has every incentive to attack for points long before the finish, dragging Pogačar into a decision about whether to follow for jersey defence or sit up. Lenny Martinez, fresh off a breakaway ride into fifth overall, is another rider capable of going long given his climbing legs over the past week, while GC riders further back such as Sepp Kuss and Tobias Halland Johannessen will be racing simply to defend their placings on a stage where the time gaps could open up fast.",
+    "num": 21,
+    "date": "2026-07-26",
+    "start": "Thoiry",
+    "finish": "Paris",
+    "distance_km": 133,
+    "type": "Flat",
+    "note": "Processional-then-punchy finale on the Champs-Elysees with the Montmartre cobbled climb spicing the closing laps.",
+    "headline": "Montmartre spices the Paris finale",
+    "watch_for": "Stage 21 is the ceremonial run from Thoiry into Paris and a flat, largely processional 133 km finishing on the Champs-Élysées, so watch the early neutralised riding give way to a fast, nervous finale once the bunch hits the capital. Mads Pedersen wrapped up the points classification on stage 20 by 72 points, but sprinters chase stage wins on principle, and Jasper Philipsen and Biniam Girmay will want Lidl-Trek and NSN Cycling to not have it all their own way into the Arc de Triomphe finishing straight. Alpecin-Premier Tech's leadout for Philipsen versus Lidl-Trek's control for Pedersen is the sprint subplot to track, with Max Kanter and Olav Kooij also in the mix after strong points hauls. On the overall picture, Tadej Pogačar rides in with a commanding gap over Remco Evenepoel and Isaac del Toro, so for the GC men this stage is about staying upright and celebrating rather than racing each other. Richard Carapaz, fresh off sealing the King of the Mountains jersey and a stage win at Alpe d'Huez, and del Toro, who has the white jersey wrapped up over Paul Seixas, will be enjoying a low-key ride before any late-race sprint drama unfolds.",
     "riders_to_watch": [
+      "Mads Pedersen",
+      "Jasper Philipsen",
+      "Biniam Girmay",
+      "Max Kanter",
       "Tadej Pogačar",
-      "Remco Evenepoel",
-      "Isaac del Toro",
-      "Paul Seixas",
       "Richard Carapaz",
-      "Lenny Martinez"
+      "Isaac del Toro"
     ],
-    "nz_note": "The GC decider and the climax of the whole race, so clear the evening for this one.",
-    "climb_m": 5624,
-    "summit_finish": true,
+    "nz_note": "The Montmartre twist makes this more than a parade, worth watching the closing laps in full.",
+    "climb_m": 1295,
+    "summit_finish": false,
     "contextual": true
   },
   "abandoned": [
     {
       "name": "Clément Berthet",
       "stage": 2,
-      "reason": "DNS"
+      "reason": "DNS (injuries due to crash)"
     },
     {
       "name": "Arnaud De Lie",
       "stage": 3,
-      "reason": "withdrawal"
+      "reason": "withdrawal (illness)"
     },
     {
       "name": "Kelland O'Brien",
@@ -53,57 +54,57 @@ window.STAGE_TODAY = {
     {
       "name": "Bert Van Lerberghe",
       "stage": 6,
-      "reason": "withdrawal"
+      "reason": "withdrawal (injuries due to crash)"
     },
     {
       "name": "Cian Uijtdebroeks",
       "stage": 6,
-      "reason": "withdrawal"
+      "reason": "withdrawal (illness)"
     },
     {
       "name": "Arvid de Kleijn",
       "stage": 6,
-      "reason": "withdrawal"
+      "reason": "withdrawal (fractured metacarpal)"
     },
     {
       "name": "Alex Molenaar",
       "stage": 6,
-      "reason": "DNS"
+      "reason": "DNS (fractured metacarpal)"
     },
     {
       "name": "Torstein Traen",
       "stage": 7,
-      "reason": "DNS"
+      "reason": "DNS (broken ribs)"
     },
     {
       "name": "Matteo Trentin",
       "stage": 10,
-      "reason": "DNS"
+      "reason": "DNS (illness)"
     },
     {
       "name": "Chris Harper",
       "stage": 11,
-      "reason": "DNS"
+      "reason": "DNS (injuries due to crash)"
     },
     {
       "name": "Jenno Berckmoes",
       "stage": 13,
-      "reason": "DNS"
+      "reason": "DNS (broken collarbone)"
     },
     {
       "name": "Frits Biesterbos",
       "stage": 13,
-      "reason": "DNS"
+      "reason": "DNS (injuries due to crash)"
     },
     {
       "name": "Fernando Gaviria",
       "stage": 13,
-      "reason": "DNS"
+      "reason": "DNS (broken collarbone)"
     },
     {
       "name": "Ramses Debruyne",
       "stage": 14,
-      "reason": "DNS"
+      "reason": "DNS (illness)"
     },
     {
       "name": "Anthon Charmig",
@@ -113,12 +114,12 @@ window.STAGE_TODAY = {
     {
       "name": "Jonas Vingegaard",
       "stage": 15,
-      "reason": "withdrawal"
+      "reason": "withdrawal (injuries due to crash)"
     },
     {
       "name": "Tim Merlier",
       "stage": 15,
-      "reason": "withdrawal"
+      "reason": "withdrawal (illness)"
     },
     {
       "name": "Tom Van Asbroeck",
@@ -128,12 +129,12 @@ window.STAGE_TODAY = {
     {
       "name": "Florian Lipowitz",
       "stage": 16,
-      "reason": "withdrawal"
+      "reason": "withdrawal (injuries due to crash)"
     },
     {
       "name": "Lars Craps",
       "stage": 16,
-      "reason": "DNS"
+      "reason": "DNS (illness)"
     },
     {
       "name": "Brandon McNulty",
@@ -144,6 +145,11 @@ window.STAGE_TODAY = {
       "name": "José Félix Parra",
       "stage": 18,
       "reason": "DNS"
+    },
+    {
+      "name": "Ilan Van Wilder",
+      "stage": 20,
+      "reason": "crashed out on the descent of the Col de la Croix de Fer"
     }
   ],
   "standings": {
@@ -158,7 +164,7 @@ window.STAGE_TODAY = {
         "rank": 2,
         "rider": "Remco Evenepoel",
         "team": "Red Bull - BORA - hansgrohe",
-        "gap": "+7:11"
+        "gap": "+6:26"
       },
       {
         "rank": 3,
@@ -170,43 +176,43 @@ window.STAGE_TODAY = {
         "rank": 4,
         "rider": "Paul Seixas",
         "team": "Decathlon CMA CGM Team",
-        "gap": "+10:06"
+        "gap": "+11:56"
       },
       {
         "rank": 5,
         "rider": "Lenny Martinez",
         "team": "Bahrain - Victorious",
-        "gap": "+13:00"
+        "gap": "+13:02"
       },
       {
         "rank": 6,
         "rider": "Mattias Skjelmose",
         "team": "Lidl - Trek",
-        "gap": "+13:09"
+        "gap": "+14:59"
       },
       {
         "rank": 7,
         "rider": "Juan Ayuso",
         "team": "Lidl - Trek",
-        "gap": "+15:58"
+        "gap": "+17:48"
       },
       {
         "rank": 8,
         "rider": "Richard Carapaz",
         "team": "EF Education - EasyPost",
-        "gap": "+21:15"
+        "gap": "+20:00"
       },
       {
         "rank": 9,
         "rider": "Tom Pidcock",
         "team": "Pinarello Q36.5 Pro Cycling Team",
-        "gap": "+21:30"
+        "gap": "+29:28"
       },
       {
         "rank": 10,
         "rider": "Jordan Jegat",
-        "team": "TotalEnergies",
-        "gap": "+23:21"
+        "team": "Team TotalEnergies",
+        "gap": "+33:21"
       }
     ],
     "points": [
@@ -214,7 +220,7 @@ window.STAGE_TODAY = {
         "rank": 1,
         "rider": "Mads Pedersen",
         "team": "Lidl - Trek",
-        "pts": 502
+        "pts": 527
       },
       {
         "rank": 2,
@@ -244,7 +250,7 @@ window.STAGE_TODAY = {
         "rank": 6,
         "rider": "Tadej Pogačar",
         "team": "UAE Team Emirates - XRG",
-        "pts": 185
+        "pts": 198
       },
       {
         "rank": 7,
@@ -256,19 +262,19 @@ window.STAGE_TODAY = {
         "rank": 8,
         "rider": "Remco Evenepoel",
         "team": "Red Bull - BORA - hansgrohe",
-        "pts": 140
+        "pts": 157
       },
       {
         "rank": 9,
         "rider": "Isaac del Toro",
         "team": "UAE Team Emirates - XRG",
-        "pts": 132
+        "pts": 143
       },
       {
         "rank": 10,
-        "rider": "Mauro Schmid",
-        "team": "Team Jayco AlUla",
-        "pts": 131
+        "rider": "Tobias Halland Johannessen",
+        "team": "Uno-X Mobility",
+        "pts": 133
       }
     ],
     "kom": [
@@ -276,49 +282,61 @@ window.STAGE_TODAY = {
         "rank": 1,
         "rider": "Richard Carapaz",
         "team": "EF Education - EasyPost",
-        "pts": 91
+        "pts": 156
       },
       {
         "rank": 2,
         "rider": "Tadej Pogačar",
         "team": "UAE Team Emirates - XRG",
-        "pts": 90
+        "pts": 100
       },
       {
         "rank": 3,
         "rider": "Valentin Paret-Peintre",
         "team": "Soudal Quick-Step",
-        "pts": 84
+        "pts": 99
       },
       {
         "rank": 4,
-        "rider": "Remco Evenepoel",
-        "team": "Red Bull - BORA - hansgrohe",
-        "pts": 42
+        "rider": "Sepp Kuss",
+        "team": "Team Visma | Lease a Bike",
+        "pts": 55
       },
       {
         "rank": 5,
-        "rider": "Lenny Martinez",
-        "team": "Bahrain - Victorious",
-        "pts": 37
+        "rider": "Remco Evenepoel",
+        "team": "Red Bull - BORA - hansgrohe",
+        "pts": 50
       },
       {
         "rank": 6,
-        "rider": "Isaac del Toro",
-        "team": "UAE Team Emirates - XRG",
-        "pts": 34
+        "rider": "Lenny Martinez",
+        "team": "Bahrain - Victorious",
+        "pts": 41
       },
       {
         "rank": 7,
-        "rider": "Paul Seixas",
-        "team": "Decathlon CMA CGM Team",
-        "pts": 34
+        "rider": "Isaac del Toro",
+        "team": "UAE Team Emirates - XRG",
+        "pts": 40
       },
       {
         "rank": 8,
+        "rider": "Paul Seixas",
+        "team": "Decathlon CMA CGM Team",
+        "pts": 36
+      },
+      {
+        "rank": 9,
         "rider": "Tobias Halland Johannessen",
         "team": "Uno-X Mobility",
-        "pts": 26
+        "pts": 29
+      },
+      {
+        "rank": 10,
+        "rider": "Jai Hindley",
+        "team": "Red Bull - BORA - hansgrohe",
+        "pts": 28
       }
     ],
     "youth": [
@@ -332,70 +350,34 @@ window.STAGE_TODAY = {
         "rank": 2,
         "rider": "Paul Seixas",
         "team": "Decathlon CMA CGM Team",
-        "gap": "+0:24"
+        "gap": "+2:14"
       },
       {
         "rank": 3,
         "rider": "Lenny Martinez",
         "team": "Bahrain - Victorious",
-        "gap": "+3:18"
+        "gap": "+3:20"
       },
       {
         "rank": 4,
         "rider": "Juan Ayuso",
         "team": "Lidl - Trek",
-        "gap": "+6:16"
-      },
-      {
-        "rank": 5,
-        "rider": "Davide Piganzoli",
-        "team": "Team Visma | Lease a Bike",
-        "gap": "+46:15"
-      },
-      {
-        "rank": 6,
-        "rider": "Quinn Simmons",
-        "team": "Lidl - Trek",
-        "gap": "+1:16:49"
-      },
-      {
-        "rank": 7,
-        "rider": "Pablo Castrillo",
-        "team": "Movistar Team",
-        "gap": "+1:41:55"
-      },
-      {
-        "rank": 8,
-        "rider": "Matthew Riccitello",
-        "team": "Decathlon CMA CGM Team",
-        "gap": "+1:55:35"
-      },
-      {
-        "rank": 9,
-        "rider": "Raúl García Pierna",
-        "team": "Movistar Team",
-        "gap": "+2:09:19"
-      },
-      {
-        "rank": 10,
-        "rider": "Kévin Vauquelin",
-        "team": "Netcompany INEOS",
-        "gap": "+2:12:52"
+        "gap": "+8:06"
       }
     ],
-    "after_stage_num": 19,
-    "after_stage_date": "2026-07-24"
+    "after_stage_num": 20,
+    "after_stage_date": "2026-07-25"
   },
   "ai": {
     "confidence": "high",
     "sources": [
+      "https://www.letour.fr/en/rankings/stage-20",
+      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-20-pogacar-pedersen-carapaz-and-del-toro-virtually-confirm-their-win",
       "https://www.letour.fr/en/rankings",
-      "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-19-tadej-pogacar-extends-yellow-jersey-lead-as-evenepoel-puts-time-into-del-toro-and-carapaz-takes-over-polka-dots",
-      "https://www.olympics.com/en/news/tour-de-france-2026-full-schedule-all-stage-results-classification-standings",
       "https://www.tntsports.co.uk/cycling/tour-de-france/2026/standings.shtml",
       "https://www.letour.fr/en/withdrawal",
       "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/",
-      "https://www.procyclingstats.com/race/tour-de-france/2026/results/dropouts"
+      "https://www.domestiquecycling.com/en/news/tour-de-france-2026-withdrawals/"
     ]
   }
 };
