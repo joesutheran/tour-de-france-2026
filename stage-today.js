@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-07-26T10:00:02.311456+12:00",
+  "generated_at": "2026-07-26T14:00:03.922636+12:00",
   "nz_date": "2026-07-26",
   "as_of_date": "2026-07-26",
   "boundary_hour": 10,
@@ -20,13 +20,14 @@ window.STAGE_TODAY = {
     "type": "Flat",
     "note": "Processional-then-punchy finale on the Champs-Elysees with the Montmartre cobbled climb spicing the closing laps.",
     "headline": "Montmartre spices the Paris finale",
-    "watch_for": "Stage 21 is the ceremonial run from Thoiry into Paris and a flat, largely processional 133 km finishing on the Champs-Élysées, so watch the early neutralised riding give way to a fast, nervous finale once the bunch hits the capital. Mads Pedersen wrapped up the points classification on stage 20 by 72 points, but sprinters chase stage wins on principle, and Jasper Philipsen and Biniam Girmay will want Lidl-Trek and NSN Cycling to not have it all their own way into the Arc de Triomphe finishing straight. Alpecin-Premier Tech's leadout for Philipsen versus Lidl-Trek's control for Pedersen is the sprint subplot to track, with Max Kanter and Olav Kooij also in the mix after strong points hauls. On the overall picture, Tadej Pogačar rides in with a commanding gap over Remco Evenepoel and Isaac del Toro, so for the GC men this stage is about staying upright and celebrating rather than racing each other. Richard Carapaz, fresh off sealing the King of the Mountains jersey and a stage win at Alpe d'Huez, and del Toro, who has the white jersey wrapped up over Paul Seixas, will be enjoying a low-key ride before any late-race sprint drama unfolds.",
+    "watch_for": "Stage 21 into Paris is the traditional processional-then-punchy finale: expect UAE Team Emirates - XRG to shepherd Tadej Pogačar gently out of Thoiry, with no rival likely to contest yellow given Remco Evenepoel sits 6:26 back and the overall was described as \"virtually sealed\" after the Alpe d'Huez stage. The bigger intrigue is the sprint finish on the Champs-Élysées: Mads Pedersen (Lidl - Trek) has the green jersey mathematically wrapped up but will still want a statement stage win, while Jasper Philipsen (Alpecin - Premier Tech), Biniam Girmay (NSN Cycling Team) and Max Kanter (XDS Astana Team) chase a career Champs-Élysées victory of their own. With roughly 1,295m of climbing packed into an otherwise flat 133km, a categorised ascent before the finishing circuits could tempt a puncheur or late breakaway to disrupt the sprint teams' control, so watch how hard Alpecin, Lidl-Trek and XDS Astana have to work to bring things back together. Richard Carapaz's big polka-dot haul on the queen stage looks to have put the King of the Mountains jersey out of reach, so a last dash for combativity or minor placings from breakaway-minded squads like TotalEnergies or Cofidis is plausible. Isaac del Toro, having all but secured the white jersey, will likely be content to roll in safely alongside the GC group rather than take any risks on the final circuits.",
     "riders_to_watch": [
+      "Tadej Pogačar",
+      "Remco Evenepoel",
       "Mads Pedersen",
       "Jasper Philipsen",
       "Biniam Girmay",
       "Max Kanter",
-      "Tadej Pogačar",
       "Richard Carapaz",
       "Isaac del Toro"
     ],
@@ -39,112 +40,117 @@ window.STAGE_TODAY = {
     {
       "name": "Clément Berthet",
       "stage": 2,
-      "reason": "DNS (injuries due to crash)"
+      "reason": "did not start after sustaining injuries in a stage 1 crash"
     },
     {
       "name": "Arnaud De Lie",
       "stage": 3,
-      "reason": "withdrawal (illness)"
+      "reason": "withdrew due to illness"
     },
     {
       "name": "Kelland O'Brien",
       "stage": 4,
-      "reason": "outside the time limit"
-    },
-    {
-      "name": "Bert Van Lerberghe",
-      "stage": 6,
-      "reason": "withdrawal (injuries due to crash)"
-    },
-    {
-      "name": "Cian Uijtdebroeks",
-      "stage": 6,
-      "reason": "withdrawal (illness)"
-    },
-    {
-      "name": "Arvid de Kleijn",
-      "stage": 6,
-      "reason": "withdrawal (fractured metacarpal)"
+      "reason": "eliminated outside the time limit"
     },
     {
       "name": "Alex Molenaar",
       "stage": 6,
-      "reason": "DNS (fractured metacarpal)"
+      "reason": "did not start with a fractured metacarpal"
+    },
+    {
+      "name": "Bert Van Lerberghe",
+      "stage": 6,
+      "reason": "withdrew due to crash injuries"
+    },
+    {
+      "name": "Cian Uijtdebroeks",
+      "stage": 6,
+      "reason": "withdrew due to illness"
+    },
+    {
+      "name": "Arvid de Kleijn",
+      "stage": 6,
+      "reason": "withdrew with a fractured metacarpal"
     },
     {
       "name": "Torstein Traen",
       "stage": 7,
-      "reason": "DNS (broken ribs)"
+      "reason": "did not start with broken ribs"
     },
     {
       "name": "Matteo Trentin",
       "stage": 10,
-      "reason": "DNS (illness)"
+      "reason": "did not start due to illness"
     },
     {
       "name": "Chris Harper",
       "stage": 11,
-      "reason": "DNS (injuries due to crash)"
+      "reason": "did not start due to crash injuries"
     },
     {
       "name": "Jenno Berckmoes",
       "stage": 13,
-      "reason": "DNS (broken collarbone)"
+      "reason": "did not start with a broken collarbone"
     },
     {
       "name": "Frits Biesterbos",
       "stage": 13,
-      "reason": "DNS (injuries due to crash)"
+      "reason": "did not start due to crash injuries"
     },
     {
       "name": "Fernando Gaviria",
       "stage": 13,
-      "reason": "DNS (broken collarbone)"
+      "reason": "did not start with a broken collarbone"
     },
     {
       "name": "Ramses Debruyne",
       "stage": 14,
-      "reason": "DNS (illness)"
+      "reason": "did not start due to illness"
     },
     {
       "name": "Anthon Charmig",
       "stage": 14,
-      "reason": "outside the time limit"
+      "reason": "eliminated outside the time limit"
     },
     {
       "name": "Jonas Vingegaard",
       "stage": 15,
-      "reason": "withdrawal (injuries due to crash)"
+      "reason": "withdrew due to crash injuries"
     },
     {
       "name": "Tim Merlier",
       "stage": 15,
-      "reason": "withdrawal (illness)"
+      "reason": "withdrew due to illness"
     },
     {
       "name": "Tom Van Asbroeck",
       "stage": 15,
-      "reason": "withdrawal"
+      "reason": "withdrew (cause unconfirmed)"
     },
     {
       "name": "Florian Lipowitz",
       "stage": 16,
-      "reason": "withdrawal (injuries due to crash)"
+      "reason": "withdrew due to crash injuries"
     },
     {
       "name": "Lars Craps",
       "stage": 16,
-      "reason": "DNS (illness)"
+      "reason": "did not start due to illness"
     },
     {
       "name": "Brandon McNulty",
       "stage": 18,
-      "reason": "withdrawal"
+      "reason": "withdrew from the race"
     },
     {
       "name": "José Félix Parra",
       "stage": 18,
-      "reason": "DNS"
+      "reason": "withdrew from the race"
+    },
+    {
+      "name": "Edoardo Affini",
+      "stage": 19,
+      "reason": "abandoned mid-stage, climbing into the team car"
     },
     {
       "name": "Ilan Van Wilder",
@@ -211,7 +217,7 @@ window.STAGE_TODAY = {
       {
         "rank": 10,
         "rider": "Jordan Jegat",
-        "team": "Team TotalEnergies",
+        "team": "TotalEnergies",
         "gap": "+33:21"
       }
     ],
@@ -374,7 +380,7 @@ window.STAGE_TODAY = {
       "https://www.letour.fr/en/rankings/stage-20",
       "https://cyclinguptodate.com/cycling/tour-de-france-2026-classifications-update-stage-20-pogacar-pedersen-carapaz-and-del-toro-virtually-confirm-their-win",
       "https://www.letour.fr/en/rankings",
-      "https://www.tntsports.co.uk/cycling/tour-de-france/2026/standings.shtml",
+      "https://www.cyclingweekly.com/racing/who-is-leading-the-tour-de-france-2026",
       "https://www.letour.fr/en/withdrawal",
       "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-abandons-2026/",
       "https://www.domestiquecycling.com/en/news/tour-de-france-2026-withdrawals/"
