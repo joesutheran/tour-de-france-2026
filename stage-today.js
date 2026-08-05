@@ -2,7 +2,7 @@
 // Regenerated daily. If this file is missing or stale, index.html falls
 // back to computing tonight's stage in the browser from the embedded schedule.
 window.STAGE_TODAY = {
-  "generated_at": "2026-08-05T14:00:05.519311+12:00",
+  "generated_at": "2026-08-05T17:57:42.019080+12:00",
   "nz_date": "2026-08-05",
   "as_of_date": "2026-08-05",
   "boundary_hour": 10,
